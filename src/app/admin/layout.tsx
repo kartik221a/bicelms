@@ -1,0 +1,88 @@
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import {
+  LayoutDashboard, BookOpen, Tags, ListVideo, Users, GraduationCap, ShoppingBag,
+  CreditCard, TicketPercent, MessageSquareText, FolderOpen, Megaphone, BarChart3,
+  Settings, ChevronLeft,
+} from "lucide-react";
+import { SetupBanner } from "@/components/shared/setup-banner";
+import { getSession } from "@/services/auth/session";
+import { AdminSidebarNav } from "@/components/admin/admin-sidebar-nav";
+
+const NAV_SECTIONS = [
+  {
+    title: "Overview",
+    items: [{ href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard }],
+  },
+  {
+    title: "Catalog",
+    items: [
+      { href: "/admin/courses", label: "Courses", icon: BookOpen },
+      { href: "/admin/categories", label: "Categories", icon: Tags },
+      { href: "/admin/lessons", label: "Lessons", icon: ListVideo },
+    ],
+  },
+  {
+    title: "People",
+    items: [
+      { href: "/admin/students", label: "Students", icon: Users },
+      { href: "/admin/instructors", label: "Instructors", icon: GraduationCap },
+    ],
+  },
+  {
+    title: "Sales",
+    items: [
+      { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
+      { href: "/admin/payments", label: "Payments", icon: CreditCard },
+      { href: "/admin/coupons", label: "Coupons", icon: TicketPercent },
+    ],
+  },
+  {
+    title: "Engagement",
+    items: [
+      { href: "/admin/reviews", label: "Reviews", icon: MessageSquareText },
+      { href: "/admin/resources", label: "Resources", icon: FolderOpen },
+      { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
+    ],
+  },
+  {
+    title: "Insights",
+    items: [{ href: "/admin/analytics", label: "Analytics", icon: BarChart3 }],
+  },
+  {
+    title: "System",
+    items: [{ href: "/admin/settings", label: "Settings", icon: Settings }],
+  },
+];
+
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const session = await getSession();
+  if (!session) redirect("/login?next=/admin/dashboard");
+  if (session.role !== "admin" && session.role !== "super_admin") {
+    redirect("/dashboard?error=forbidden");
+  }
+
+  return (
+    <>
+      <SetupBanner />
+      <div className="flex min-h-screen">
+        <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col overflow-y-auto bg-[#0f172a] scrollbar-thin lg:flex">
+          <div className="flex h-16 items-center justify-between px-5">
+            <span className="font-bold tracking-tight text-white">
+              BICE <span className="font-normal text-slate-400">Admin</span>
+            </span>
+          </div>
+          <AdminSidebarNav sections={NAV_SECTIONS} />
+          <div className="mt-auto border-t border-white/10 p-4">
+            <Link href="/" className="flex items-center gap-2 text-sm text-slate-400 hover:text-white">
+              <ChevronLeft className="h-4 w-4" /> Back to site
+            </Link>
+          </div>
+        </aside>
+        <div className="flex min-w-0 flex-1 flex-col lg:pl-60">
+          <main className="flex-1 bg-slate-50 px-4 py-6 sm:px-6 lg:px-8">{children}</main>
+        </div>
+      </div>
+    </>
+  );
+}
