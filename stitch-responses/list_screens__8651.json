@@ -1,0 +1,25 @@
+{
+  "http_status": 200,
+  "result": {
+    "id": 8651,
+    "jsonrpc": "2.0",
+    "result": {
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://stitch.googleapis.com/project-viewer",
+          "visibility": [
+            "model",
+            "app"
+          ]
+        }
+      },
+      "content": [
+        {
+          "text": "{}",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {}
+    }
+  }
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#ffdf9f","error-container":"#ffdad6","on-secondary-fixed-variant":"#3f465c","on-error-container":"#93000a","on-tertiary-fixed":"#261a00","primary":"#3525cd","secondary-container":"#dae2fd","surface":"#f7f9fb","surface-bright":"#f7f9fb","inverse-on-surface":"#eff1f3","outline-variant":"#c7c4d8","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#3323cc","surface-container-low":"#f2f4f6","on-surface-variant":"#464555","tertiary-container":"#7b5b00","secondary":"#565e74","on-tertiary-fixed-variant":"#5c4300","tertiary-fixed-dim":"#f9bd22","surface-container-high":"#e6e8ea","on-tertiary-container":"#ffd681","secondary-fixed":"#dae2fd","surface-dim":"#d8dadc","on-secondary":"#ffffff","outline":"#777587","surface-container-highest":"#e0e3e5","inverse-primary":"#c3c0ff","primary-container":"#4f46e5","error":"#ba1a1a","primary-fixed-dim":"#c3c0ff","on-primary-fixed":"#0f0069","surface-tint":"#4d44e3","on-secondary-fixed":"#131b2e","on-error":"#ffffff","surface-container":"#eceef0","on-background":"#191c1e","surface-variant":"#e0e3e5","on-primary-container":"#dad7ff","on-secondary-container":"#5c647a","tertiary":"#5e4400","inverse-surface":"#2d3133","background":"#f7f9fb","on-primary":"#ffffff","secondary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","on-surface":"#191c1e","primary-fixed":"#e2dfff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"2rem","space-xl":"2rem","space-sm":"0.5rem","space-md":"1rem","margin-mobile":"1rem",gutter:"1.5rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-2xl":"3rem","space-lg":"1.5rem"},fontFamily:{"headline-md":["Inter"],"display-hero-mobile":["Inter"],"display-hero":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"],"code-inline":["Inter"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"800"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"code-inline":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between border-b border-on-surface-variant/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight leading-none">BICE LMS</span><span class="font-label-sm text-label-sm text-inverse-primary tracking-wider uppercase mt-1">Data Academy</span></div></div></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="dashboard" href="#"><span class="font-label-md text-label-md">Dashboard</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-courses" href="#"><span class="font-label-md text-label-md">My Courses</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-notes" href="#"><span class="font-label-md text-label-md">My Notes</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-resources" href="#"><span class="font-label-md text-label-md">My Resources</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="certificates" href="#"><span class="font-label-md text-label-md">Certificates</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="orders" href="#"><span class="font-label-md text-label-md">Orders</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="profile" href="#"><span class="font-label-md text-label-md">Profile</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="settings" href="#"><span class="font-label-md text-label-md">Settings</span></a></nav></div><div class="p-space-md border-t border-on-surface-variant/20 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-2"><div class="flex items-center gap-space-xs text-inverse-on-surface/80"><span class="material-symbols-outlined text-[18px]">dark_mode</span><span class="font-label-md text-label-md">Theme Mode</span></div><div class="w-9 h-5 rounded-full bg-surface-variant/30 flex items-center p-0.5 cursor-pointer"><div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div></div></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-inverse-on-surface/80 hover:bg-error/20 hover:text-error-container transition-all" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-md text-label-md">Log out</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-high z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">home</span><span class="text-outline-variant font-label-md">/</span><span class="font-label-md text-label-md text-secondary">Dashboard</span><span class="text-outline-variant font-label-md">/</span><span class="font-label-md text-label-md text-primary font-semibold">My Resources</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-[18px]">search</span><input class="w-80 h-10 pl-9 pr-12 rounded-lg bg-surface border border-surface-container-high font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search datasets, templates, cheat sheets..." type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-secondary font-code-inline text-code-inline">⌘K</kbd></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-tertiary-fixed/30 border border-tertiary-fixed"><span class="material-symbols-outlined text-tertiary-container text-[18px]">local_fire_department</span><span class="font-label-md text-label-md text-tertiary font-bold">14 Day Streak</span></div><div class="relative flex items-center cursor-pointer"><span class="material-symbols-outlined text-secondary text-[22px] hover:text-on-surface transition-colors">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center leading-none font-bold">3</span></div><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span><span class="font-label-sm text-label-sm text-primary font-medium leading-none mt-0.5">Pro Learner</span></div><span class="material-symbols-outlined text-secondary text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Ensure sidebar active styling highlights "Orders" via script & standard styles -->
+<script>
+    (function highlightActiveSidebar() {
+      const links = document.querySelectorAll('aside nav a');
+      links.forEach(link => {
+        if (link.getAttribute('data-path') === 'orders') {
+          link.classList.remove('text-inverse-on-surface/80');
+          link.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+          const span = link.querySelector('span');
+          if (span) span.classList.add('text-on-primary');
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary');
+          link.classList.add('text-inverse-on-surface/80');
+        }
+      });
+      // Synchronize header breadcrumb if required
+      const breadcrumbContainer = document.querySelector('header .gap-space-xs');
+      if (breadcrumbContainer) {
+        breadcrumbContainer.innerHTML = `
+          <span class="material-symbols-outlined text-secondary text-[18px]">home</span>
+          <span class="text-outline-variant font-label-md">/</span>
+          <span class="font-label-md text-label-md text-secondary">Student Portal</span>
+          <span class="text-outline-variant font-label-md">/</span>
+          <span class="font-label-md text-label-md text-primary font-semibold">Orders</span>
+        `;
+      }
+    })();
+  </script>
+<!-- Main Content Body -->
+<div class="px-margin py-space-lg flex flex-col gap-space-lg max-w-[1400px] mx-auto w-full">
+<!-- Page Header & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-1.5 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wider uppercase">Executive Billing Portal</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-secondary">GSTIN Verified</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Orders &amp; Payments</h1>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+          View payment receipts, manage invoices, and track enrollment transactions for your executive data cohorts.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">folder_zip</span>
+<span>Download All Invoices (ZIP)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:opacity-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Billing Support</span>
+</button>
+</div>
+</div>
+<!-- 4 KPI Metrics Mini-Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Total Spent -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase tracking-wider text-secondary">Total Spent</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+</div>
+</div>
+<div class="flex flex-col mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">₹14,997</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">INR</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Across 4 enrolled masterclasses</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-4/5"></div>
+</div>
+</div>
+<!-- Card 2: Completed Orders -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase tracking-wider text-secondary">Completed Orders</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">check_circle</span>
+</div>
+</div>
+<div class="flex flex-col mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">4</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">100% Success</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Instant clearance via Razorpay</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-full"></div>
+</div>
+</div>
+<!-- Card 3: Refunds / Disputes -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase tracking-wider text-secondary">Refunds / Disputes</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_return</span>
+</div>
+</div>
+<div class="flex flex-col mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">0</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">Clean Record</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">No active chargebacks or queries</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-outline h-full rounded-full w-0"></div>
+</div>
+</div>
+<!-- Card 4: Tax Invoices Available -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase tracking-wider text-secondary">Tax Invoices</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">receipt_long</span>
+</div>
+</div>
+<div class="flex flex-col mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">4 GST Ready</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/40 text-tertiary font-label-sm text-label-sm font-semibold">18% ITC</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Compliant B2C/B2B tax receipts</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Search Toolbar Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap lg:flex-nowrap items-center justify-between gap-space-md">
+<!-- Search bar -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search by Order ID (e.g. ORD-2024-0182) or course title..." type="text"/>
+</div>
+<!-- Filter Selectors -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Status Dropdown -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>All Statuses</option>
+<option>Paid (4)</option>
+<option>Pending (0)</option>
+<option>Failed (0)</option>
+<option>Refunded (0)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Date Range Selector -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>All Time (2024)</option>
+<option>Last 30 Days</option>
+<option>Q3 2024 (Jul - Sep)</option>
+<option>Q2 2024 (Apr - Jun)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-[18px] pointer-events-none">calendar_month</span>
+</div>
+<!-- Payment Gateway Selector -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>All Gateways (Razorpay)</option>
+<option>UPI / QR</option>
+<option>Credit / Debit Cards</option>
+<option>NetBanking</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-[18px] pointer-events-none">account_balance_wallet</span>
+</div>
+<!-- Clear Filters -->
+<button class="h-10 px-3 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-secondary">
+          Showing <span class="font-semibold text-on-surface">4</span> of <span class="font-semibold text-on-surface">4</span> executive enrollment transactions
+        </span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-secondary">Auto-syncing real-time ledger</span>
+</div>
+</div>
+</div>
+<!-- Orders & Transactions Ledger -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header -->
+<div class="hidden lg:grid grid-cols-12 gap-space-md px-space-lg py-3.5 bg-surface-container-low font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">
+<div class="col-span-2">Order ID &amp; Ref</div>
+<div class="col-span-4">Cohort &amp; Details</div>
+<div class="col-span-2">Date &amp; Time</div>
+<div class="col-span-2">Amount (INR)</div>
+<div class="col-span-1">Method</div>
+<div class="col-span-1 text-right">Actions</div>
+</div>
+<!-- ROW 1: EXPANDED DETAILED ROW (ORD-2024-0182) -->
+<div class="flex flex-col bg-surface-container-lowest">
+<!-- Main Row Bar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md px-space-lg py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors">
+<!-- Col 1: Order ID -->
+<div class="lg:col-span-2 flex items-center gap-2">
+<button class="p-1 rounded-md hover:bg-surface-container text-primary transition-colors" title="Collapse details">
+<span class="material-symbols-outlined text-[20px] transition-transform rotate-180">keyboard_arrow_down</span>
+</button>
+<div class="flex flex-col">
+<span class="font-code-inline text-code-inline text-primary font-bold tracking-tight">ORD-2024-0182</span>
+<span class="font-label-sm text-label-sm text-secondary">Inv #BC-24-9041</span>
+</div>
+</div>
+<!-- Col 2: Course & Cohort Details -->
+<div class="lg:col-span-4 flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a financial analyst keyboard with green backlit illumination and high resolution stock chart screens in soft corporate focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoUmc3G5QT1GmYp49WdYMqbIOXLN8b8frvNkENL2BYpD2KBiUD5rJvHKYLE--g8sBCCOM8rEoTxhDQs622Xl9E1axCJMKFLiprnj70yG2HcBctODJ20Fj8WGZ2bb2xHLhBXUCMG8eklNfAYQqJzJB8LLTaw0Ded-xOlb0qA6Uu7HdMHcyKJO4fVMCylrXHMHpZxaV5Qcm1EfLOq_Pfb6e9yz1AAshQEXIbj0yVXujQBOatNazCapfA__dKY6CJKYfiEA69Mo1JNz0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Cohort 14</span>
+<span class="font-label-sm text-label-sm text-secondary">Live Weekend</span>
+</div>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate leading-snug mt-0.5">
+                Advanced Excel Masterclass: Dynamic Arrays &amp; Financial Modeling
+              </span>
+<span class="font-body-sm text-body-sm text-secondary">Instructor: CA Rohan Mehta • Executive Tier</span>
+</div>
+</div>
+<!-- Col 3: Date & Time -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Oct 14, 2024</span>
+<span class="font-body-sm text-body-sm text-secondary">14:28 IST • Instant</span>
+</div>
+<!-- Col 4: Amount -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">₹4,999.00</span>
+<span class="font-body-sm text-body-sm text-secondary">Incl. 18% GST (₹762.56)</span>
+</div>
+<!-- Col 5: Method & Status -->
+<div class="lg:col-span-1 flex flex-col gap-1 items-start">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">qr_code_2</span>
+<span>UPI / Razorpay</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Paid
+            </span>
+</div>
+<!-- Col 6: Action Buttons -->
+<div class="lg:col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-all" title="Download Tax Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary transition-all" title="Audit Trail">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- ACCORDION EXPANDED SUB-CARD -->
+<div class="px-space-lg pb-space-lg pt-2 bg-surface-container-low/70">
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-lg">
+<!-- Header stripe of expanded area -->
+<div class="flex flex-wrap items-center justify-between pb-3 bg-surface-container-low/40 p-3 rounded-lg gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Tax Invoice &amp; Payment Breakdown (Verified Cleared)</span>
+</div>
+<div class="flex items-center gap-3 font-code-inline text-code-inline text-secondary">
+<span>UTR/RRN: <strong class="text-on-surface">428819283719</strong></span>
+<span>•</span>
+<span>Gateway ID: <strong class="text-on-surface">pay_Qx8Lm2NpKl</strong></span>
+</div>
+</div>
+<!-- 3 Columns Details Mosaic -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Identifiers & Billing Entity -->
+<div class="lg:col-span-4 flex flex-col gap-space-md p-space-md rounded-lg bg-surface">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Billed By Entity</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">BICE Data Academy Pvt. Ltd.</span>
+<span class="font-body-sm text-body-sm text-secondary">GSTIN: <span class="font-code-inline text-code-inline font-semibold text-on-surface">27AABCB1234F1Z5</span></span>
+<span class="font-body-sm text-body-sm text-secondary">CIN: U80903KA2021PTC149204</span>
+<span class="font-body-sm text-body-sm text-secondary">Bengaluru Headquarters, Koramangala 4th Block, Karnataka 560034</span>
+</div>
+<div class="h-px bg-surface-container-high w-full"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Student / Learner Details</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rahul Sharma (Pro Learner)</span>
+<span class="font-body-sm text-body-sm text-secondary">Email: rahul.sharma@example.com</span>
+<span class="font-body-sm text-body-sm text-secondary">Place of Supply: Karnataka (State Code: 29)</span>
+</div>
+</div>
+<!-- Middle Column: Tax & Line Item Breakdown -->
+<div class="lg:col-span-4 flex flex-col justify-between p-space-md rounded-lg bg-surface">
+<div class="flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Line Item Breakdown</span>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-secondary font-body-sm">Executive Tier Tuition (SAC 9992)</span>
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">₹4,236.44</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-secondary font-body-sm">Central GST (CGST @ 9%)</span>
+<span class="font-code-inline text-code-inline text-on-surface font-medium">₹381.28</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-secondary font-body-sm">State GST (SGST @ 9%)</span>
+<span class="font-code-inline text-code-inline text-on-surface font-medium">₹381.28</span>
+</div>
+<div class="h-px bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Total Amount Paid</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">₹4,999.00</span>
+</div>
+</div>
+<div class="mt-4 p-2.5 rounded-lg bg-surface-container flex items-center justify-between text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">info</span>
+<span class="font-label-sm text-label-sm">Eligible for Company Corporate Tax Claim</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary cursor-pointer hover:underline">GST Guide</span>
+</div>
+</div>
+<!-- Right Column: Invoice Actions & Timeline -->
+<div class="lg:col-span-4 flex flex-col justify-between p-space-md rounded-lg bg-surface">
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Quick Receipts &amp; Invoices</span>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:opacity-95 transition-all shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Download Tax Invoice (PDF)</span>
+</div>
+<span class="font-code-inline text-code-inline text-on-primary/80">312 KB</span>
+</button>
+<button class="flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">receipt</span>
+<span>Download Payment Receipt (Razorpay)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+</button>
+<button class="flex items-center justify-between px-3.5 py-2 rounded-lg bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">email</span>
+<span>Send Invoice to Official Email</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<!-- 3-step progress timeline -->
+<div class="flex flex-col gap-2 mt-4 pt-3 border-t border-surface-container-high">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Fulfillment Lifecycle</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Guarantee Ended Oct 21</span>
+</div>
+<div class="grid grid-cols-3 gap-1 relative mt-1">
+<div class="flex flex-col items-center text-center">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold z-10">1</div>
+<span class="font-label-sm text-[10px] text-on-surface font-medium mt-1 leading-tight">Order Placed</span>
+<span class="font-label-sm text-[9px] text-secondary">Oct 14, 14:28</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold z-10">2</div>
+<span class="font-label-sm text-[10px] text-on-surface font-medium mt-1 leading-tight">Payment Cleared</span>
+<span class="font-label-sm text-[9px] text-secondary">Instant Razorpay</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold z-10">3</div>
+<span class="font-label-sm text-[10px] text-on-surface font-medium mt-1 leading-tight">Access Active</span>
+<span class="font-label-sm text-[9px] text-secondary">Live Cohort 14</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 2: SQL for Modern Data Analysis -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md px-space-lg py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<!-- Col 1: Order ID -->
+<div class="lg:col-span-2 flex items-center gap-2">
+<button class="p-1 rounded-md hover:bg-surface-container text-secondary transition-colors" title="Expand order details">
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_right</span>
+</button>
+<div class="flex flex-col">
+<span class="font-code-inline text-code-inline text-primary font-bold tracking-tight">ORD-2024-0145</span>
+<span class="font-label-sm text-label-sm text-secondary">Inv #BC-24-7892</span>
+</div>
+</div>
+<!-- Col 2: Course & Cohort Details -->
+<div class="lg:col-span-4 flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Dark aesthetic monitor showcasing PostgreSQL query terminal with syntax highlighted queries and query execution speed benchmarks in crisp executive light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_mtgrxIvznncgyvuRZqsA-DZnaVVjLNfdZNexLxFf3_8D8Thy1CkIWUtlAIA2s1mukzdRYWfgvyHGrQ6sL84bezuUNsn6mTtq3-UwdwF5atabgIoi--xVqaoLU16v-bxeepkpwMuj9AN_MssD7fGuo1jmu0AHMq5xmICku55ryUZnn5ulQa8sKiqLUUVM8WoofTxeNtCkzGS9m5_jLRk87m9hLSYdApIHe2I1B-7VWSYnAXABfl53j6AoFQzJdj2Zh1tYqu7_BRs"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Cohort 09</span>
+<span class="font-label-sm text-label-sm text-secondary">Self-Paced + Mentorship</span>
+</div>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate leading-snug mt-0.5">
+              SQL for Modern Data Analysis &amp; Warehousing
+            </span>
+<span class="font-body-sm text-body-sm text-secondary">Instructor: Elena Rostova • Full Access</span>
+</div>
+</div>
+<!-- Col 3: Date & Time -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Sep 22, 2024</span>
+<span class="font-body-sm text-body-sm text-secondary">18:04 IST • Razorpay</span>
+</div>
+<!-- Col 4: Amount -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">₹4,299.00</span>
+<span class="font-body-sm text-body-sm text-secondary">Incl. 18% GST (₹655.78)</span>
+</div>
+<!-- Col 5: Method & Status -->
+<div class="lg:col-span-1 flex flex-col gap-1 items-start">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">credit_card</span>
+<span>Visa •••• 4012</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Paid
+          </span>
+</div>
+<!-- Col 6: Action Buttons -->
+<div class="lg:col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-all" title="Download Tax Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary transition-all" title="More Options">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- ROW 3: Power Query & M-Code -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md px-space-lg py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<!-- Col 1: Order ID -->
+<div class="lg:col-span-2 flex items-center gap-2">
+<button class="p-1 rounded-md hover:bg-surface-container text-secondary transition-colors" title="Expand order details">
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_right</span>
+</button>
+<div class="flex flex-col">
+<span class="font-code-inline text-code-inline text-primary font-bold tracking-tight">ORD-2024-0098</span>
+<span class="font-label-sm text-label-sm text-secondary">Inv #BC-24-6510</span>
+</div>
+</div>
+<!-- Col 2: Course & Cohort Details -->
+<div class="lg:col-span-4 flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern dashboard user interface with ETL pipeline diagrams, data workflow arrows, and clean node connection graphics in corporate indigo colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXRXu2ZQ3psns5C9r5CtIKMH5FEfWqgu0ln0Bujf35F4ExYpYPYg8SCkbQvHI4af_UuNBdvuCRtNDuJQu0JEyKN9tepdsq3RgIJ2kYkarT0rQWg4ZwU4mnsd0pUDZnjaHye5xHtQkzAnJTEi5f0ZqaQd_jCnGLVNm6-DJgA25yMhWOHpw8iVGzyq-JtHMWbiDroILJAJW_9aab9IzWDK0dgbPWWy1Or2nNgGR-iw80HEXMBsT_-eISeiGgCYJEJg4szw1wEMGpn2U"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Cohort 06</span>
+<span class="font-label-sm text-label-sm text-secondary">Weekend Accelerator</span>
+</div>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate leading-snug mt-0.5">
+              Power Query &amp; M-Code Automation: Enterprise ETL
+            </span>
+<span class="font-body-sm text-body-sm text-secondary">Instructor: Marcus Chen • Standard Tier</span>
+</div>
+</div>
+<!-- Col 3: Date & Time -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Aug 05, 2024</span>
+<span class="font-body-sm text-body-sm text-secondary">09:15 IST • Razorpay</span>
+</div>
+<!-- Col 4: Amount -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">₹2,999.00</span>
+<span class="font-body-sm text-body-sm text-secondary">Incl. 18% GST (₹457.47)</span>
+</div>
+<!-- Col 5: Method & Status -->
+<div class="lg:col-span-1 flex flex-col gap-1 items-start">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">account_balance</span>
+<span>HDFC NetBank</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Paid
+          </span>
+</div>
+<!-- Col 6: Action Buttons -->
+<div class="lg:col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-all" title="Download Tax Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary transition-all" title="More Options">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- ROW 4: Python 3 for Financial Analysts -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md px-space-lg py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<!-- Col 1: Order ID -->
+<div class="lg:col-span-2 flex items-center gap-2">
+<button class="p-1 rounded-md hover:bg-surface-container text-secondary transition-colors" title="Expand order details">
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_right</span>
+</button>
+<div class="flex flex-col">
+<span class="font-code-inline text-code-inline text-primary font-bold tracking-tight">ORD-2024-0042</span>
+<span class="font-label-sm text-label-sm text-secondary">Inv #BC-24-4119</span>
+</div>
+</div>
+<!-- Col 2: Course & Cohort Details -->
+<div class="lg:col-span-4 flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Jupyter notebook environment on a sleek metallic laptop display, with Pandas dataframe outputs, statistical plots, and high-performance financial analytics scripts in clean lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2LEeYB-_jLAztjZOF2zc-g4uJvj6zjHoSrYcmpNNdeTaec6rJehxZjy5rlXdgtVxOKlCa11wl2b0pjseZk3BoQuWfbVPL-dq1M5i1_IkjriOP2xka-X0M3PdH7VxYfzCXEjvwUeqgYpj2PqZFNF0s4ktytIKnCSEbPaxEb7WZtqfmNs9-G5t-SZsEufgjAGF81k_OyHijzObAPHUDajU6j5AE3Rz58r4h5--urf3o_i5GOcgAuEwTFvrzOPkEMIUlEnh_8YxRorw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Cohort 03</span>
+<span class="font-label-sm text-label-sm text-secondary">Self-Paced</span>
+</div>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold truncate leading-snug mt-0.5">
+              Python 3 for Financial Analysts &amp; Quant Modeling
+            </span>
+<span class="font-body-sm text-body-sm text-secondary">Instructor: David Kalu • Early Bird Pass</span>
+</div>
+</div>
+<!-- Col 3: Date & Time -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Jun 18, 2024</span>
+<span class="font-body-sm text-body-sm text-secondary">11:42 IST • Razorpay</span>
+</div>
+<!-- Col 4: Amount -->
+<div class="lg:col-span-2 flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">₹2,700.00</span>
+<span class="font-body-sm text-body-sm text-secondary">Incl. 18% GST (₹411.86)</span>
+</div>
+<!-- Col 5: Method & Status -->
+<div class="lg:col-span-1 flex flex-col gap-1 items-start">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">account_balance_wallet</span>
+<span>GPay / UPI</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Paid
+          </span>
+</div>
+<!-- Col 6: Action Buttons -->
+<div class="lg:col-span-1 flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-all" title="Download Tax Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary transition-all" title="More Options">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination & Table Footer -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-secondary">
+        Showing <span class="font-medium text-on-surface">1</span> to <span class="font-medium text-on-surface">4</span> of <span class="font-medium text-on-surface">4</span> total orders
+      </span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-secondary text-body-sm font-medium cursor-not-allowed opacity-60 flex items-center gap-1" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold">1</button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-secondary text-body-sm font-medium cursor-not-allowed opacity-60 flex items-center gap-1" disabled="">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Corporate GST Invoice & Reimbursement Advisory Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center flex-shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">domain_verification</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Need a Corporate Tax Invoice with your Employer's GSTIN?</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-semibold">L&amp;D Expense Policy</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            All course fees are eligible for annual Learning &amp; Development corporate tax deductions. If your company requires a revised tax invoice with official Legal Entity Name and state GST number, you can append it within 30 days of cohort enrollment.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all">
+          Update GST Profile
+        </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all">
+          Contact Enterprise Desk
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

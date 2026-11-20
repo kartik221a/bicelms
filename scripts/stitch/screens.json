@@ -1,0 +1,150 @@
+{
+  "projectId_env": "BICE_STITCH_PROJECT_ID",
+  "design_system_prompt": "BICE - a premium professional Learning Management System (LMS) web application for a data-skills coaching institute offering courses like Advanced Excel Masterclass, Power Query, SQL for Data Analysis, Python for Data Analysis, and Business Dashboards. Overall design language to apply: modern corporate SaaS aesthetic with premium e-learning polish (similar quality to Coursera, Udemy Business, Linear, Stripe dashboards); clean, trustworthy, professional - not playful, no flashy gradients, no oversized elements. Colors: white background, slate-50 (#F8FAFC) section bands, primary color indigo-600 (#4F46E5), deep navy slate-900 (#0F172A) for top navigation, footer and admin sidebar, amber-400 (#FBBF24) accents for star ratings and highlights, green for success states, red for locked/error states. Typography: Inter, bold headings, regular body text, comfortable line heights. Shape: rounded-xl (12px) cards, rounded-lg buttons and inputs, soft subtle shadows, 8px spacing grid, generous whitespace. Components used across the app: sticky navigation bar, primary indigo buttons, outlined secondary buttons, level badges (Beginner green, Intermediate amber, Advanced red), star ratings, progress bars, accordion curriculum sections, clean data tables with status pills, KPI stat cards, skeleton loaders, toast notifications, Lucide-style line icons.",
+  "screens": [
+    {
+      "id": "01-homepage-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Homepage of the BICE LMS public marketing website, desktop 1440px web layout. Sticky top navigation: BICE logo, links Home / Courses / About / FAQ / Contact, 'Log in' ghost button and indigo 'Get Started' primary button. Hero section: left-aligned headline 'Master Data Skills That Drive Your Career', supporting paragraph about professional coaching for Excel, Power Query, SQL and Python, two CTA buttons ('Explore Courses', 'Get Started'), right side illustration of professionals learning data analytics, subtle indigo-tinted background band. Below: statistics band with counters (12,000+ students, 25+ courses, 96% completion support, 4.8 average rating). Featured Courses section: 4 course cards in a row, each with course thumbnail image, category badge, title like 'Advanced Excel Masterclass', instructor avatar and name, star rating with review count, duration and lesson count, price with struck-through original price and discount badge, level badge. Course Categories section: 6 icon tiles (Excel, Power Query, SQL, Python, Dashboards, Career Prep). 'Why Learn With Us' section: 3 benefit cards with icons (Expert instructors, Hands-on projects, Certificate of completion). Instructor introduction section with photo, name, credentials and CTA. Student success stories: 3 testimonial cards with avatars, quotes and star ratings. FAQ accordion with 5 questions. Newsletter subscription band with email input and subscribe button. Rich navy footer with columns: platform links, courses, support, contact info, social icons and copyright."
+    },
+    {
+      "id": "02-courses-listing-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Course catalog page 'All Courses' of the BICE LMS public website, desktop 1440px layout. Sticky simplified top navigation with BICE logo and login/get started buttons. Page header with breadcrumb Home / Courses, title 'All Courses', short subtitle. Toolbar: search input 'Search courses...' on the left; result count 'Showing 12 of 48 courses'; sort dropdown (Popularity, Newest, Price: Low to High, Price: High to Low, Highest Rated). Left sidebar filters in a card: Category checkboxes (Excel, Power Query, SQL, Python, Dashboards), Price radio list (Free, Under 1,000, 1,000-5,000, 5,000+), Level checkboxes (Beginner, Intermediate, Advanced), Rating (4+ stars, 3+ stars), Duration ranges, and a 'Clear all filters' link. Main area: responsive grid of 9 course cards, each card with thumbnail, category badge, title, 2-line short description, instructor avatar + name, star rating with count, students enrolled with icon, clock duration, lessons count, level badge, price row with current price and struck-through original price and discount percent pill. Pagination component at bottom center. Show one subtle empty-state hint card at the end: 'No more courses match your filters' with clear filters button."
+    },
+    {
+      "id": "03-course-detail-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Individual course landing page for 'Advanced Excel Masterclass' on the BICE LMS public website, desktop 1440px layout. Breadcrumb Home / Courses / Advanced Excel Masterclass. Two-column layout. LEFT main column: course category badge + title + subtitle 'From spreadsheet basics to automation-grade Excel for analysts'; course meta row (star rating 4.8 with 1,240 reviews, 8,420 students, Intermediate level badge, 32 hours, 96 lessons, updated date); promo video player block with play button and thumbnail; tabs: Overview / Curriculum / Instructor / Reviews / FAQ. Overview tab active: 'What you'll learn' grid of 8 checklist items with green check icons; 'Skills you'll gain' tag chips (XLOOKUP, SUMIFS, Power Query, Pivot Tables, Dashboard Design); 'Prerequisites' bullet list; 'Who this course is for' bullet list; detailed description paragraphs. Curriculum tab area below: 'Course content' header with '4 sections - 24 lessons - 32h total' and expand-all; accordion with Section 1 'Excel Fundamentals' expanded showing 6 lesson rows (play icon, lesson name, duration, 'Free Preview' indigo pill for 2 lessons, lock icon for paid lessons), Sections 2 'Advanced Excel Formulas', 3 'Power Query', 4 'Practical Projects' collapsed with lesson counts and durations; instructor profile card with photo, name 'CA Rohan Mehta', credentials, stats; reviews section with overall 4.8 rating, rating breakdown bars, 3 review cards with avatar, name, stars, date, text; FAQ accordion with 4 questions. RIGHT sticky sidebar (purchase card): course thumbnail, 'Subscribe to Pro' hint, price '4,999' large with '9,999' struck through and '50% OFF' red badge, indigo 'Enroll Now' full-width button, outlined 'Add to Wishlist' button with heart icon, '30-day money-back guarantee' note, 'This course includes' list with icons (32h video, 96 lessons, 24 downloadable resources, certificate, lifetime access, mobile + desktop). Coupon code input with Apply button."
+    },
+    {
+      "id": "05-login-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Login page for the BICE LMS platform, desktop 1440px split layout. LEFT 45%: deep navy (#0F172A) branded panel with BICE logo, tagline 'Learn data skills that move your career forward', subtle geometric pattern, 3 small feature bullets with icons (Structured courses, Personal dashboard, Verified certificates) and a subtle testimonial quote. RIGHT 55%: centered white card with 'Welcome back' heading, 'Log in to continue learning' subtext, form with Email address input, Password input with eye toggle, 'Remember me' checkbox and 'Forgot password?' link on the same row, full-width indigo 'Log in' button, divider with 'or', full-width outlined 'Continue with Google' button with colorful Google G logo, footer text 'New to BICE? Create an account' link. Below the card: small trust row with lock icon 'Secured with Firebase Authentication'. Show subtle inline validation state on the email field."
+    },
+    {
+      "id": "06-register-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Registration page for the BICE LMS platform, desktop 1440px split layout matching the login page. LEFT 45%: navy branded panel with BICE logo, headline 'Start learning today', subtext 'Join 12,000+ students mastering Excel, SQL and Python', small stats row (25+ courses, 4.8 rating, 96% satisfaction). RIGHT 55%: centered card 'Create your account' with form: Full name input, Email address input, Phone number (optional) input, Password input with strength meter showing 'Strong' in green with 4-segment bar, Confirm password input, checkbox 'I agree to the Terms of Service and Privacy Policy' with links, full-width indigo 'Create Account' button, divider 'or', outlined 'Continue with Google' button, helper note with mail icon 'We will send a verification link to your email address', footer link 'Already have an account? Log in'. Show a subtle green success hint under the password field."
+    },
+    {
+      "id": "07-forgot-password-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "Forgot password page for the BICE LMS platform, desktop 1440px split layout matching login/register. LEFT: navy branded panel with logo and supportive quote. RIGHT: centered card 'Reset your password' with explanation text 'Enter the email associated with your account and we will send you a secure reset link.', Email address input, full-width indigo 'Send reset link' button, back arrow link 'Back to login'. Below show a success state banner: green check circle with 'Reset link sent! Check your inbox at r***@gmail.com. Link expires in 30 minutes.' Also show small troubleshooting links: 'Didn't receive it? Resend' and 'Contact support'."
+    },
+    {
+      "id": "08-student-dashboard-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Student dashboard home of the BICE LMS app, desktop 1440px. App shell: left sidebar 260px with BICE logo, nav items with icons: Dashboard (active, indigo highlight), My Courses, My Notes, My Resources, Certificates, Orders, Profile, Settings; bottom: dark-mode toggle and Log out. Top bar: page title 'Dashboard', search input, notification bell with red badge '3', student avatar with name 'Rahul Sharma' and dropdown chevron. Content: welcome banner card 'Welcome back, Rahul! You completed 4 lessons this week.' with indigo illustration accent. KPI row of 4 stat cards with icons: Enrolled Courses 5, Completed Lessons 42, Hours Learned 36.5, Certificates 1. 'Continue Learning' section: hero resume card for 'Advanced Excel Masterclass' with progress ring 68%, last watched lesson 'Section 3: Power Query - Data Cleaning', 'Resume Lesson' indigo button; below it 2 compact course rows with thumbnail, title, progress bar with percent, next lesson name, resume button. Right column: 'Overall Progress' card with weekly learning bar chart; 'Recent Announcements' card with 3 items (title, course tag, date, unread dot); 'Upcoming' card with assignment deadline. Show one card in skeleton loading state to demonstrate loading design."
+    },
+    {
+      "id": "09-my-courses-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "'My Courses' page of the BICE LMS student app, desktop 1440px, same app shell (left sidebar Dashboard, My Courses active, My Notes, My Resources, Certificates, Orders, Profile, Settings; top bar with search, bell, avatar). Content: page header 'My Courses' with subtitle; filter tabs: All (5), In Progress (3), Completed (2); view toggle grid/list. Grid of 6 enrolled course cards: thumbnail, title, instructor name, progress bar with percentage (e.g. 68% complete), 'Completed 21 of 31 lessons', last accessed '2 days ago', indigo 'Continue Learning' button with play icon; completed course card variant shows green 'Completed' badge, 100% progress and 'View Certificate' outlined button with award icon, 'Download certificate' link. One card shows 'New content added' pill. Bottom: pagination. Include one wide empty-state card at the end: 'You haven't started a course yet' with browse courses button."
+    },
+    {
+      "id": "10-learn-interface-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Course learning interface (the core LMS screen) of the BICE platform for lesson 'Power Query: Cleaning Messy Data', desktop 1440px. Three-zone layout. LEFT sidebar 280px: course header 'Advanced Excel Masterclass' with back arrow, overall progress bar 68%, search lessons input; collapsible curriculum list: Section 1 'Excel Fundamentals' collapsed with '5/6 done'; Section 2 'Advanced Formulas' collapsed '4/7 done'; Section 3 'Power Query' expanded showing lesson rows: green check circle for completed lessons, play circle in indigo for current lesson highlighted with indigo-50 background, gray outline circle for pending, small lock icon for one locked lesson, each row shows lesson name and duration; Section 4 'Projects' collapsed '2/4 done'. CENTER: top breadcrumb 'Section 3 > Lesson 4' with prev/next lesson buttons; large video player (16:9) playing the lesson with visible timeline at 12:40 of 28:10, controls row (play/pause, volume, playback speed '1.5x', quality '1080p', captions CC, PiP, fullscreen) and NO download button; subtle diagonal semi-transparent watermark text overlay across the video: 'Rahul Sharma | rah***@gmail.com | ID 10234'; below player: lesson title, description paragraph, lesson attachments row with 2 file chips 'powerquery-cheatsheet.pdf' and 'practice-dataset.xlsx' each with download icon; bottom action row: outlined 'Previous' button, indigo 'Mark as Completed' button with check icon. RIGHT panel 320px with tabs Notes / Resources / Q&A: Notes tab active with textarea 'Write your notes for this lesson... (auto-saved)' containing sample note text, 'Save note' button, timestamped note chip '05:12 - Power Query steps'; Resources tab list: PDF and XLSX rows with view/download icons; Q&A tab preview with 2 questions."
+    },
+    {
+      "id": "11-my-notes-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "'My Notes' page of the BICE LMS student app, desktop 1440px, same app shell (sidebar with My Notes active). Content: page header 'My Notes' with subtitle 'Your personal notes across all courses'; toolbar: search input 'Search notes...', course filter dropdown 'All courses', sort dropdown 'Recent first'. Two-pane layout: left list of note cards (title, course tag chip, lesson reference, 2-line preview, edited time, pin icon on one); right editor panel: note title input, breadcrumb chips 'Advanced Excel Masterclass > Power Query > Lesson 4', rich text toolbar (bold, italic, bullet list, highlight), editor area with sample note content, timestamp link '05:12', footer with 'Auto-saved 2 min ago' text, 'Delete' ghost red button and indigo 'Save' button. One note card shows empty-state variant message if no note selected."
+    },
+    {
+      "id": "12-my-resources-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "'My Resources' page of the BICE LMS student app, desktop 1440px, same app shell (sidebar with My Resources active). Content: page header 'My Resources' subtitle 'Practice files, notes and downloads from your enrolled courses'; filter row: course dropdown 'All courses', type dropdown 'All types' (PDF Notes, Cheat Sheets, Practice Files, Templates, Assignments), search input. Resource table/card list grouped by course: group header 'Advanced Excel Masterclass' with rows of resource items: file type icon (red PDF, green XLSX, blue DOC), resource name, type chip, linked lesson 'Power Query: Cleaning Messy Data', size, and action buttons: 'View' outlined button, 'Download' indigo button for downloadable items, 'View only' disabled badge with eye icon for protected items that cannot be downloaded; one row shows lock icon with tooltip 'Unlocks after Lesson 6'. Summary chips at top: 8 PDFs, 4 Practice files, 2 Templates. One group shows collapsed state."
+    },
+    {
+      "id": "13-orders-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "'Orders' page of the BICE LMS student app, desktop 1440px, same app shell (sidebar with Orders active). Content: page header 'Orders & Payments' with subtitle; KPI mini-cards: Total spent 14,997, Orders 4, Refunds 0. Orders table with columns: Order ID (e.g. ORD-2024-0182), Course with thumbnail and title, Date, Amount in INR, Payment method 'UPI / Razorpay', Status pill (Paid green, Pending amber, Failed red, Refunded gray), Actions: 'Invoice' download icon button, 'Get help' link. One row expanded showing Razorpay payment ID 'pay_Qx8Lm2NpKl', receipt download and 'Refund status' timeline. Pagination. Empty state hint for filters showing no results with 'Clear filters' button."
+    },
+    {
+      "id": "14-certificates-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "'Certificates' page of the BICE LMS student app, desktop 1440px, same app shell (sidebar with Certificates active). Content: page header 'Certificates' subtitle 'Earned by completing 100% of a course'; two earned certificate cards side by side designed like elegant certificates: navy border frame, BICE logo, 'Certificate of Completion', student name 'Rahul Sharma' in serif, course name 'Advanced Excel Masterclass', instructor signature line 'CA Rohan Mehta', completion date, unique certificate ID 'BICE-2024-EXC-00124', verified checkmark; actions: 'Download PDF' indigo button, 'Copy verification link' outlined button with link icon. Below: 'Courses close to completion' section with 2 progress rows (Power Query Bootcamp 85%, SQL for Analysts 72%) with note 'Complete all lessons to receive your certificate'. Small explainer card about certificate verification at /verify-certificate/[id]."
+    },
+    {
+      "id": "15-admin-dashboard-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Admin dashboard home of the BICE LMS admin panel, desktop 1440px. App shell: LEFT dark navy sidebar 260px with 'BICE Admin' logo area, nav sections: Overview (Dashboard active with indigo accent), Catalog (Courses, Categories, Lessons), People (Students, Instructors), Sales (Orders, Payments, Coupons), Engagement (Reviews, Announcements, Resources), Insights (Analytics), Settings. Top bar: breadcrumb 'Admin / Dashboard', date range picker chip, notification bell, admin avatar 'Admin' with chevron. Content: title 'Dashboard overview' with subtitle. KPI row of 5 cards: Total Students 1,248 (+42 this month), Total Courses 12, Total Enrollments 3,540, Total Revenue 48,20,000 INR, Monthly Revenue 6,12,400 INR (+18%). Charts row: large revenue trend area chart with month axis (Recharts-style, indigo fill) titled 'Revenue trend (last 12 months)'; donut chart 'Enrollments by category'. Row: 'Recent purchases' table with columns Order ID, Student avatar+name, Course, Amount, Status pill Paid, Date; 'Recent registrations' list with avatar, name, email, time ago; 'Most popular courses' ranked list with mini progress bars of enrollment share and revenue numbers."
+    },
+    {
+      "id": "16-admin-courses-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Admin course management page of the BICE LMS admin panel, desktop 1440px, same dark sidebar admin shell (Catalog > Courses active). Content: header 'Courses' with indigo 'Create course' button and category manager link. Toolbar: search 'Search courses...', filter dropdowns (Category, Status, Instructor), bulk selection actions bar appearing '2 selected: Publish, Unpublish, Delete'. Courses table with thumbnail, course title + slug, category chip, instructor avatar+name, price INR with struck original, enrolled students count, rating, status pill (Published green, Draft gray, Scheduled amber), updated date, row actions kebab menu (Edit, View curriculum, Duplicate, Unpublish, Delete). One row shows 'Processing videos' amber pill. Pagination. Side hint card 'Tip: use the curriculum builder to add sections and lessons.'"
+    },
+    {
+      "id": "17-admin-curriculum-builder-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Admin curriculum builder page for course 'Advanced Excel Masterclass' in the BICE LMS admin panel, desktop 1440px, same dark sidebar admin shell (Catalog > Courses > Curriculum). Header: course title with 'Back to courses' link, status pill Draft, 'Preview as student' outlined button, indigo 'Publish changes' button. Two-column layout. LEFT 60%: sections list with drag handles: Section 1 'Excel Fundamentals' expanded showing header (drag handle, section name editable, '6 lessons - 4h 20m', kebab menu: Rename, Delete) and lesson rows: drag handle, video thumbnail placeholder, lesson title 'Introduction to Excel', duration '12:30', type icon, 'Free preview' toggle switch ON for two lessons, completion rule chip 'Auto (watch 90%)', edit and delete icons; add lesson dashed button at section bottom; Section 2 'Advanced Excel Formulas' collapsed '7 lessons'; '+ Add section' dashed button. RIGHT 40%: lesson editor panel titled 'Edit lesson: Introduction to Excel': video upload dropzone showing an uploaded file with upload progress bar 64% and status 'Processing: transcoding 720p/1080p', note 'Max 2GB, MP4/MOV, direct secure upload'; fields: Lesson title, Description textarea, Duration auto-detected chip '12:30', Resources attachments with 2 file chips and add button, 'Free preview lesson' toggle with helper text 'Students can watch this lesson without purchasing', Completion rule select (Auto on 90% watched / Manual mark complete), Save lesson indigo button and Cancel. Bottom sticky bar: 'Unsaved changes' warning with Discard and Save draft buttons."
+    },
+    {
+      "id": "18-admin-students-orders-desktop",
+      "device": "DESKTOP",
+      "priority": 1,
+      "prompt": "Admin students and orders management pages of the BICE LMS admin panel, desktop 1440px, same dark sidebar admin shell (People > Students active). MAIN: header 'Students' with search, filters (Status, Course, Joined date), 'Export CSV' outlined button. Students table: avatar+name, email, joined date, courses count, overall progress bar, status pill (Active green, Suspended red), kebab actions (View profile, Manually enroll, Revoke enrollment, Suspend). RIGHT: student detail drawer open for 'Rahul Sharma (rahul@gmail.com)': profile header with avatar, badges 'Active since Mar 2024'; stat chips (5 courses, 42 lessons done, 14,997 INR spent); tabs Overview / Courses / Orders: purchased courses list with progress bars; order history rows with amounts and Paid pills; actions row: 'Manually enroll' indigo button, 'Revoke enrollment' outlined red button. Below main table area: secondary header 'Orders & Payments': search, status filter tabs (All, Paid, Pending, Failed, Refunded), orders table: Order ID, student, course, amount INR, Razorpay Payment ID column, status pill, date, kebab with 'Issue refund' action; one failed row highlighted with retry icon note."
+    },
+    {
+      "id": "19-admin-analytics-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "Admin analytics page of the BICE LMS admin panel, desktop 1440px, same dark sidebar admin shell (Insights > Analytics active). Header 'Analytics' with date range picker and 'Export report' button. KPI strip: Revenue 6.1L this month (+18%), New students 142, Course sales 218, Avg. completion rate 71%. Charts grid (Recharts style): large revenue trend area chart by month with two series (Gross revenue, Net after refunds); 'Course sales' horizontal bar chart by course; 'Student registrations' line chart weekly; 'Enrollment trends by category' stacked area chart; 'Top courses table' with conversion rate and revenue columns; 'Completion rates by course' horizontal bars with target line at 80%. Small insight callout cards: 'Excel Masterclass drives 42% of revenue' with sparkline; 'Weekend registrations 2.3x higher' note."
+    },
+    {
+      "id": "20-admin-settings-desktop",
+      "device": "DESKTOP",
+      "priority": 2,
+      "prompt": "Admin settings page of the BICE LMS admin panel, desktop 1440px, same dark sidebar admin shell (Settings active). Header 'Settings'. Left tab list: General, Branding, Payments, Email, Video security, SEO, Advanced. Content shows 'General' active as form sections in cards: Institute profile (Name 'BICE Academy', support email, phone, address fields with logo upload box); Branding section: primary color picker swatch #4F46E5, logo preview, favicon upload; Payments section: Razorpay Key ID field (masked), webhook secret masked field, currency select INR, tax/GST percentage input, 'Test connection' button with green 'Connected' pill; Video security section: concurrent session limit stepper '2', watermark opacity slider 12%, playback token expiry select '30 minutes', 'Allow downloads' toggle OFF with warning note; Session/Security: rate limit inputs, 'Audit log' link; Save bar at bottom sticky with 'Save changes' indigo button and 'Discard'. Show tab 'Email' as inactive label list on the left."
+    },
+    {
+      "id": "21-homepage-mobile",
+      "device": "MOBILE",
+      "priority": 1,
+      "prompt": "Homepage of the BICE LMS public website in MOBILE layout (390px wide, tall scroll). Compact top bar: hamburger menu icon, BICE logo centered, search icon. Hero: headline 'Master Data Skills That Drive Your Career' smaller size, subtext, two stacked full-width buttons 'Explore Courses' (indigo) and 'Get Started' (outlined), hero illustration below. Stats band as 2x2 grid cards (12,000+ students, 25+ courses, 4.8 rating, 96% support). 'Featured Courses' horizontal scroll snap row of course cards with thumbnail, title, rating, price; 'Browse all' link. Categories as horizontal chips with icons. 'Why BICE' stacked benefit cards with icons. One testimonial card with avatar and stars. FAQ accordion 3 items. Newsletter band with email input and full-width subscribe button. Footer as accordion link groups plus social icons row."
+    },
+    {
+      "id": "22-course-detail-mobile",
+      "device": "MOBILE",
+      "priority": 2,
+      "prompt": "Course landing page 'Advanced Excel Masterclass' of the BICE LMS public website in MOBILE layout (390px). Top bar with back arrow, share and wishlist heart icons. Course hero: category badge, title, rating row 4.8 (1,240 reviews) with students count, promo video player with play button full-width. Sticky bottom purchase bar: price '4,999' with '9,999' struck, '50% OFF' chip, full-width indigo 'Enroll Now' button. Content sections stacked: 'What you'll learn' 2-column checklist compact, skills chips, 'Course content' accordion with Section 1 expanded showing lessons with play/lock icons and 'Free Preview' pills, collapsed sections 2-4 with lesson counts; instructor mini card with avatar and name; reviews summary with rating breakdown bars and 2 review cards; FAQ accordion; 'This course includes' icon list. Everything single column, comfortable tap targets."
+    },
+    {
+      "id": "23-learn-interface-mobile",
+      "device": "MOBILE",
+      "priority": 1,
+      "prompt": "Course learning interface of the BICE LMS in MOBILE layout (390px), optimized learning screen. Top bar: back arrow, course title 'Advanced Excel Masterclass' truncated, progress chip '68%'. Full-width video player 16:9 playing lesson with timeline at 12:40/28:10, compact controls (play, speed 1.5x, quality, fullscreen) and NO download button, subtle diagonal watermark overlay 'Rahul Sharma | ID 10234'. Below: lesson breadcrumb chip 'Section 3 - Lesson 4', lesson title 'Power Query: Cleaning Messy Data', description 2 lines, attachment chips 'powerquery-cheatsheet.pdf' and 'practice-dataset.xlsx' with download icons. Action row: outlined 'Previous' icon button, full-width indigo 'Mark as Completed' button, outlined 'Next' icon button. Bottom sheet partially visible: pull-up handle labeled 'Course content', showing Section 3 expanded lesson list with completed green checks, current indigo highlight, locked lesson lock icons and durations. Floating bottom-right circular notes button with pencil icon. Bottom tab bar: Course home, Notes, Resources, Q&A."
+    },
+    {
+      "id": "24-student-dashboard-mobile",
+      "device": "MOBILE",
+      "priority": 1,
+      "prompt": "Student dashboard of the BICE LMS app in MOBILE layout (390px). Top bar: BICE logo, notification bell with badge 3, avatar. Greeting header 'Welcome back, Rahul' with subtitle 'You completed 4 lessons this week'. Continue-learning hero card: course thumbnail strip 'Advanced Excel Masterclass', progress ring 68%, last lesson name, full-width indigo 'Resume Lesson' button. 2x2 stat cards: Courses 5, Lessons done 42, Hours 36.5, Certificates 1. 'In Progress' section list rows with thumbnail, title, progress bar percent, chevron. 'Announcements' card with 2 items. Bottom navigation bar with 5 items and icons: Home (active indigo), My Courses, Notes, Resources, Profile."
+    },
+    {
+      "id": "25-student-dashboard-tablet",
+      "device": "TABLET",
+      "priority": 2,
+      "prompt": "Student dashboard of the BICE LMS app in TABLET layout (834px wide landscape). Responsive adaptation between mobile and desktop: condensed left icon-only sidebar 72px with icons and labels on active item (Dashboard active, My Courses, My Notes, My Resources, Certificates, Orders, Profile), top bar with search and avatar. Content adapts: welcome banner, KPI cards in 2x2 grid, continue-learning hero card with progress ring, two-column area: 'In Progress' course list left and 'Announcements' right. Cards slightly larger touch targets, 16px gutters."
+    }
+  ]
+}

@@ -1,0 +1,1174 @@
+# MASTER PROJECT PROMPT: COMPLETE LMS PLATFORM
+
+You are a senior full-stack engineer, software architect, UI/UX designer, security engineer, and product developer.
+
+Your task is to design, architect, and develop a complete, production-ready Learning Management System (LMS) for a professional coaching institute.
+
+This is NOT a simple course-selling website. Build a complete educational platform where instructors can publish courses, students can purchase them, and enrolled students can access protected educational content through their personal dashboards.
+
+The entire project must be developed as ONE unified Next.js application.
+
+Do not split the frontend, backend, admin panel, or API into separate applications.
+
+---
+
+# 1. TECHNOLOGY STACK
+
+Use the following technology stack:
+
+### Core Framework
+- Next.js (latest stable version)
+- TypeScript
+- App Router
+- React
+- Tailwind CSS
+
+### Backend
+- Next.js Route Handlers
+- Server Actions where appropriate
+- REST API architecture
+- API versioning: `/api/v1/`
+- Zod for request validation
+
+### Authentication
+- Firebase Authentication
+- Email/password authentication
+- Google authentication
+- Email verification
+- Password reset
+- Secure session management using Firebase Admin SDK and HTTP-only cookies.
+
+### Database
+- Use a database abstraction layer so the database provider can be changed later.
+- Design the data layer to support Firebase Firestore initially.
+- Keep business logic independent of database implementation.
+
+### File and Media Storage
+- Cloudinary initially.
+- All file uploads must go through secure server-side upload workflows.
+- Create a storage abstraction layer so Cloudinary can be replaced with Hostinger storage in the future without rewriting application logic.
+
+### Payments
+- Razorpay integration.
+- Server-side payment order creation.
+- Server-side payment verification.
+- Webhook signature verification.
+- Automatic enrollment after confirmed successful payment.
+- Never trust payment status received directly from the frontend.
+
+### Other Libraries
+- React Hook Form
+- Zod
+- Lucide React
+- Recharts for analytics
+- A suitable video player supporting HLS playback
+- A notification/toast library
+- A suitable rich-text editor for course content.
+
+Use stable, production-ready packages.
+
+---
+
+# 2. APPLICATION ARCHITECTURE
+
+Everything must exist inside one Next.js application.
+
+There must be no separately deployed frontend, backend, or admin application.
+
+Use the following URL structure:
+
+Public website:
+- `/`
+- `/courses`
+- `/courses/[slug]`
+- `/about`
+- `/contact`
+- `/faq`
+- `/privacy-policy`
+- `/terms`
+- `/refund-policy`
+
+Authentication:
+- `/login`
+- `/register`
+- `/forgot-password`
+- `/verify-email`
+
+Student LMS:
+- `/dashboard`
+- `/my-courses`
+- `/learn/[courseSlug]`
+- `/learn/[courseSlug]/[lessonId]`
+- `/my-notes`
+- `/my-resources`
+- `/certificates`
+- `/profile`
+- `/settings`
+- `/orders`
+
+Admin:
+- `/admin`
+- `/admin/dashboard`
+- `/admin/courses`
+- `/admin/courses/create`
+- `/admin/courses/[id]/edit`
+- `/admin/categories`
+- `/admin/lessons`
+- `/admin/students`
+- `/admin/instructors`
+- `/admin/orders`
+- `/admin/payments`
+- `/admin/coupons`
+- `/admin/reviews`
+- `/admin/resources`
+- `/admin/announcements`
+- `/admin/analytics`
+- `/admin/settings`
+
+REST API:
+- `/api/v1/auth/*`
+- `/api/v1/courses/*`
+- `/api/v1/lessons/*`
+- `/api/v1/enrollments/*`
+- `/api/v1/payments/*`
+- `/api/v1/webhooks/*`
+- `/api/v1/users/*`
+- `/api/v1/resources/*`
+- `/api/v1/progress/*`
+- `/api/v1/admin/*`
+
+Organize the source code using a clean, scalable folder structure.
+
+Keep public routes, student routes, and admin routes properly separated through route groups and shared layouts where appropriate.
+
+---
+
+# 3. DESIGN AND USER EXPERIENCE
+
+Create a premium, professional educational platform.
+
+Design inspiration:
+- Modern SaaS dashboards.
+- Premium online learning platforms.
+- Clean educational interfaces.
+- Professional corporate training websites.
+
+The design must feel trustworthy, modern, polished, and easy to navigate.
+
+Requirements:
+- Fully responsive.
+- Mobile-first layouts.
+- Desktop, tablet, and mobile optimization.
+- Consistent design system.
+- Beautiful typography.
+- Proper spacing.
+- Subtle animations.
+- Smooth transitions.
+- Professional icons.
+- Skeleton loading states.
+- Empty states.
+- Error states.
+- Success states.
+- Toast notifications.
+- Accessible components.
+- Dark/light mode support.
+
+Avoid excessive gradients, unnecessary animations, oversized components, and generic AI-generated website aesthetics.
+
+Create reusable UI components and maintain a consistent visual language throughout the application.
+
+---
+
+# 4. PUBLIC WEBSITE
+
+Build a complete marketing and course-selling website.
+
+### Homepage
+
+Include:
+
+1. Professional navigation bar.
+2. Hero section with compelling headline.
+3. Short description of the coaching institute.
+4. CTA buttons:
+   - Explore Courses
+   - Get Started
+5. Featured courses.
+6. Popular courses.
+7. Course categories.
+8. Why Learn With Us section.
+9. Learning benefits.
+10. Instructor introduction.
+11. Student testimonials.
+12. Student success stories.
+13. Statistics section.
+14. Frequently asked questions.
+15. Newsletter subscription.
+16. Footer with all important links.
+
+All content should be manageable from the admin dashboard wherever practical.
+
+### Course Listing Page
+
+Include:
+- Course cards.
+- Course thumbnail.
+- Course title.
+- Instructor.
+- Short description.
+- Course price.
+- Original price.
+- Discount percentage.
+- Course rating.
+- Number of students.
+- Course duration.
+- Total lessons.
+- Beginner/intermediate/advanced level.
+
+Filters:
+- Category.
+- Price.
+- Difficulty.
+- Rating.
+- Duration.
+
+Sorting:
+- Popularity.
+- Newest.
+- Price low to high.
+- Price high to low.
+- Highest rated.
+
+Search courses by title, description, and relevant tags.
+
+### Individual Course Landing Page
+
+This page is extremely important.
+
+Students must be able to understand exactly what they are purchasing before paying.
+
+Include:
+
+1. Course title.
+2. Course subtitle.
+3. Course promotional video or preview.
+4. Course thumbnail.
+5. Instructor information.
+6. Course description.
+7. Learning objectives.
+8. Skills students will acquire.
+9. Prerequisites.
+10. Target audience.
+11. Difficulty level.
+12. Course duration.
+13. Total sections.
+14. Total lessons.
+15. Total video duration.
+16. Course pricing.
+17. Discount pricing.
+18. Purchase button.
+19. Add to wishlist.
+20. Student reviews and ratings.
+21. Frequently asked questions.
+
+### Course Curriculum Preview
+
+Display the complete course structure BEFORE purchase.
+
+Example:
+
+Course: Advanced Excel Masterclass
+
+Section 1: Excel Fundamentals
+- Introduction to Excel
+- Understanding the Excel interface
+- Essential keyboard shortcuts
+- Working with tables
+
+Section 2: Advanced Excel Formulas
+- XLOOKUP
+- INDEX and MATCH
+- SUMIFS and COUNTIFS
+- IF, IFS and nested conditions
+- Dynamic array formulas
+- LET and LAMBDA
+
+Section 3: Power Query
+- Introduction to Power Query
+- Importing external data
+- Data cleaning
+- Data transformation
+- Combining datasets
+- Automating repetitive tasks
+
+Section 4: Practical Projects
+- Sales dashboard
+- Business reporting
+- Automated data cleaning project
+
+Show:
+- Section names.
+- Lesson names.
+- Lesson durations.
+- Preview labels for free lessons.
+- Locked labels for paid lessons.
+
+Students must be able to expand and collapse curriculum sections.
+
+Only free preview lessons should be playable without purchasing the course.
+
+---
+
+# 5. AUTHENTICATION AND USER ACCOUNTS
+
+Implement Firebase Authentication.
+
+Features:
+- Email/password registration.
+- Google login.
+- Email verification.
+- Forgot password.
+- Reset password.
+- Secure logout.
+- Persistent sessions.
+- Profile management.
+- Profile picture.
+- Name and email.
+- Phone number.
+- Account settings.
+
+Use secure server-side session validation.
+
+IMPORTANT:
+Never trust user roles, enrollment status, or permissions provided by frontend state.
+
+All protected operations must verify the authenticated user on the server.
+
+---
+
+# 6. STUDENT DASHBOARD
+
+Create a complete student learning dashboard.
+
+Dashboard overview:
+
+- Welcome message.
+- Enrolled courses.
+- Recently accessed courses.
+- Continue learning.
+- Overall learning progress.
+- Completed lessons.
+- Pending lessons.
+- Certificates earned.
+- Recent announcements.
+
+### My Courses
+
+Display all purchased courses.
+
+Each course card should show:
+- Thumbnail.
+- Course title.
+- Instructor.
+- Progress percentage.
+- Completed lessons.
+- Total lessons.
+- Last accessed date.
+- Continue Learning button.
+
+Provide filtering:
+- All courses.
+- In progress.
+- Completed.
+
+### Learning Interface
+
+This is the core of the platform.
+
+Build a professional LMS learning environment.
+
+Layout:
+
+LEFT SIDEBAR:
+- Course curriculum.
+- Expandable sections.
+- Lesson names.
+- Lesson completion indicators.
+- Current lesson highlight.
+- Locked/unlocked states.
+
+MAIN CONTENT:
+- Video player.
+- Lesson title.
+- Lesson description.
+- Lesson resources.
+- Notes section.
+- Previous lesson.
+- Next lesson.
+- Mark as completed.
+
+RIGHT PANEL (optional on desktop):
+- Lesson resources.
+- Notes.
+- Course progress.
+
+Mobile users should receive an optimized layout with collapsible curriculum navigation.
+
+### Learning Progress
+
+Track:
+- Lesson started.
+- Video progress.
+- Last watched position.
+- Lesson completed.
+- Course completion percentage.
+- Last accessed lesson.
+
+Automatically save progress.
+
+Allow students to resume videos from where they stopped.
+
+Implement configurable lesson completion rules.
+
+---
+
+# 7. VIDEO SECURITY AND PROTECTED PLAYBACK
+
+This is one of the most important requirements.
+
+Students must watch purchased course videos directly on the website.
+
+Do not provide direct video download links.
+
+Implement a layered video protection system.
+
+### Required protections
+
+1. Authenticated playback.
+2. Server-side enrollment verification.
+3. Signed, expiring playback URLs or tokens.
+4. Short-lived playback authorization.
+5. Secure video delivery.
+6. Prevent direct access to private media URLs.
+7. No video URLs exposed in public API responses.
+8. No download buttons.
+9. Disable player download controls where supported.
+10. Restrict playback to authorized lessons.
+11. Validate authorization on every playback request.
+12. Rate limiting on playback authorization endpoints.
+13. Session/device tracking.
+14. Configurable concurrent session limits.
+15. Dynamic student watermark overlay.
+
+### Dynamic Watermark
+
+Display a subtle, moving watermark over the video.
+
+Include:
+- Student name.
+- Student email (partially masked where appropriate).
+- Student ID or unique identifier.
+
+The watermark should move periodically to make simple cropping more difficult.
+
+### Video Player
+
+Build a professional video player with:
+
+- Play/pause.
+- Volume control.
+- Playback speed.
+- Fullscreen.
+- Picture-in-picture where appropriate.
+- Quality selection when supported.
+- Timeline.
+- Current timestamp.
+- Duration.
+- Resume playback.
+- Captions/subtitles where available.
+
+Disable right-click on the video player as a deterrent, but do not treat this as a security mechanism.
+
+### Important Storage Architecture
+
+Cloudinary is the initial storage provider.
+
+However, design the video delivery system around a VideoProvider abstraction.
+
+The application should support future migration to:
+- Cloudinary.
+- Hostinger storage.
+- Other compatible video hosting/CDN solutions.
+
+IMPORTANT TECHNICAL SECURITY REQUIREMENT:
+
+Ordinary private files on Cloudinary with hidden URLs are NOT sufficient protection.
+
+Use authenticated/signed delivery and ensure the chosen delivery configuration actually supports the required access restrictions.
+
+Prefer private HLS streaming with protected manifests and segments where supported.
+
+Do not claim that browser playback makes downloading or screen recording impossible.
+
+If the selected Cloudinary configuration cannot securely support protected streaming, clearly identify the limitation and design the VideoProvider interface so a proper protected streaming provider can be integrated later.
+
+Never silently downgrade security.
+
+---
+
+# 8. NOTES AND STUDY MATERIALS
+
+Each course should support educational resources.
+
+Resource types:
+
+1. PDF notes.
+2. Cheat sheets.
+3. Excel practice files.
+4. Power Query practice datasets.
+5. Templates.
+6. Assignments.
+7. Reference documents.
+8. Additional reading material.
+
+### Student Resource Interface
+
+Create a dedicated resource section inside each course.
+
+Organize resources by:
+- Course.
+- Section.
+- Lesson.
+- Resource type.
+
+Students should be able to:
+- View available resources.
+- Preview PDFs where supported.
+- Download permitted resources.
+- Open external learning references.
+
+Admin must be able to configure whether each resource is:
+- Downloadable.
+- View-only.
+- Available after a particular lesson.
+- Available only after course purchase.
+
+Do not expose resources belonging to courses the student has not purchased.
+
+### My Notes
+
+Students should have a personal notes feature.
+
+Allow:
+- Creating notes.
+- Editing notes.
+- Deleting notes.
+- Associating notes with courses.
+- Associating notes with lessons.
+- Searching notes.
+
+Automatically save notes.
+
+---
+
+# 9. RAZORPAY PAYMENT INTEGRATION
+
+Implement complete Razorpay integration.
+
+Features:
+- Course purchase.
+- Secure order creation.
+- Payment checkout.
+- Payment verification.
+- Payment failure handling.
+- Webhook handling.
+- Refund status tracking.
+- Payment history.
+- Order history.
+- Invoice/receipt generation.
+- Coupon support.
+
+### Payment Flow
+
+1. Student selects a course.
+2. Server checks course availability and current price.
+3. Server creates a Razorpay order.
+4. Frontend opens Razorpay Checkout.
+5. Student completes payment.
+6. Server verifies the payment signature.
+7. Razorpay webhook independently confirms payment status.
+8. Create enrollment only after verified payment.
+9. Show course in student dashboard.
+10. Send purchase confirmation.
+
+Prevent:
+- Duplicate orders.
+- Duplicate enrollments.
+- Client-side price manipulation.
+- Fake payment-success requests.
+- Webhook replay attacks.
+- Unauthorized refunds.
+
+Support:
+- INR.
+- Indian payment methods supported by Razorpay.
+
+Never expose Razorpay secret keys in frontend code.
+
+---
+
+# 10. ADMIN DASHBOARD
+
+Build a complete admin control panel at `/admin`.
+
+Only authorized admin accounts should access it.
+
+Implement server-side role-based access control.
+
+### Admin Dashboard
+
+Display:
+
+- Total students.
+- Total courses.
+- Total enrollments.
+- Total revenue.
+- Monthly revenue.
+- Recent purchases.
+- Recent registrations.
+- Most popular courses.
+- Course completion statistics.
+- Payment statistics.
+
+Use charts and tables.
+
+### Course Management
+
+Admin can:
+
+- Create courses.
+- Edit courses.
+- Delete courses.
+- Publish/unpublish courses.
+- Create course categories.
+- Set course pricing.
+- Set discount pricing.
+- Upload thumbnails.
+- Add descriptions.
+- Add learning objectives.
+- Add prerequisites.
+- Assign instructors.
+- Configure difficulty.
+- Configure course duration.
+- Add tags.
+- Configure SEO metadata.
+
+### Curriculum Builder
+
+Build an intuitive curriculum editor.
+
+Admin can:
+
+- Create sections.
+- Rename sections.
+- Delete sections.
+- Reorder sections.
+- Create lessons.
+- Reorder lessons using drag and drop.
+- Upload videos.
+- Add lesson descriptions.
+- Add lesson notes.
+- Add attachments.
+- Set lesson duration.
+- Mark lessons as free previews.
+- Lock/unlock lessons.
+- Configure lesson completion rules.
+
+Support draft saving and publishing.
+
+### Video Management
+
+Admin should be able to:
+
+- Upload videos.
+- View upload progress.
+- Replace videos.
+- Delete videos.
+- Preview uploaded videos.
+- Assign videos to lessons.
+- View processing status.
+- Manage subtitles where supported.
+
+Do not upload large video files through memory-intensive Next.js API routes.
+
+Use secure direct uploads to Cloudinary with server-generated upload signatures and appropriate size/type restrictions.
+
+### Student Management
+
+Admin can:
+
+- View students.
+- Search students.
+- Filter students.
+- View student profiles.
+- View purchased courses.
+- View learning progress.
+- View order history.
+- Manually enroll students.
+- Revoke enrollments.
+- Suspend accounts where appropriate.
+
+### Order and Payment Management
+
+Display:
+- Order ID.
+- Student.
+- Course.
+- Amount.
+- Payment status.
+- Razorpay payment ID.
+- Purchase date.
+
+Allow searching and filtering.
+
+### Coupon Management
+
+Admin can create coupons with:
+
+- Coupon code.
+- Percentage discount.
+- Fixed discount.
+- Start date.
+- Expiration date.
+- Usage limit.
+- Per-user usage limit.
+- Applicable courses.
+- Minimum order value.
+- Active/inactive status.
+
+### Instructor Management
+
+Allow admins to:
+- Create instructors.
+- Edit instructor profiles.
+- Upload profile images.
+- Add biographies.
+- Assign instructors to courses.
+
+### Announcements
+
+Admin can publish:
+- Platform announcements.
+- Course-specific announcements.
+- Important updates.
+- Maintenance notifications.
+
+Display announcements to relevant students.
+
+### Reviews
+
+Admin can:
+- View reviews.
+- Moderate reviews.
+- Approve or hide reviews.
+- Respond to reviews where supported.
+
+### Analytics
+
+Include:
+- Revenue trends.
+- Course sales.
+- Student registrations.
+- Popular courses.
+- Enrollment trends.
+- Course completion rates.
+
+### Settings
+
+Allow admin to manage:
+- Institute name.
+- Logo.
+- Website branding.
+- Contact information.
+- Social links.
+- Currency.
+- Tax settings.
+- Payment settings.
+- Email settings.
+- Video security settings.
+- Session limits.
+- SEO settings.
+
+---
+
+# 11. EMAIL AND NOTIFICATIONS
+
+Create a notification system.
+
+Student notifications:
+- Successful enrollment.
+- Payment confirmation.
+- Course announcements.
+- New course updates.
+- Certificate earned.
+- Important account notifications.
+
+Admin notifications:
+- New student registration.
+- New course purchase.
+- Failed payment.
+- New review.
+- Important system alerts.
+
+Prepare email notification templates.
+
+Keep the email provider configurable so one can be integrated later.
+
+---
+
+# 12. CERTIFICATES
+
+Implement course completion certificates.
+
+Features:
+- Configurable completion requirements.
+- Automatic certificate generation.
+- Student name.
+- Course name.
+- Instructor name.
+- Completion date.
+- Unique certificate ID.
+- Institute branding.
+- Downloadable PDF.
+- Certificate verification page.
+
+Public verification URL:
+
+`/verify-certificate/[certificateId]`
+
+Only issue certificates after the configured completion requirements are satisfied.
+
+---
+
+# 13. DATABASE DESIGN
+
+Design a scalable database schema.
+
+Include entities/collections for:
+
+- Users.
+- Roles.
+- UserProfiles.
+- Courses.
+- Categories.
+- Instructors.
+- Sections.
+- Lessons.
+- LessonResources.
+- Enrollments.
+- LessonProgress.
+- CourseProgress.
+- Orders.
+- Payments.
+- Refunds.
+- Coupons.
+- CouponRedemptions.
+- Reviews.
+- StudentNotes.
+- Announcements.
+- Notifications.
+- Certificates.
+- VideoSessions.
+- AuditLogs.
+- PlatformSettings.
+
+Define relationships, indexes, validation rules, and access policies.
+
+Avoid duplicate data where possible.
+
+Use proper timestamps and soft deletion where appropriate.
+
+Never store sensitive payment credentials.
+
+Implement data-access functions through a repository/service layer instead of directly scattering database queries throughout components.
+
+---
+
+# 14. SECURITY REQUIREMENTS
+
+Security must be implemented throughout the application.
+
+Mandatory:
+
+- Server-side authentication.
+- Server-side authorization.
+- Role-based access control.
+- Enrollment verification.
+- Input validation.
+- Output sanitization.
+- Secure HTTP-only cookies.
+- CSRF protection where applicable.
+- Rate limiting.
+- Secure file uploads.
+- Upload MIME/type validation.
+- Upload size limits.
+- Razorpay webhook verification.
+- Secure environment variables.
+- Protection against IDOR vulnerabilities.
+- Protection against privilege escalation.
+- Protection against mass assignment.
+- Audit logging for sensitive admin actions.
+- Secure error handling.
+- No secrets in client bundles.
+- No private API data exposed publicly.
+
+Create separate authorization rules for:
+- Public visitors.
+- Authenticated students.
+- Enrolled students.
+- Instructors.
+- Administrators.
+- Super administrators.
+
+Do not rely on hiding frontend buttons to enforce permissions.
+
+---
+
+# 15. SEO AND PERFORMANCE
+
+Implement:
+
+- Dynamic metadata.
+- SEO-friendly URLs.
+- Sitemap.
+- Robots.txt.
+- Open Graph metadata.
+- Course structured data where appropriate.
+- Image optimization.
+- Lazy loading.
+- Server-side rendering where appropriate.
+- Caching strategies.
+- Pagination.
+- Efficient database queries.
+- Responsive image sizes.
+- Performance monitoring hooks.
+
+Public course pages should be indexable.
+
+Private student pages and admin pages must not be indexed.
+
+---
+
+# 16. DEVELOPMENT AND PROJECT ORGANIZATION
+
+Keep the project maintainable.
+
+Suggested architecture:
+
+- `src/app/` - Next.js routes and layouts.
+- `src/components/` - Reusable UI components.
+- `src/features/` - Feature-specific modules.
+- `src/lib/` - Shared utilities.
+- `src/services/` - Business logic.
+- `src/repositories/` - Data-access abstraction.
+- `src/providers/` - Firebase, payment, storage and video providers.
+- `src/hooks/` - Custom hooks.
+- `src/types/` - TypeScript definitions.
+- `src/validators/` - Zod schemas.
+- `src/config/` - Application configuration.
+- `src/middleware/` - Shared middleware utilities.
+- `public/` - Static assets.
+
+Keep the actual Next.js middleware/proxy implementation compatible with the selected Next.js version.
+
+Create clear environment variable documentation.
+
+Provide:
+- `.env.example`
+- README.md
+- Installation instructions.
+- Firebase configuration instructions.
+- Razorpay configuration instructions.
+- Cloudinary configuration instructions.
+- Database setup instructions.
+- Deployment instructions.
+
+Never hardcode API keys or credentials.
+
+---
+
+# 17. IMPORTANT IMPLEMENTATION RULES
+
+Follow these rules throughout development:
+
+1. Build a complete, working application, not a collection of static mockup pages.
+2. Every button must perform its intended action.
+3. Every form must have working validation and submission.
+4. Every dashboard must use actual database-backed information.
+5. Do not use hardcoded demo statistics in production components.
+6. Do not create fake payment success flows.
+7. Do not simulate successful enrollment.
+8. Do not expose private video URLs.
+9. Do not trust frontend authorization.
+10. Use reusable components.
+11. Use proper TypeScript types.
+12. Handle loading, error, and empty states.
+13. Make every page responsive.
+14. Keep all business logic modular.
+15. Avoid unnecessary dependencies.
+16. Do not leave critical features as TODOs.
+17. Do not silently replace requested integrations with mock implementations.
+
+If credentials are unavailable, build the actual integration code and clearly document the environment variables required to activate it.
+
+For features that cannot be activated without credentials, provide a clearly marked setup state rather than pretending they work.
+
+---
+
+# 18. IMPLEMENTATION PHASES
+
+Do not attempt to generate the entire application as one massive, unstructured code dump.
+
+Work in structured phases.
+
+### Phase 1: Foundation
+- Project initialization.
+- Next.js configuration.
+- TypeScript configuration.
+- Tailwind setup.
+- Folder architecture.
+- Shared UI components.
+- Design system.
+- Environment configuration.
+
+### Phase 2: Authentication and Database
+- Firebase integration.
+- Session management.
+- User profiles.
+- Roles and permissions.
+- Database abstraction.
+- Database schema.
+
+### Phase 3: Public Website
+- Homepage.
+- Course listings.
+- Course details.
+- Curriculum previews.
+- Instructor profiles.
+- SEO.
+
+### Phase 4: Student LMS
+- Student dashboard.
+- My courses.
+- Learning interface.
+- Curriculum navigation.
+- Video playback.
+- Progress tracking.
+- Notes.
+- Resources.
+
+### Phase 5: Payment System
+- Razorpay integration.
+- Orders.
+- Verification.
+- Webhooks.
+- Enrollment automation.
+- Payment history.
+
+### Phase 6: Admin Dashboard
+- Dashboard.
+- Course management.
+- Curriculum builder.
+- Video management.
+- Student management.
+- Orders.
+- Coupons.
+- Analytics.
+- Settings.
+
+### Phase 7: Advanced Features
+- Certificates.
+- Reviews.
+- Announcements.
+- Notifications.
+- Email templates.
+
+### Phase 8: Security and Optimization
+- Authorization audit.
+- Video security audit.
+- Payment security audit.
+- API validation.
+- Performance optimization.
+- SEO verification.
+- Responsive testing.
+
+### Phase 9: Final QA
+Test the complete user journey:
+
+1. Visitor opens the website.
+2. Visitor explores available courses.
+3. Visitor opens a course.
+4. Visitor explores the full curriculum.
+5. Visitor registers.
+6. Student purchases a course.
+7. Razorpay confirms payment.
+8. Student gets enrolled.
+9. Student opens the learning dashboard.
+10. Student watches a protected lesson.
+11. Student resumes the lesson later.
+12. Student accesses notes and resources.
+13. Student completes the course.
+14. Student receives a certificate.
+15. Admin manages the course and student.
+
+Test failure scenarios too:
+- Failed payments.
+- Expired sessions.
+- Unauthorized course access.
+- Invalid playback tokens.
+- Invalid webhooks.
+- Duplicate payment callbacks.
+- Unauthorized admin access.
+- Invalid file uploads.
+
+---
+
+# 19. FINAL DELIVERABLE
+
+The final result must be a fully functional, production-oriented LMS inside a single Next.js repository.
+
+The platform must have:
+
+- A beautiful public-facing website.
+- A complete course marketplace.
+- A student learning management system.
+- A protected video learning environment.
+- A course curriculum builder.
+- A notes and resources system.
+- Razorpay payment integration.
+- Firebase authentication.
+- Cloudinary storage.
+- A complete admin dashboard.
+- Analytics and reporting.
+- Certificate generation.
+- Secure REST APIs.
+- A scalable architecture for future storage migration.
+
+Before declaring completion, provide:
+
+1. Completed feature checklist.
+2. Project folder structure.
+3. Environment variables required.
+4. External service setup instructions.
+5. Database configuration.
+6. Deployment instructions.
+7. Known limitations.
+8. Security considerations.
+9. QA results.
+10. Features that still require external credentials.
+
+**MOST IMPORTANT:** Prioritize functionality, security, maintainability, and user experience over simply generating a large amount of code.
+
+Build this as a real educational business platform that can handle actual students, real payments, and paid educational content.
+
+Start with Phase 1. Establish the architecture and design system before proceeding through the remaining phases. Maintain a project progress document so development can resume reliably across multiple sessions.

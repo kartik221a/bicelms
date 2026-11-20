@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3323cc", "outline": "#777587", "secondary-fixed-dim": "#bec6e0", "surface": "#f7f9fb", "inverse-surface": "#2d3133", "on-primary-container": "#dad7ff", "on-background": "#191c1e", "tertiary": "#5e4400", "on-tertiary-fixed-variant": "#5c4300", "on-error-container": "#93000a", "surface-dim": "#d8dadc", "error": "#ba1a1a", "primary-fixed-dim": "#c3c0ff", "surface-tint": "#4d44e3", "primary-container": "#4f46e5", "background": "#f7f9fb", "inverse-on-surface": "#eff1f3", "surface-container-highest": "#e0e3e5", "surface-bright": "#f7f9fb", "on-tertiary": "#ffffff", "on-secondary-container": "#5c647a", "surface-variant": "#e0e3e5", "surface-container-low": "#f2f4f6", "tertiary-fixed-dim": "#f9bd22", "primary-fixed": "#e2dfff", "secondary-container": "#dae2fd", "on-secondary-fixed": "#131b2e", "secondary": "#565e74", "on-secondary": "#ffffff", "outline-variant": "#c7c4d8", "surface-container": "#eceef0", "primary": "#3525cd", "secondary-fixed": "#dae2fd", "surface-container-lowest": "#ffffff", "surface-container-high": "#e6e8ea", "error-container": "#ffdad6", "on-primary": "#ffffff", "tertiary-container": "#7b5b00", "on-error": "#ffffff", "on-surface": "#191c1e", "on-surface-variant": "#464555", "on-primary-fixed": "#0f0069", "inverse-primary": "#c3c0ff", "on-tertiary-container": "#ffd681", "tertiary-fixed": "#ffdf9f", "on-tertiary-fixed": "#261a00", "on-secondary-fixed-variant": "#3f465c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xl": "2rem", "gutter": "1.5rem", "space-2xl": "3rem", "space-lg": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, "fontFamily": { "code-inline": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg": [ "Inter" ], "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "display-hero": [ "Inter" ], "body-sm": [ "Inter" ], "headline-md": [ "Inter" ], "label-sm": [ "Inter" ], "headline-sm": [ "Inter" ], "display-hero-mobile": [ "Inter" ] }, "fontSize": { "code-inline": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="sticky top-0 z-50 w-full bg-[#0F172A] border-b border-slate-800 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="BICE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDYpONvWfVyobwN5vLs56N2-1khNHD2gllRcEgIS5e73aKVJfNJgnTp6_ihKyS13W-E7TclAE30H_BtB2GCqEdRUNwvYOyymzLIZ6CNmNUJheWJ1Aqve3XeGHxrDJ16YvlFwj7hwdiQ6WLGplVuXT1tHAS9AjQh08dxt9A8QI0HVE4E5_bMupu3FCSWRI9-ggCy88XeUPSBF-4EAh75X9w_80wc8aIQYK5Lu7J4IgJ5uhczsTvl6Bs1rgg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-white">BICE LMS</span></div><nav class="hidden md:flex items-center gap-8" data-active-classes="text-white font-semibold border-b-2 border-primary-container pb-0.5"><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="home" href="#">Home</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="courses" href="#">Courses</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="about" href="#">About</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-4"><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors px-3 py-1.5 rounded-lg" data-path="login" href="#">Log in</a><a class="font-label-md text-label-md bg-primary-container hover:bg-primary text-on-primary font-medium px-4 py-2 rounded-lg transition-colors shadow-sm" data-path="register" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full bg-surface min-h-[calc(100vh-4rem)] pt-16"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow & Breadcrumbs Context -->
+<div class="w-full bg-surface-bright py-4 border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<nav aria-label="Breadcrumbs" class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1.5 font-medium" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors font-medium" href="#">Courses</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors font-medium" href="#">Data &amp; Financial Modeling</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold truncate max-w-xs sm:max-w-sm md:max-w-none">Advanced Excel Masterclass</span>
+</nav>
+</div>
+</div>
+<!-- Hero Course Introduction Banner -->
+<section class="w-full bg-surface-bright pb-10 border-b border-outline-variant/40 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Main Column Header Context -->
+<div class="lg:col-span-8 flex flex-col gap-4">
+<!-- Tag Cluster -->
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px]">finance_chip</span>
+              Data &amp; Financial Modeling
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wide">
+              Intermediate
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+              BICE Certified Track
+            </span>
+</div>
+<!-- Course Title -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight font-extrabold text-balance">
+            Advanced Excel Masterclass
+          </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            From spreadsheet basics to automation-grade Excel for enterprise analysts. Master nested lookups, automated Power Query ETL pipelines, financial modeling architectures, and C-Suite presentation dashboards.
+          </p>
+<!-- Metric & Metadata Bar -->
+<div class="flex flex-wrap items-center gap-y-3 gap-x-6 pt-2 text-body-sm font-body-sm text-on-surface-variant">
+<!-- Rating -->
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-md">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">4.8</span>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<a class="text-primary hover:underline font-medium" href="#reviews">(1,240 reviews)</a>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">group</span>
+<span class="text-on-surface font-semibold">8,420</span> students enrolled
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pace</span>
+<span>32 hours on-demand • 96 lessons</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">update</span>
+<span>Updated October 2024</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">translate</span>
+<span>English <span class="text-outline font-normal">[CC: EN, ES]</span></span>
+</div>
+</div>
+<!-- Lead Instructor Lockup -->
+<div class="flex items-center gap-3 pt-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high shrink-0 ring-2 ring-primary/20">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of CA Rohan Mehta in a refined dark charcoal corporate blazer smiling with confidence against a clean slate studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVPJ7ulM4N7Cri7OpBF1N9sOnUfCL9v0phwrLIbbAZtMaTq06NfVgxCy2j3YU2nKMCtGB5XT9uqEYEN0rY1oWDRk3E0WqraK-irJaskHoasvr5RbdqdpQF-SH5Mtn788GtBECumv_s0uSHqCyjlqhJhDYKsZr-jL10Gu5Ii23_u5JEQuM-9dDUc_7OtzMd5uOger_N23nhE8YEYYRdMB2Ao4fX0QeSgeMeK4Io-8RejC8-ooDcI3Bl3hcA05WPAGwZaargDAfs2sM"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Created by CA Rohan Mehta</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Verified Master Instructor">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Principal Financial Architect &amp; Ex-Deloitte Strategy Lead</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky In-Page Navigation Bar -->
+<div class="sticky top-16 z-40 w-full bg-surface-container-lowest/95 backdrop-blur shadow-sm border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+<nav class="flex items-center gap-8 overflow-x-auto py-3.5 scrollbar-none" id="course-subnav">
+<a class="text-primary font-semibold border-b-2 border-primary pb-3 -mb-3.5 font-label-md text-label-md whitespace-nowrap transition-colors" href="#overview">Overview</a>
+<a class="text-secondary hover:text-on-surface font-medium pb-3 -mb-3.5 font-label-md text-label-md whitespace-nowrap transition-colors" href="#curriculum">Curriculum</a>
+<a class="text-secondary hover:text-on-surface font-medium pb-3 -mb-3.5 font-label-md text-label-md whitespace-nowrap transition-colors" href="#instructor">Instructor</a>
+<a class="text-secondary hover:text-on-surface font-medium pb-3 -mb-3.5 font-label-md text-label-md whitespace-nowrap transition-colors" href="#reviews">Student Reviews</a>
+<a class="text-secondary hover:text-on-surface font-medium pb-3 -mb-3.5 font-label-md text-label-md whitespace-nowrap transition-colors" href="#faq">FAQ</a>
+</nav>
+<div class="hidden xl:flex items-center gap-4 py-2">
+<div class="text-right">
+<span class="text-body-sm font-body-sm text-secondary line-through">$99</span>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface ml-1.5">$49</span>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-5 py-2 rounded-lg shadow-sm transition-transform active:scale-95">
+          Enroll Now
+        </button>
+</div>
+</div>
+</div>
+<!-- Primary Content Area: 2-Column Split -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- ================= LEFT COLUMN: DEEP COURSE DIVE (approx 68% -> col-span-8) ================= -->
+<div class="lg:col-span-8 space-y-14">
+<!-- Video Promo Player Sandbox Container -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-slate-950 group">
+<div class="aspect-video w-full relative">
+<img class="w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-500" data-alt="High quality screenshot of a complex multi-tab Excel financial workbook open on a dual monitor workstation displaying dynamic cohort modeling, power query formulas, and dark corporate KPI dashboards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7NQqygm8v6G-rrc3ILKTU-UUpR8LT3hlS-YfdIHSvWDzjlVlh00B8IWQfeuhy4D9LJCd5ISxxtwVB79bNL38IHUOiYfWXC_slOsIj3SmZA-kTdG5ptfc5m874npriwDa5UI4JQM7AAI-CU-LkfSKMv6z6zHCpP7q8gA36lnLeA1cQWxHK0-4LIz8il9Gotk5mfmLfQDxFKCypKZQBK4mGiCZ4jYZPeC-3JFjQwuZIp1md9jALuWiVKUzP9nQtuIVdv1VKPJJzqzs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+<!-- Center Play Button with Pulsing Ring -->
+<button aria-label="Play course introductory preview" class="absolute inset-0 m-auto w-20 h-20 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-2xl backdrop-blur-sm group-hover:scale-110 transition-all duration-300 focus:outline-none">
+<span class="absolute w-full h-full rounded-full bg-primary animate-ping opacity-30"></span>
+<span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+</button>
+<!-- Video Player Metadata Overlays -->
+<div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-white font-label-md text-label-md flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+<span>Course Preview Trailer</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-slate-200 font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Preview this course (4:15 min)</span>
+</div>
+<div class="absolute bottom-4 left-4 hidden sm:flex items-center gap-2 text-white font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">verified_user</span>
+<span>Institutional syllabus vetted by Fortune 500 analytics leads</span>
+</div>
+</div>
+</div>
+<!-- SECTION: WHAT YOU'LL LEARN -->
+<section class="scroll-mt-32 space-y-6" id="overview">
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/40 shadow-sm space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">What you'll learn in this masterclass</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">8 Core Competencies</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Master dynamic lookup formulas including <strong class="text-on-surface font-semibold">XLOOKUP, INDEX-MATCH-MATCH</strong>, CHOOSE, and 2-way matrix referencing.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Build multi-table financial models with automated scenarios, Goal Seek, Solver, and dynamic data sensitivity tables.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Cleanse, transform, and merge disparate messy ERP datasets via <strong class="text-on-surface font-semibold">Power Query M-code</strong> and automated ETL steps.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Implement advanced Pivot Tables, calculated items, cross-table slicers, and interactive timeline aggregation filters.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Design executive KPI dashboards adhering to McKinsey-style visual hierarchy, custom charting, and clean metric cards.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Automate repetitive weekly reporting routines and standardized spreadsheet distribution with VBA macro scripting.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Leverage Microsoft 365 dynamic arrays: <strong class="text-on-surface font-semibold">FILTER, SORT, UNIQUE, TOCOL</strong>, and reusable LAMBDA functions.
+                </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Audit intricate calculation chains, eliminate circular dependency risks, and dramatically speed up heavy gigabyte workbooks.
+                </p>
+</div>
+</div>
+</div>
+<!-- Skills You'll Gain Badges -->
+<div class="space-y-3">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Skills You'll Gain</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">XLOOKUP &amp; Dynamic Arrays</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">SUMIFS &amp; Array Formulas</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">Power Query ETL</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">Pivot Tables &amp; Slicers</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">Dashboard UI Design</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">Financial Scenario Modeling</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">Data Cleansing &amp; Wrangling</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-secondary-container transition-colors cursor-default">VBA Automation Macros</span>
+</div>
+</div>
+<!-- Narrative Editorial Description -->
+<div class="space-y-4 pt-4 border-t border-outline-variant/30">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Bridging Spreadsheet Usability to Wall Street Rigor</h3>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-3 leading-relaxed">
+<p>
+                In the modern corporate enterprise, knowing how to type <code class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-code-inline text-code-inline">=VLOOKUP</code> is no longer a competitive differentiator. Senior analysts, corporate finance directors, and management consultants require scalable architectures: spreadsheets that update dynamically when raw database exports are dropped in, calculations that never return breaking errors, and presentation layers that communicate immediately to Board members.
+              </p>
+<p>
+                This Masterclass was curated from real engagements across top-tier investment banking desks, Fortune 100 supply chains, and private equity portfolio management. You will work on real sanitized enterprise data files totaling over 250,000 transaction rows—discovering how to use Power Query to eliminate 90% of manual data formatting forever.
+              </p>
+</div>
+</div>
+<!-- Prerequisites & Audience Split Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 space-y-3">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[22px]">checklist</span>
+<h4>Prerequisites</h4>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">check_circle</span>
+<span>Basic familiarity with Excel grid navigation, formatting, and standard arithmetic (+, -, *, /).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">check_circle</span>
+<span>Understanding of fundamental aggregation functions (SUM, AVERAGE, COUNT).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">check_circle</span>
+<span>Microsoft Excel 2019, 2021, or Microsoft 365 installed on Windows or Mac.</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 space-y-3">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[22px]">target</span>
+<h4>Who This Course Is For</h4>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">person</span>
+<span>Financial Analysts, FP&amp;A Specialists, and Corporate Accountants seeking promotion.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">person</span>
+<span>Data Analysts who want to prep data upstream before feeding Power BI or Tableau.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">person</span>
+<span>Consultants &amp; Project Managers tasked with executive monthly operating decks.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION: CURRICULUM SYLLABUS -->
+<section class="scroll-mt-32 space-y-6" id="curriculum">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-outline-variant/30 pb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Course Curriculum</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                4 comprehensive sections • 24 modules • 96 total lessons • 32h 15m total duration
+              </p>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container font-semibold transition-colors flex items-center gap-1" id="toggle-all-curriculum">
+<span>Expand all sections</span>
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Section 1 (Expanded by Default) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden shadow-sm">
+<button aria-expanded="true" class="w-full flex items-center justify-between p-5 text-left bg-surface-container-low hover:bg-surface-container transition-colors curriculum-toggle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200 chevron-icon rotate-180">expand_more</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 1</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Modern Excel Architecture &amp; Dynamic Formulas</h3>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-secondary font-medium">6 lessons • 4h 30m</span>
+</div>
+</button>
+<div class="divide-y divide-outline-variant/20 curriculum-content">
+<!-- Lesson 1 (Free Preview) -->
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">play_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">1. Course Architecture, Sanitized Enterprise Data Files &amp; Workspace Setup</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 ml-4">
+<span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-fixed text-primary">Free Preview</span>
+<span class="font-body-sm text-body-sm text-secondary">12:40</span>
+</div>
+</div>
+<!-- Lesson 2 (Free Preview) -->
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">play_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">2. Dynamic Arrays &amp; The Death of Legacy VLOOKUP: Deep Dive into XLOOKUP</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 ml-4">
+<span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary-fixed text-primary">Free Preview</span>
+<span class="font-body-sm text-body-sm text-secondary">24:15</span>
+</div>
+</div>
+<!-- Lesson 3 (Locked) -->
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">3. Two-Way Matrix Matching: Combining INDEX, MATCH, and XMATCH</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 ml-4">38:20</span>
+</div>
+<!-- Lesson 4 (Locked) -->
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">4. Array Extraction: FILTER, SORT, SORTBY, and UNIQUE with Multiple Conditions</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 ml-4">29:10</span>
+</div>
+<!-- Lesson 5 (Locked) -->
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">5. Formula Error Resiliency: Defensive Logic with IFERROR, ISNUMBER, and SWITCH</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 ml-4">18:45</span>
+</div>
+<!-- Lesson 6 (Capstone) -->
+<div class="p-4 sm:px-6 flex items-center justify-between bg-surface-container-low/50 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">assignment</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">6. Capstone Project 1: Multi-Tier Cohort Retention &amp; ARR Modeling Sheet</span>
+</div>
+<div class="flex items-center gap-2 shrink-0 ml-4">
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Includes starter workbook">attach_file</span>
+<span class="font-body-sm text-body-sm text-secondary">45:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2 (Financial Modeling) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-5 text-left bg-surface-container-low hover:bg-surface-container transition-colors curriculum-toggle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200 chevron-icon">expand_more</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Institutional Financial Modeling &amp; Scenario Sensitivity</h3>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-secondary font-medium">8 lessons • 8h 15m</span>
+</div>
+</button>
+<div class="divide-y divide-outline-variant/20 curriculum-content hidden">
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">1. 3-Statement Financial Model Structure: Setting Standards &amp; Color Codings</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">55:10</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">2. Building 1-Way and 2-Way Sensitivity Data Tables without Workbook Lag</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">48:20</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">3. Goal Seek, Scenario Manager, and Non-Linear Optimization with Solver</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">62:00</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between bg-surface-container-low/50 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">assignment</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">4. Capstone Project 2: LBO / DCF Valuation Model with Dynamic Leverage Swaps</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">1h 12m</span>
+</div>
+</div>
+</div>
+<!-- Section 3 (Power Query) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-5 text-left bg-surface-container-low hover:bg-surface-container transition-colors curriculum-toggle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200 chevron-icon">expand_more</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 3</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Power Query &amp; Automated Multi-Source ETL Workflows</h3>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-secondary font-medium">10 lessons • 11h 20m</span>
+</div>
+</button>
+<div class="divide-y divide-outline-variant/20 curriculum-content hidden">
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">1. Introduction to the Power Query Engine &amp; M-Code Formula Bar</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">42:15</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">2. Automated Folder Ingestion: Merging 52 Weekly SAP Transaction Workbooks</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">58:40</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">3. Pivoting, Unpivoting, Fuzzy Matching &amp; Data Normalization Routines</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">51:00</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between bg-surface-container-low/50 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">assignment</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">4. Capstone Project 3: Production-Ready Multi-Branch General Ledger Reconciliation</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">1h 35m</span>
+</div>
+</div>
+</div>
+<!-- Section 4 (Executive Dashboards) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-5 text-left bg-surface-container-low hover:bg-surface-container transition-colors curriculum-toggle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200 chevron-icon">expand_more</span>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 4</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Executive Dashboard Design, VBA Automation &amp; Final Portfolio</h3>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-secondary font-medium">8 lessons • 8h 10m</span>
+</div>
+</button>
+<div class="divide-y divide-outline-variant/20 curriculum-content hidden">
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">1. Principles of Boardroom Dashboards: Contrast, White Space, and Typography</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">40:10</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">2. Building Interactive Form Controls, Custom Sparklines, and Linked Dynamic Charts</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">54:00</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between hover:bg-surface transition-colors opacity-90">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">lock</span>
+<span class="font-body-md text-body-md text-on-surface font-normal truncate">3. Pragmatic VBA: One-Click Refresh and Automated PDF Dispatch Macros</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">48:30</span>
+</div>
+<div class="p-4 sm:px-6 flex items-center justify-between bg-surface-container-low/50 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">workspace_premium</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">4. Final Master Capstone: The Complete C-Suite Operational Command Cockpit</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">2h 05m</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: INSTRUCTOR PROFILE -->
+<section class="scroll-mt-32 space-y-6" id="instructor">
+<div class="border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Your Instructor</h2>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/40 shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<div class="w-24 h-24 rounded-2xl overflow-hidden shadow-md bg-surface-container shrink-0 ring-4 ring-primary/10">
+<img class="w-full h-full object-cover" data-alt="Close up executive portrait of CA Rohan Mehta wearing a refined blue shirt and navy blazer with modern glasses in an architectural corporate boardroom office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTXqbglvEjDp9nfgSjjFE1DVuH-vZJMz9-7NRw3q6o0Yp3xdUl1I2IotjQniOjXUx0a25o7gsbdXBFjwRZa3Y7ClaJr5-hl-tDFDQMKXI1l5CtvGByG3s-JPN4K-M_JKwYMdfVvR3yLXqSR7z1UmX00o4NOQbZNvU2bTe2zJOL6QabH1Rxkpzkk7PcQwY2dM3IM9aNhrB3jFNWzHR-cLA2tF3-Pw1pRf1hm19brDsYqkKfKe9sDd4QZxK9P3MIDvzSD95c3U2sKoI"/>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">CA Rohan Mehta</h3>
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-medium">Principal Financial Architect &amp; Former Deloitte Strategy Lead</p>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="text-on-surface">4.9</strong> Instructor Rating
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<strong class="text-on-surface">42,000+</strong> Students
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">video_library</span>
+<strong class="text-on-surface">6</strong> Master Courses
+                  </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">workspace_premium</span>
+<strong class="text-on-surface">14 Years</strong> Enterprise Practice
+                  </span>
+</div>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-3 leading-relaxed border-t border-outline-variant/20 pt-4">
+<p>
+                Rohan is a Chartered Accountant and institutional financial modeler who spent over a decade leading restructuring and transaction diligence for Big-4 firms across New York, London, and Singapore.
+              </p>
+<p>
+                Over the past 8 years, Rohan has audited hundreds of financial models spanning multi-billion-dollar infrastructure concessions, cross-border M&amp;A, and SaaS hypergrowth forecasting. He brings this empirical, no-shortcuts rigor directly to BICE students, emphasizing battle-tested modeling conventions that hold up under senior stakeholder scrutiny.
+              </p>
+</div>
+</div>
+</section>
+<!-- SECTION: STUDENT REVIEWS & FEEDBACK -->
+<section class="scroll-mt-32 space-y-6" id="reviews">
+<div class="border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Student Feedback &amp; Alumni Ratings</h2>
+</div>
+<!-- Overall Rating Breakdown Card -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/40 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Left Score Column -->
+<div class="md:col-span-4 flex flex-col items-center justify-center text-center p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/30">
+<span class="font-display-hero text-display-hero font-extrabold text-on-surface">4.8</span>
+<div class="flex items-center text-amber-500 my-1.5">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Course Rating based on 1,240 verified student submissions</span>
+</div>
+<!-- Right Bar Chart Distribution -->
+<div class="md:col-span-8 space-y-2.5">
+<!-- 5 Stars -->
+<div class="flex items-center gap-3 text-body-sm font-body-sm">
+<span class="w-12 text-on-surface font-medium">5 stars</span>
+<div class="flex-1 h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 84%;"></div>
+</div>
+<span class="w-10 text-right text-secondary font-medium">84%</span>
+</div>
+<!-- 4 Stars -->
+<div class="flex items-center gap-3 text-body-sm font-body-sm">
+<span class="w-12 text-on-surface font-medium">4 stars</span>
+<div class="flex-1 h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 12%;"></div>
+</div>
+<span class="w-10 text-right text-secondary font-medium">12%</span>
+</div>
+<!-- 3 Stars -->
+<div class="flex items-center gap-3 text-body-sm font-body-sm">
+<span class="w-12 text-on-surface font-medium">3 stars</span>
+<div class="flex-1 h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 3%;"></div>
+</div>
+<span class="w-10 text-right text-secondary font-medium">3%</span>
+</div>
+<!-- 2 Stars -->
+<div class="flex items-center gap-3 text-body-sm font-body-sm">
+<span class="w-12 text-on-surface font-medium">2 stars</span>
+<div class="flex-1 h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 1%;"></div>
+</div>
+<span class="w-10 text-right text-secondary font-medium">1%</span>
+</div>
+<!-- 1 Star -->
+<div class="flex items-center gap-3 text-body-sm font-body-sm">
+<span class="w-12 text-on-surface font-medium">1 star</span>
+<div class="flex-1 h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 0%;"></div>
+</div>
+<span class="w-10 text-right text-secondary font-medium">0%</span>
+</div>
+</div>
+</div>
+<!-- Alumni Review Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                  "The XLOOKUP and Power Query workflow modules alone saved my team 15+ hours weekly. The capstone modeling template is identical to what we use on live engagements."
+                </p>
+</div>
+<div class="flex items-center gap-3 border-t border-outline-variant/20 pt-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary font-bold flex items-center justify-center text-xs">
+                  SJ
+                </div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Sarah Jenkins</h4>
+<p class="font-body-sm text-body-sm text-secondary">Sr. Financial Analyst, McKinsey</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                  "Clear, structured, zero fluff. The breakdown of dynamic arrays and scenario matrices made complex model audits second nature for my corporate treasury group."
+                </p>
+</div>
+<div class="flex items-center gap-3 border-t border-outline-variant/20 pt-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-xs">
+                  DK
+                </div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">David Kalu</h4>
+<p class="font-body-sm text-body-sm text-secondary">FP&amp;A Team Lead, FinTech</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                  "Rohan explains edge cases that traditional tutorials completely ignore. Best corporate Excel course on the market for analysts moving toward senior roles."
+                </p>
+</div>
+<div class="flex items-center gap-3 border-t border-outline-variant/20 pt-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center justify-center text-xs">
+                  ER
+                </div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Elena Rostova</h4>
+<p class="font-body-sm text-body-sm text-secondary">BI &amp; Operations Consultant</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: FAQ ACCORDION -->
+<section class="scroll-mt-32 space-y-6" id="faq">
+<div class="border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-3" id="faq-container">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors faq-toggle">
+<span>Do I need prior financial modeling or VBA experience?</span>
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200">add</span>
+</button>
+<div class="p-5 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed hidden faq-answer">
+                No. While intermediate comfort with standard Excel formulas (like SUM, IF, basic averages) is helpful, the course starts from architectural first principles. We build from nested formulas up to complete automated financial models and VBA scripts methodically with downloadable walkthrough templates for each stage.
+              </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors faq-toggle">
+<span>Is the certificate recognized for corporate training reimbursement?</span>
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200">add</span>
+</button>
+<div class="p-5 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed hidden faq-answer">
+                Yes. BICE is an accredited professional development provider. Upon completing all capstone modules and passing the benchmark assessments, you will receive a verifiable digital credential with a persistent ID suitable for LinkedIn and enterprise L&amp;D reimbursement receipts.
+              </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors faq-toggle">
+<span>Does this course cover Excel for Mac or only Windows?</span>
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200">add</span>
+</button>
+<div class="p-5 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed hidden faq-answer">
+                95% of the core content (including dynamic arrays, modern lookups, and financial modeling) is completely identical across Mac and Windows with Microsoft 365. For Power Query and VBA macros, where the Mac interface has minor architectural differences, dedicated side-by-side callout guides are provided.
+              </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors faq-toggle">
+<span>How long do I maintain access to the sandbox files and video lessons?</span>
+<span class="material-symbols-outlined text-primary text-[20px] transform transition-transform duration-200">add</span>
+</button>
+<div class="p-5 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed hidden faq-answer">
+                You receive full lifetime access to all 32 hours of HD instruction, all 96 downloadable corporate model templates (.xlsx), and all future course updates as Microsoft rolls out new calculation formulas and features to Excel 365.
+              </div>
+</div>
+</div>
+</section>
+</div>
+<!-- ================= RIGHT COLUMN: STICKY CONVERSION / PURCHASE PANEL (approx 32% -> col-span-4) ================= -->
+<aside class="lg:col-span-4 w-full">
+<div class="sticky top-28 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 shadow-xl overflow-hidden space-y-6">
+<!-- Course Card Header Visual Banner -->
+<div class="relative h-44 w-full bg-slate-900 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up aesthetic shot of clean green spreadsheet cells with complex formula bar and glowing analytical data charts in high contrast modern corporate layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn-BEd7QUsgF56pqLbLWpg12FN9hlQFS-71ArW528f4gOmHi6fqh1JW804urD7jThi6ecpC9xyXOxEQhiP3RLqGLDZt1AaRdjxKRf1Q3kbu7yIzpzI-b_laHtczKfAQB7MU6HVXKGSHQCg_dgeCQR7ncJX1Wgu9etgzsdpOHSYcm572q4HXVEt02P30hPXAH0QvGlv8WRjZtP2mHBVoUeO3chLBrBURfFUgt26wSVwJMdu5PETFxpQJeWTs23vg0do1BfxZNoMUt4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent"></div>
+<div class="absolute top-3 right-3">
+<span class="bg-rose-500/90 text-white font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">
+                50% OFF
+              </span>
+</div>
+<div class="absolute bottom-3 left-4 right-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-fixed/90 backdrop-blur-sm text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>BICE Enterprise All-Access</span>
+</div>
+<p class="text-xs text-slate-300 mt-1 font-medium truncate">Included in team subscription or purchase standalone</p>
+</div>
+</div>
+<!-- Pricing & Urgency Bar -->
+<div class="px-6 space-y-1">
+<div class="flex items-baseline gap-3">
+<span class="font-display-hero text-display-hero font-extrabold text-on-surface">$49</span>
+<span class="font-headline-md text-headline-md text-secondary line-through">$99</span>
+<span class="text-label-md font-label-md text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded">Save $50</span>
+</div>
+<div class="flex items-center gap-1.5 text-rose-600 font-body-sm text-body-sm font-medium pt-1">
+<span class="material-symbols-outlined text-[16px] animate-pulse">timer</span>
+<span>Flash pricing ends in 2 days at this price!</span>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="px-6 space-y-3">
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md shadow-primary/20 transition-all duration-200 active:scale-98 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span>Enroll Now — Instant Access</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium border border-outline-variant/50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">favorite</span>
+<span>Add to Wishlist</span>
+</button>
+<!-- 30-Day Guarantee Trust Badge -->
+<div class="flex items-center justify-center gap-2 pt-2 text-center text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">verified_user</span>
+<span>30-Day Money-Back Guarantee • 100% Refund</span>
+</div>
+</div>
+<!-- Course Feature Checklist -->
+<div class="px-6 pt-4 border-t border-outline-variant/30 space-y-3">
+<h4 class="font-label-md text-label-md font-bold uppercase tracking-wider text-on-surface">This course includes:</h4>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
+<span><strong>32 hours</strong> on-demand HD video</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">cloud_download</span>
+<span><strong>96 downloadable</strong> corporate models (.xlsx, .pbix)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">assignment_turned_in</span>
+<span><strong>4 real-world</strong> capstone portfolio reviews</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">workspace_premium</span>
+<span>Verified BICE Certificate of Completion</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+<span>Accessible on Mobile, Tablet &amp; Desktop</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">all_inclusive</span>
+<span>Lifetime access with all future updates</span>
+</li>
+</ul>
+</div>
+<!-- Coupon Code Input Box -->
+<div class="px-6 pt-2 space-y-2">
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-10 px-3 rounded-lg border border-outline-variant/60 font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 uppercase" id="coupon-input" placeholder="Enter coupon code" type="text"/>
+</div>
+<button class="px-4 h-10 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold border border-outline-variant/60 transition-colors" id="coupon-apply">
+                Apply
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">info</span>
+<span>Use <strong class="text-primary font-code-inline">BICE2025</strong> for an extra 10% off</span>
+</p>
+</div>
+<!-- Enterprise Team License Callout Link -->
+<div class="p-6 bg-surface-container-low border-t border-outline-variant/30 space-y-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">groups</span>
+<div>
+<h5 class="font-label-md text-label-md font-bold text-on-surface">Training 5 or more people?</h5>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                  Get seamless team access, centralized billing, and custom reporting analytics.
+                </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline mt-2" href="#">
+<span>Get BICE Team License</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Bottom CTA Ribbon for Corporate Enrollment -->
+<section class="w-full bg-[#0F172A] py-16 text-white border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="space-y-2 text-center md:text-left">
+<span class="px-3 py-1 rounded-full bg-slate-800 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+          Career Acceleration
+        </span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-white tracking-tight">
+          Ready to operate at an elite institutional modeling level?
+        </h3>
+<p class="font-body-md text-body-md text-slate-400 max-w-2xl">
+          Join over 8,400 financial analysts, BI engineers, and consultants who accelerated their workbooks with BICE.
+        </p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<a class="px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-lg hover:shadow-primary/30" href="#overview">
+          Enroll in Masterclass ($49)
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Accordion for Curriculum Sections
+  document.querySelectorAll('.curriculum-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const chevron = button.querySelector('.chevron-icon');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        content.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+        chevron.classList.remove('rotate-180');
+      } else {
+        content.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+        chevron.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Expand / Collapse All Curriculum Sections
+  const toggleAllBtn = document.getElementById('toggle-all-curriculum');
+  if (toggleAllBtn) {
+    let allExpanded = false;
+    toggleAllBtn.addEventListener('click', () => {
+      allExpanded = !allExpanded;
+      document.querySelectorAll('.curriculum-toggle').forEach(button => {
+        const content = button.nextElementSibling;
+        const chevron = button.querySelector('.chevron-icon');
+        if (allExpanded) {
+          content.classList.remove('hidden');
+          button.setAttribute('aria-expanded', 'true');
+          chevron.classList.add('rotate-180');
+        } else {
+          content.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+          chevron.classList.remove('rotate-180');
+        }
+      });
+      toggleAllBtn.querySelector('span').textContent = allExpanded ? 'Collapse all sections' : 'Expand all sections';
+    });
+  }
+
+  // Interactive FAQ Accordion
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isHidden = answer.classList.contains('hidden');
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        icon.textContent = 'remove';
+      } else {
+        answer.classList.add('hidden');
+        icon.textContent = 'add';
+      }
+    });
+  });
+
+  // Active Sub-navigation Spy on Scroll
+  const navLinks = document.querySelectorAll('#course-subnav a');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 180;
+    navLinks.forEach(link => {
+      const section = document.querySelector(link.hash);
+      if (
+        section &&
+        section.offsetTop <= fromTop &&
+        section.offsetTop + section.offsetHeight > fromTop
+      ) {
+        navLinks.forEach(l => {
+          l.classList.remove('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+          l.classList.add('text-secondary', 'font-medium');
+        });
+        link.classList.remove('text-secondary', 'font-medium');
+        link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+      }
+    });
+  });
+
+  // Coupon Code Micro-interaction
+  const couponApplyBtn = document.getElementById('coupon-apply');
+  const couponInput = document.getElementById('coupon-input');
+  if (couponApplyBtn && couponInput) {
+    couponApplyBtn.addEventListener('click', () => {
+      const code = couponInput.value.trim().toUpperCase();
+      if (code === 'BICE2025') {
+        couponApplyBtn.textContent = 'Applied!';
+        couponApplyBtn.classList.remove('bg-surface-container-high', 'text-on-surface');
+        couponApplyBtn.classList.add('bg-emerald-600', 'text-white');
+        couponInput.disabled = true;
+      } else {
+        alert('Invalid or expired promotional code. Try code: BICE2025');
+      }
+    });
+  }
+</script></main><footer class="w-full bg-[#0F172A] border-t border-slate-800 text-slate-400 py-16"><div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="BICE Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDYpONvWfVyobwN5vLs56N2-1khNHD2gllRcEgIS5e73aKVJfNJgnTp6_ihKyS13W-E7TclAE30H_BtB2GCqEdRUNwvYOyymzLIZ6CNmNUJheWJ1Aqve3XeGHxrDJ16YvlFwj7hwdiQ6WLGplVuXT1tHAS9AjQh08dxt9A8QI0HVE4E5_bMupu3FCSWRI9-ggCy88XeUPSBF-4EAh75X9w_80wc8aIQYK5Lu7J4IgJ5uhczsTvl6Bs1rgg"/><span class="font-headline-sm text-headline-sm font-semibold text-white">BICE LMS</span></div><p class="font-body-sm text-body-sm text-slate-400 leading-relaxed">Empowering corporate analysts, data engineers, and modern business leaders with enterprise-grade data education in Advanced Excel, Power Query, SQL, and BI systems.</p><div class="flex items-center gap-4 pt-2"><a aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">hub</span></a><a aria-label="YouTube" class="w-9 h-9 rounded-lg bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><a aria-label="Community Network" class="w-9 h-9 rounded-lg bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a><a aria-label="Code Repository" class="w-9 h-9 rounded-lg bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span></a></div></div><div class="space-y-3"><h3 class="font-label-md text-label-md uppercase tracking-wider text-slate-200 font-semibold">Courses</h3><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="hover:text-white transition-colors"><a data-path="advanced-excel-masterclass" href="#">Advanced Excel Mastery</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">Power Query &amp; Data Prep</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">SQL for Business Intelligence</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">Python for Data Analytics</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">Executive BI Dashboards</a></li></ul></div><div class="space-y-3"><h3 class="font-label-md text-label-md uppercase tracking-wider text-slate-200 font-semibold">Student Support</h3><ul class="space-y-2.5 font-body-sm text-body-sm"><li class="hover:text-white transition-colors"><a data-path="faq" href="#">Knowledge Base &amp; FAQ</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">Practice Query Sandbox</a></li><li class="hover:text-white transition-colors"><a data-path="courses" href="#">Dataset Downloads &amp; Templates</a></li><li class="hover:text-white transition-colors"><a data-path="faq" href="#">Enterprise Certification</a></li><li class="hover:text-white transition-colors"><a data-path="contact" href="#">Career Guidance Desk</a></li></ul></div><div class="space-y-3"><h3 class="font-label-md text-label-md uppercase tracking-wider text-slate-200 font-semibold">Contact &amp; Campus</h3><div class="font-body-sm text-body-sm space-y-3 text-slate-400"><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-slate-400 text-[18px] shrink-0 mt-0.5">location_on</span><span>Tech Plaza 400, Financial District, New York, NY 10004</span></div><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-slate-400 text-[18px] shrink-0">mail</span><span>admissions@bice-academy.com</span></div><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-slate-400 text-[18px] shrink-0">call</span><span>+1 (800) 555-0199</span></div></div></div></div><div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-slate-500"><div>© 2025 BICE Learning Management System. All rights reserved.</div><div class="flex items-center gap-6"><a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a><a class="hover:text-slate-300 transition-colors" href="#">Terms of Service</a><a class="hover:text-slate-300 transition-colors" href="#">Cookie Settings</a></div></div></footer></body></html>

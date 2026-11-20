@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#191c1e","on-surface-variant":"#464555","secondary-fixed-dim":"#bec6e0","background":"#f7f9fb","surface-container-lowest":"#ffffff","primary-fixed":"#e2dfff","surface-tint":"#4d44e3","surface-container-high":"#e6e8ea","on-tertiary-fixed":"#261a00","on-primary":"#ffffff","surface-container-highest":"#e0e3e5","secondary-container":"#dae2fd","secondary-fixed":"#dae2fd","surface-container-low":"#f2f4f6","on-primary-container":"#dad7ff","tertiary-fixed":"#ffdf9f","outline":"#777587","error":"#ba1a1a","surface-dim":"#d8dadc","primary":"#3525cd","on-tertiary-container":"#ffd681","surface-variant":"#e0e3e5","secondary":"#565e74","primary-fixed-dim":"#c3c0ff","tertiary":"#5e4400","surface-container":"#eceef0","on-secondary-fixed":"#131b2e","inverse-surface":"#2d3133","tertiary-fixed-dim":"#f9bd22","on-secondary":"#ffffff","surface-bright":"#f7f9fb","inverse-primary":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","tertiary-container":"#7b5b00","on-error-container":"#93000a","on-error":"#ffffff","on-surface":"#191c1e","primary-container":"#4f46e5","surface":"#f7f9fb","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f3","on-primary-fixed-variant":"#3323cc","on-tertiary-fixed-variant":"#5c4300","on-primary-fixed":"#0f0069","outline-variant":"#c7c4d8","error-container":"#ffdad6","on-secondary-container":"#5c647a"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem","gutter":"1.5rem","space-lg":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem","margin":"2rem"},fontFamily:{"headline-lg-mobile":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-md":["Inter"],"code-inline":["Inter"],"display-hero":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"]},fontSize:{"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"code-inline":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"500"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"800"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between border-b border-on-surface-variant/20"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold tracking-tight leading-none">BICE LMS</span><span class="font-label-sm text-label-sm text-inverse-primary tracking-wider uppercase mt-1">Data Academy</span></div></div></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md text-label-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-courses" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-label-md text-label-md">My Courses</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-notes" href="#"><span class="material-symbols-outlined text-[20px]">edit_note</span><span class="font-label-md text-label-md">My Notes</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="my-resources" href="#"><span class="material-symbols-outlined text-[20px]">folder_data</span><span class="font-label-md text-label-md">My Resources</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="certificates" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span><span class="font-label-md text-label-md">Certificates</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Orders</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Profile</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a></nav></div><div class="p-space-md border-t border-on-surface-variant/20 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-2"><div class="flex items-center gap-space-xs text-inverse-on-surface/80"><span class="material-symbols-outlined text-[18px]">dark_mode</span><span class="font-label-md text-label-md">Theme Mode</span></div><div class="w-9 h-5 rounded-full bg-surface-variant/30 flex items-center p-0.5 cursor-pointer"><div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div></div></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-inverse-on-surface/80 hover:bg-error/20 hover:text-error-container transition-all" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-md text-label-md">Log out</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-high z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">home</span><span class="text-outline-variant font-label-md">/</span><span class="font-label-md text-label-md text-primary font-semibold">Dashboard</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-[18px]">search</span><input class="w-80 h-10 pl-9 pr-12 rounded-lg bg-surface border border-surface-container-high font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search courses, notes, exercises..." type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-secondary font-code-inline text-code-inline">⌘K</kbd></div><div class="relative flex items-center cursor-pointer"><span class="material-symbols-outlined text-secondary text-[22px] hover:text-on-surface transition-colors">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center leading-none font-bold">3</span></div><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span><span class="font-label-sm text-label-sm text-primary font-medium leading-none mt-0.5">Pro Learner</span></div><span class="material-symbols-outlined text-secondary text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Feedback Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" id="toast-icon">verified</span>
+<span class="font-label-md text-label-md" id="toast-message">Verification URL copied to clipboard</span>
+</div>
+<div class="max-w-[1400px] w-full mx-auto px-margin py-space-xl flex flex-col gap-space-2xl">
+<!-- Top Metadata / Sub-Nav Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Home</a>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Student Portal</a>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Certificates</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Accredited Credentials</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            100% Course Completion Verified
+          </span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+          Enterprise-standard certificates issued upon passing comprehensive capstones and 100% syllabus mastery.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" onclick="triggerVerificationModal()">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Verify External ID</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" onclick="copyPublicProfile()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Share Public Portfolio</span>
+</button>
+</div>
+</div>
+<!-- Executive Stat Cards (Bento Metric Strip) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Metric 1 -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Earned Diplomas</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface leading-none font-bold">2</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Active &amp; Indexed</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Both eligible for LinkedIn one-click upload</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">workspace_premium</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">In Progress Track</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface leading-none font-bold">2</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Near Capstone</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Average 78.5% completion progress</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">trending_up</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between sm:col-span-2 lg:col-span-1">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Security Integrity</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface leading-none font-bold">SHA-256</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Cryptographically stamped on Polygon Mainnet</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+</div>
+</div>
+<!-- Section: Earned Certificates Section -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Official Credentials</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2 Issued</span>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+          Institutional seal verified by Deloitte, PwC, &amp; McKinsey recruitment partners
+        </div>
+</div>
+<!-- Certificate Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- Certificate Card 1 -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+<!-- Diploma Frame / Visual Canvas -->
+<div class="relative p-space-xl bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container flex flex-col justify-between min-h-[380px] overflow-hidden">
+<!-- Decorative Guilloche Background Pattern (Subtle mathematical SVG grid) -->
+<svg class="absolute inset-0 w-full h-full opacity-[0.035] pointer-events-none" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="guilloche-1" patternunits="userSpaceOnUse" width="40">
+<path class="text-on-surface" d="M0 20 Q10 0 20 20 T40 20 M20 0 Q30 20 40 0" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle class="text-on-surface" cx="20" cy="20" fill="none" r="14" stroke="currentColor" stroke-width="0.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#guilloche-1)" height="100%" width="100%"></rect>
+</svg>
+<!-- Dual Navy/Gold Micro Precision Border Inset -->
+<div class="absolute inset-3 rounded-lg pointer-events-none shadow-[inset_0_0_0_1px_rgba(79,70,229,0.15),inset_0_0_0_3px_rgba(255,255,255,0.8),inset_0_0_0_4px_rgba(249,189,34,0.35)]"></div>
+<!-- Top Plaque Header: Crest & Category Badge -->
+<div class="relative z-10 flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface flex items-center justify-center text-inverse-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">BICE Data Academy</span>
+<span class="font-body-sm text-body-sm text-secondary">Global Analytical Standard</span>
+</div>
+</div>
+<!-- Official Gold Foil Stamp Badge -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Honor Distinction</span>
+</div>
+</div>
+<!-- Recipient Centerpiece -->
+<div class="relative z-10 my-space-md flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Certificate of Mastery</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">This credential formally certifies that</p>
+<!-- Recipient Name in Refined Serif Typography -->
+<h3 class="font-serif text-3xl font-bold text-on-surface mt-1.5 tracking-tight italic" style="font-family: Georgia, 'Times New Roman', serif;">
+                Rahul Sharma
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                has successfully fulfilled all rigorous capstone deliverables for
+              </p>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 leading-snug">
+                Advanced Excel Masterclass: Dynamic Arrays &amp; Financial Modeling
+              </h4>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-secondary font-body-sm text-body-sm">
+<span>Issued: <strong class="text-on-surface font-semibold">October 14, 2024</strong></span>
+<span>•</span>
+<span>Grade: <strong class="text-on-surface font-semibold">98.4% (Top 2% Percentile)</strong></span>
+</div>
+</div>
+<!-- Bottom Plaque Metadata & Signature -->
+<div class="relative z-10 pt-space-sm flex items-end justify-between border-t border-surface-container-highest/60">
+<div class="flex flex-col">
+<!-- Handwritten Signature Emulation -->
+<div class="font-serif italic text-lg text-on-surface/80 leading-none pb-1 select-none" style="font-family: 'Brush Script MT', 'Dancing Script', cursive, serif;">
+                  CA Rohan Mehta
+                </div>
+<div class="h-0.5 w-32 bg-outline-variant/60"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold mt-1">CA Rohan Mehta</span>
+<span class="font-body-sm text-[10px] leading-tight text-secondary">Lead Faculty (Ex-Deloitte Strategy Lead)</span>
+</div>
+<!-- Security Hash & Mini QR Indicator -->
+<div class="flex items-center gap-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">ID: BICE-2024-EXC-00124</span>
+<span class="font-label-sm text-[10px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">lock</span> Cryptographically Signed
+                  </span>
+</div>
+<div class="w-9 h-9 bg-surface-container-lowest rounded p-1 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[28px] text-on-surface">qr_code_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Certificate Action Ribbon -->
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" onclick="downloadCertificate('BICE-2024-EXC-00124')">
+<span class="material-symbols-outlined text-[17px]">download</span>
+<span>Download PDF</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors active:scale-[0.99]" onclick="copyCredentialLink('BICE-2024-EXC-00124')">
+<span class="material-symbols-outlined text-[17px]">link</span>
+<span>Copy Link</span>
+</button>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-sm py-2 text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" href="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current text-[#0A66C2]" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span>Add to LinkedIn</span>
+</a>
+</div>
+</div>
+<!-- Certificate Card 2 -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+<!-- Diploma Frame / Visual Canvas -->
+<div class="relative p-space-xl bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container flex flex-col justify-between min-h-[380px] overflow-hidden">
+<!-- Decorative Guilloche Background Pattern -->
+<svg class="absolute inset-0 w-full h-full opacity-[0.035] pointer-events-none" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="guilloche-2" patternunits="userSpaceOnUse" width="40">
+<path class="text-on-surface" d="M0 20 Q10 0 20 20 T40 20 M20 0 Q30 20 40 0" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle class="text-on-surface" cx="20" cy="20" fill="none" r="14" stroke="currentColor" stroke-width="0.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#guilloche-2)" height="100%" width="100%"></rect>
+</svg>
+<!-- Dual Navy/Gold Micro Precision Border Inset -->
+<div class="absolute inset-3 rounded-lg pointer-events-none shadow-[inset_0_0_0_1px_rgba(79,70,229,0.15),inset_0_0_0_3px_rgba(255,255,255,0.8),inset_0_0_0_4px_rgba(249,189,34,0.35)]"></div>
+<!-- Top Plaque Header: Crest & Category Badge -->
+<div class="relative z-10 flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface flex items-center justify-center text-inverse-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">BICE Data Academy</span>
+<span class="font-body-sm text-body-sm text-secondary">Computing &amp; Automation Lab</span>
+</div>
+</div>
+<!-- Official Gold Foil Stamp Badge -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Verified Credential</span>
+</div>
+</div>
+<!-- Recipient Centerpiece -->
+<div class="relative z-10 my-space-md flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Certificate of Completion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">This credential formally certifies that</p>
+<!-- Recipient Name in Refined Serif Typography -->
+<h3 class="font-serif text-3xl font-bold text-on-surface mt-1.5 tracking-tight italic" style="font-family: Georgia, 'Times New Roman', serif;">
+                Rahul Sharma
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                has successfully fulfilled all curriculum benchmarks and deployed pipelines for
+              </p>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 leading-snug">
+                Python for Business Dashboards &amp; Analytics
+              </h4>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-secondary font-body-sm text-body-sm">
+<span>Issued: <strong class="text-on-surface font-semibold">August 29, 2024</strong></span>
+<span>•</span>
+<span>Track: <strong class="text-on-surface font-semibold">Full 48-Unit Syllabus (100%)</strong></span>
+</div>
+</div>
+<!-- Bottom Plaque Metadata & Signature -->
+<div class="relative z-10 pt-space-sm flex items-end justify-between border-t border-surface-container-highest/60">
+<div class="flex flex-col">
+<!-- Handwritten Signature Emulation -->
+<div class="font-serif italic text-lg text-on-surface/80 leading-none pb-1 select-none" style="font-family: 'Brush Script MT', 'Dancing Script', cursive, serif;">
+                  Rachel Vance, Ph.D.
+                </div>
+<div class="h-0.5 w-32 bg-outline-variant/60"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold mt-1">Dr. Rachel Vance</span>
+<span class="font-body-sm text-[10px] leading-tight text-secondary">Director of Enterprise BI Architecture</span>
+</div>
+<!-- Security Hash & Mini QR Indicator -->
+<div class="flex items-center gap-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">ID: BICE-2024-PY-00089</span>
+<span class="font-label-sm text-[10px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">lock</span> Cryptographically Signed
+                  </span>
+</div>
+<div class="w-9 h-9 bg-surface-container-lowest rounded p-1 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[28px] text-on-surface">qr_code_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Certificate Action Ribbon -->
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" onclick="downloadCertificate('BICE-2024-PY-00089')">
+<span class="material-symbols-outlined text-[17px]">download</span>
+<span>Download PDF</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors active:scale-[0.99]" onclick="copyCredentialLink('BICE-2024-PY-00089')">
+<span class="material-symbols-outlined text-[17px]">link</span>
+<span>Copy Link</span>
+</button>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-sm py-2 text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" href="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current text-[#0A66C2]" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span>Add to LinkedIn</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Courses Close to Completion -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Courses Close to Certification</h2>
+<p class="font-body-sm text-body-sm text-secondary">Complete all lessons, quizzes, and the final peer-reviewed project to trigger diploma generation.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Automated Instant Issue
+        </span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Progress Row 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-lg hover:shadow-md transition-shadow">
+<div class="flex items-start gap-space-md flex-1">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/30 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">dataset</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[11px] font-semibold">Intermediate</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[11px] font-semibold">Automation &amp; ETL</span>
+<span class="text-secondary text-body-sm">•</span>
+<span class="text-secondary font-body-sm text-body-sm">22 of 26 Lessons Complete</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">
+                Power Query &amp; Automated ETL: Corporate Data Pipelines
+              </h3>
+<!-- Progress Bar Track -->
+<div class="w-full max-w-xl mt-2 flex items-center gap-space-md">
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 85%;"></div>
+</div>
+<span class="font-label-md text-label-md text-primary shrink-0">85%</span>
+</div>
+</div>
+</div>
+<!-- Right Action & Time Estimation -->
+<div class="flex items-center justify-between md:justify-end gap-space-lg md:pl-space-md shrink-0">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-label-sm text-label-sm text-secondary">Remaining Work</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4 lessons · 1 Capstone</span>
+<span class="font-body-sm text-body-sm text-outline">~2.5 hours remaining</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Resume Course</span>
+</a>
+</div>
+</div>
+<!-- Progress Row 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-lg hover:shadow-md transition-shadow">
+<div class="flex items-start gap-space-md flex-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/30 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[11px] font-semibold">Intermediate</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[11px] font-semibold">Data Warehousing</span>
+<span class="text-secondary text-body-sm">•</span>
+<span class="text-secondary font-body-sm text-body-sm">29 of 40 Lessons Complete</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">
+                SQL for Modern Data Analysis &amp; Cloud Warehousing
+              </h3>
+<!-- Progress Bar Track -->
+<div class="w-full max-w-xl mt-2 flex items-center gap-space-md">
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 72%;"></div>
+</div>
+<span class="font-label-md text-label-md text-primary shrink-0">72%</span>
+</div>
+</div>
+</div>
+<!-- Right Action & Time Estimation -->
+<div class="flex items-center justify-between md:justify-end gap-space-lg md:pl-space-md shrink-0">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-label-sm text-label-sm text-secondary">Remaining Work</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">11 lessons · Window Queries</span>
+<span class="font-body-sm text-body-sm text-outline">~5.0 hours remaining</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" href="#">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Resume Course</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Verification Explainer & Enterprise Trust Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-xl shadow-sm">
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/30 flex items-center justify-center text-tertiary shrink-0 mt-1">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Public Credential Registry &amp; Instant Verification</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[11px] font-semibold">Zero Login Required</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+              Every credential issued by BICE Data Academy is immutably registered on our public ledger and can be independently confirmed by employers, HR departments, recruitment platforms, or academic committees at any time.
+            </p>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              Official public registry protocol: <code class="font-code-inline text-code-inline text-primary">https://bice.edu/verify-certificate/[CERTIFICATE_ID]</code>
+</p>
+</div>
+</div>
+<!-- Interactive Direct Lookup / Test Component -->
+<div class="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm p-1.5 bg-surface-container rounded-xl">
+<div class="flex items-center gap-2 px-3 py-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">link</span>
+<span class="font-code-inline text-code-inline text-on-surface font-medium select-all">
+              bice.edu/verify/BICE-2024-EXC-00124
+            </span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 px-space-md py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-sm transition-all active:scale-[0.99]" onclick="testPublicLink('BICE-2024-EXC-00124')">
+<span class="material-symbols-outlined text-[17px] text-primary">open_in_new</span>
+<span>Test Public Link</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Modal Mockup -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="verify-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-2xl p-space-xl flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">domain_verification</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Verify External Certificate</h3>
+<p class="font-body-sm text-body-sm text-secondary">Lookup serial token against BICE master hash ledger</p>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface p-1 rounded-lg hover:bg-surface-container" onclick="closeVerificationModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs mt-2">
+<label class="font-label-md text-label-md text-on-surface">Enter Certificate ID</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[18px]">qr_code</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container/20 transition-all uppercase" id="verify-input" placeholder="e.g. BICE-2024-EXC-00124" type="text"/>
+</div>
+<span class="font-body-sm text-[11px] text-secondary">Case-insensitive. IDs are printed on bottom-right of diplomas.</span>
+</div>
+<div class="hidden p-3 rounded-lg bg-secondary-container/40 text-on-secondary-container text-body-sm flex items-center gap-2" id="modal-result">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Certificate validated! Redirecting to public report...</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-2">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="closeVerificationModal()">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" onclick="executeVerification()">
+          Verify Token
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Logic Micro-Scripts -->
+<script>
+    function showToast(message, iconName = 'verified') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      const toastIcon = document.getElementById('toast-icon');
+      
+      toastMsg.innerText = message;
+      toastIcon.innerText = iconName;
+      
+      toast.classList.remove('opacity-0', 'translate-y-24', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-24', 'pointer-events-none');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3200);
+    }
+
+    function copyCredentialLink(certId) {
+      const url = `https://bice.edu/verify-certificate/${certId}`;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast(`Verification link copied for ${certId}`);
+      }).catch(() => {
+        showToast(`Link ready: ${url}`);
+      });
+    }
+
+    function copyPublicProfile() {
+      const profileUrl = "https://bice.edu/profile/rahul-sharma-data";
+      navigator.clipboard.writeText(profileUrl).then(() => {
+        showToast("Public Graduate Profile URL copied to clipboard!");
+      }).catch(() => {
+        showToast(`Profile: ${profileUrl}`);
+      });
+    }
+
+    function downloadCertificate(certId) {
+      showToast(`Generating high-res vector PDF for ${certId}...`, 'file_download');
+      setTimeout(() => {
+        showToast(`Certificate ${certId} downloaded successfully!`, 'download_done');
+      }, 1500);
+    }
+
+    function testPublicLink(certId) {
+      showToast(`Opening public verification audit page for ${certId}...`, 'open_in_new');
+      setTimeout(() => {
+        window.open(`https://bice.edu/verify-certificate/${certId}`, '_blank');
+      }, 600);
+    }
+
+    function triggerVerificationModal() {
+      const modal = document.getElementById('verify-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.getElementById('verify-input').focus();
+    }
+
+    function closeVerificationModal() {
+      const modal = document.getElementById('verify-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.getElementById('modal-result').classList.add('hidden');
+    }
+
+    function executeVerification() {
+      const input = document.getElementById('verify-input');
+      const res = document.getElementById('modal-result');
+      if (!input.value.trim()) {
+        input.focus();
+        return;
+      }
+      res.classList.remove('hidden');
+      setTimeout(() => {
+        closeVerificationModal();
+        showToast(`Verified token: ${input.value.toUpperCase()}`, 'check_circle');
+        input.value = '';
+      }, 1200);
+    }
+  </script>
+</div></main></div></body></html>

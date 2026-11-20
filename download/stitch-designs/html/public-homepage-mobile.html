@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#eff1f3", "error": "#ba1a1a", "surface-dim": "#d8dadc", "on-secondary-container": "#5c647a", "tertiary-fixed": "#ffdf9f", "inverse-surface": "#2d3133", "on-tertiary-fixed-variant": "#5c4300", "on-primary": "#ffffff", "surface": "#f7f9fb", "secondary-fixed-dim": "#bec6e0", "secondary-container": "#dae2fd", "surface-variant": "#e0e3e5", "on-surface-variant": "#464555", "surface-bright": "#f7f9fb", "on-tertiary-fixed": "#261a00", "primary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "primary-fixed-dim": "#c3c0ff", "on-secondary": "#ffffff", "surface-container-high": "#e6e8ea", "outline-variant": "#c7c4d8", "on-primary-fixed-variant": "#3323cc", "on-secondary-fixed-variant": "#3f465c", "on-secondary-fixed": "#131b2e", "secondary": "#565e74", "on-tertiary": "#ffffff", "on-primary-fixed": "#0f0069", "error-container": "#ffdad6", "surface-tint": "#4d44e3", "tertiary": "#5e4400", "on-surface": "#191c1e", "surface-container-highest": "#e0e3e5", "surface-container-low": "#f2f4f6", "on-tertiary-container": "#ffd681", "tertiary-container": "#7b5b00", "on-background": "#191c1e", "outline": "#777587", "surface-container": "#eceef0", "on-error": "#ffffff", "on-primary-container": "#dad7ff", "primary-container": "#4f46e5", "inverse-primary": "#c3c0ff", "tertiary-fixed-dim": "#f9bd22", "primary": "#3525cd", "background": "#f7f9fb", "secondary-fixed": "#dae2fd" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-2xl": "3rem", "space-md": "1rem", "gutter": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem" }, fontFamily: { "display-hero-mobile": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "code-inline": ["Inter"], "display-hero": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"] }, fontSize: { "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-lg hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold tracking-tight">B</div><div class="flex flex-col items-start"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface uppercase leading-none">BICE</span><span class="font-label-sm text-label-sm tracking-wider text-primary uppercase font-bold">Data Academy</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-lg hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8 overflow-x-hidden">
+<!-- HERO SECTION -->
+<section class="flex flex-col px-gutter-mobile pt-space-md pb-space-lg">
+<!-- Cohort Pill Badge -->
+<div class="inline-flex items-center gap-space-xs self-start bg-secondary-container px-3 py-1.5 rounded-full mb-space-sm shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant uppercase tracking-wider font-semibold">
+        NEW COHORT ENROLLING • Q3 EXECUTIVE
+      </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight mt-1 mb-space-sm">
+      Master Data Skills That Drive Your Career
+    </h1>
+<!-- Subtext -->
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+      Executive-caliber hands-on training in Advanced Excel, Power Query, PostgreSQL, and BI dashboards. Built for ambitious business practitioners.
+    </p>
+<!-- Stacked Touch-Friendly CTAs -->
+<div class="flex flex-col gap-space-sm w-full">
+<a class="w-full h-12 bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-space-xs shadow-md transition-all" href="#featured-courses">
+<span>Explore Courses</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="w-full h-12 bg-surface-container-lowest hover:bg-surface-container-low active:scale-[0.99] text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center shadow-sm transition-all">
+        Get Started Free
+      </button>
+</div>
+<!-- Social Proof Badge -->
+<div class="flex items-center gap-space-xs mt-space-md py-1">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.9/5</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">12,000+ corporate alumni</span>
+</div>
+<!-- Mobile Hero Graphic Mockup -->
+<div class="mt-space-lg w-full bg-inverse-surface rounded-xl shadow-xl overflow-hidden text-inverse-on-surface">
+<!-- Terminal Window Bar -->
+<div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container-highest/10">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+<span class="ml-2 font-code-inline text-label-sm text-outline-variant font-mono">bice_sandbox_v4.sql</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-emerald-950/80 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-mono font-medium">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+          Executed (14ms)
+        </span>
+</div>
+<!-- Syntax Highlighting Area -->
+<div class="p-space-md font-mono text-[11px] leading-relaxed space-y-1 bg-inverse-surface">
+<div class="text-outline-variant italic">-- CTE: Dynamic Corporate ARR Yield</div>
+<div>
+<span class="text-primary-fixed-dim font-semibold">WITH</span>
+<span class="text-tertiary-fixed">monthly_cohort</span>
+<span class="text-primary-fixed-dim font-semibold">AS</span> (
+        </div>
+<div class="pl-3 text-surface-container-highest">
+<span class="text-primary-fixed-dim font-semibold">SELECT</span>
+<span>region,</span>
+<span class="text-primary-fixed-dim font-semibold">SUM</span>(net_yield)
+          <span class="text-primary-fixed-dim font-semibold">AS</span> rev_act
+        </div>
+<div class="pl-3 text-surface-container-highest">
+<span class="text-primary-fixed-dim font-semibold">FROM</span> enterprise_ledger
+        </div>
+<div class="pl-3 text-surface-container-highest">
+<span class="text-primary-fixed-dim font-semibold">WHERE</span> fiscal_qtr = <span class="text-tertiary-fixed">'Q3-2025'</span>
+</div>
+<div>)</div>
+<div class="text-primary-fixed-dim font-semibold">SELECT * FROM <span class="text-tertiary-fixed">monthly_cohort</span>;</div>
+</div>
+<!-- Execution Result Card / Sparkline Metrics -->
+<div class="m-3 p-3 bg-surface-container-highest/15 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-outline-variant uppercase tracking-wider">Variance Yield</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface">$2.48M</span>
+<span class="text-emerald-400 font-label-sm text-[11px] font-semibold bg-emerald-950/70 px-1.5 py-0.5 rounded flex items-center">
+              +24.8% YoY
+            </span>
+</div>
+</div>
+<!-- Compact Inline Sparkline SVG -->
+<div class="w-24 h-8 flex items-center">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 100 32">
+<path d="M2 28 L 20 22 L 38 25 L 56 14 L 74 18 L 98 4" stroke="#818cf8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M2 28 L 20 22 L 38 25 L 56 14 L 74 18 L 98 4 L 98 32 L 2 32 Z" fill="url(#sparkline-grad)" opacity="0.3"></path>
+<circle cx="98" cy="4" fill="#38bdf8" r="3"></circle>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="sparkline-grad" x1="0" x2="0" y1="0" y2="32">
+<stop stop-color="#818cf8"></stop>
+<stop offset="1" stop-color="#818cf8" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- STATS BAND (2x2 Grid) -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight block">12,000+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Students Certified</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight block">25+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Specialized Tracks</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight block">4.8 / 5.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Consensus Rating</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight block">96%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Career Promotion</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CATEGORIES FILTER CHIPS (Horizontal Scroll) -->
+<section class="mt-space-md w-full">
+<div class="px-gutter-mobile mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Curated Disciplines</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto px-gutter-mobile pb-2 snap-x snap-mandatory scroll-smooth no-scrollbar" style="-webkit-overflow-scrolling: touch;">
+<button class="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>All Tracks</span>
+</button>
+<button class="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">table_chart</span>
+<span>Advanced Excel</span>
+</button>
+<button class="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-amber-600">transform</span>
+<span>Power Query & ETL</span>
+</button>
+<button class="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span>
+<span>SQL Analytics</span>
+</button>
+<button class="snap-start shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-indigo-600">terminal</span>
+<span>Python for Finance</span>
+</button>
+</div>
+</section>
+<!-- FEATURED COURSES SECTION -->
+<section class="mt-space-lg" id="featured-courses">
+<!-- Header -->
+<div class="px-gutter-mobile flex items-end justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">TOP RATED PROGRAMS</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">Featured Masterclasses</h2>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-0.5 pb-0.5 hover:underline" href="#">
+<span>Browse all</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal Snap Scroll Carousel -->
+<div class="flex gap-space-md overflow-x-auto px-gutter-mobile pb-space-md snap-x snap-mandatory scroll-smooth no-scrollbar">
+<!-- Course 1 -->
+<article class="snap-center shrink-0 w-[295px] bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col justify-between">
+<div>
+<!-- Thumbnail with Image Placeholder -->
+<div class="relative w-full h-40 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An executive desk scene showing a sleek laptop displaying complex financial Excel spreadsheets with nested formulas and pivot tables, clean soft daylight, premium minimalist stationery, in a navy and slate corporate palette with warm accent lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpKxy1goxK2TOWJa3B1SKcM8bYs4GeEAPnK8RptAKTqT6nYvTz7gWrxHAVGUBF3Jmg6Ui6x9xTKMLal_P28SKqYqYmEW7cIPNkga-XmzJAk7k6uFaJQLwbM-HeB2FrXRto3B0CoxSnwpHHFaTL4nABVmMvfwF3pc-r0yIHJ79plY_L4nSYkPNHqp3TjMTi3smVGfurbsUqNWVVIXFm8lC2EvPRK4pcSqAX6RgavEkqNVTBP_oRIDoGlqv4LoGsQ1BIz2sh1wexXKs"/>
+<div class="absolute top-2.5 left-2.5 bg-rose-100 text-rose-800 font-label-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider shadow-sm">
+              ADVANCED
+            </div>
+</div>
+<div class="p-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-[11px] mb-1.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>18.5 hrs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>42 lessons</span>
+</div>
+<h3 class="font-headline-sm text-[16px] leading-snug font-bold text-on-surface mb-2 line-clamp-2">
+              Advanced Excel: Dynamic Arrays & Financial Modeling
+            </h3>
+<div class="flex items-center gap-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(3,820)</span>
+</div>
+</div>
+</div>
+<div class="px-space-md pb-space-md pt-0 flex items-center justify-between mt-auto">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$89</span>
+<span class="font-body-sm text-body-sm text-outline line-through">$149</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-all">
+            Enroll Now
+          </button>
+</div>
+</article>
+<!-- Course 2 -->
+<article class="snap-center shrink-0 w-[295px] bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col justify-between">
+<div>
+<!-- Thumbnail with Image Placeholder -->
+<div class="relative w-full h-40 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern analytics dashboard screen depicting a Power Query transformation workflow, data ingestion nodes, ETL pipeline schema diagram, high aesthetic dark glass modern office monitor, with soft violet and amber UI highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzZTdhb3VuCzXCCFlUdYsohv91e2kQgenNqrA8oV59Pju6k7G8IiD3PjM-7eKJny3mRAaBfpM7Rw0x6-sgiCvZ-bpJ4xofOzEArD4l8EWxfQOUcOcJj42zcB2AEjHYKx2jMH7H84_9YjLM6IwZKEOIKCwcoFCFjHA0EwDMijs4k2Krjc0sKmfJPVnor7ho_0TVmBSc5J6x7Hy10oIQGGu5Xh2NiSK1L-dHZzp1CVOCmTmL5N6TnN2ZMkLbPzGaBgKW75cpJJei9E"/>
+<div class="absolute top-2.5 left-2.5 bg-amber-100 text-amber-900 font-label-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider shadow-sm">
+              INTERMEDIATE
+            </div>
+</div>
+<div class="p-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-[11px] mb-1.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>14 hrs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>30 lessons</span>
+</div>
+<h3 class="font-headline-sm text-[16px] leading-snug font-bold text-on-surface mb-2 line-clamp-2">
+              Power Query & Automated ETL: Corporate Pipelines
+            </h3>
+<div class="flex items-center gap-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(1,890)</span>
+</div>
+</div>
+</div>
+<div class="px-space-md pb-space-md pt-0 flex items-center justify-between mt-auto">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$79</span>
+<span class="font-body-sm text-body-sm text-outline line-through">$129</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-all">
+            Enroll Now
+          </button>
+</div>
+</article>
+<!-- Course 3 -->
+<article class="snap-center shrink-0 w-[295px] bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col justify-between">
+<div>
+<!-- Thumbnail with Image Placeholder -->
+<div class="relative w-full h-40 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a programmer workstation with dual curved monitors displaying PostgreSQL query results, clean database relational diagrams, dark mode theme with elegant typography, soft studio rim lighting in indigo and emerald." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9liuSc6iXg0vMHtCUb_MzYnfwqRQ8HfDUvUPkGSAgcUq5U6RzlZEkPlEjGB_tjFWHHpprdb3dRnbu38q4vQany85B3zl2tj-JcZ5LVWBEJWbnJzlO5wLJnowCaW3lMUsOHFT6ruTTbHwTo60c_hYdpFbSdFP6tRHK9YjsmDkKmJ_8s5iqCrDbJ_AIpdraZrL3nRnA5lyfBCJpLE0B31kNTPEOPitonlIrFYzxIAlR77mJ-uKfQzDLrJS0XPs0UOuTpjRLS5xGlTs"/>
+<div class="absolute top-2.5 left-2.5 bg-emerald-100 text-emerald-900 font-label-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider shadow-sm">
+              BEGINNER-TO-PRO
+            </div>
+</div>
+<div class="p-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-[11px] mb-1.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>22 hrs</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>56 lessons</span>
+</div>
+<h3 class="font-headline-sm text-[16px] leading-snug font-bold text-on-surface mb-2 line-clamp-2">
+              SQL for Modern Data Analysis & Warehousing
+            </h3>
+<div class="flex items-center gap-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(4,150)</span>
+</div>
+</div>
+</div>
+<div class="px-space-md pb-space-md pt-0 flex items-center justify-between mt-auto">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$99</span>
+<span class="font-body-sm text-body-sm text-outline line-through">$169</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-all">
+            Enroll Now
+          </button>
+</div>
+</article>
+</div>
+</section>
+<!-- WHY BICE BENEFIT CARDS -->
+<section class="px-gutter-mobile mt-space-lg">
+<div class="flex flex-col mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">THE BICE DIFFERENCE</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">Engineered for Rapid Career Impact</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        No theoretical fluff. We teach the exact workflows required to deliver results on day one.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Benefit 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Practitioner-Only Faculty</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every module is crafted and delivered by practicing VP and Director-level data professionals from top technology, financial institutions, and global management consultancies.
+          </p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">dataset</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Messy Real-World Datasets</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Practice resolving mismatched fiscal calendars, uncleared CSV exports, null reconciliations, and currency fluctuation anomalies straight from enterprise audits.
+          </p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface mb-1">Verifiable Accreditation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Earn high-trust digital credentials with immutable verification hashes easily shareable directly to LinkedIn and recognized by leading recruitment agencies.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIAL CARD -->
+<section class="px-gutter-mobile mt-space-xl">
+<div class="flex flex-col mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">STUDENT OUTCOMES</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Validated by Top Performers</h2>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md relative overflow-hidden">
+<!-- Decorative Quote Background Watermark -->
+<span class="material-symbols-outlined absolute right-2 bottom-2 text-surface-container-high text-[80px] -z-0 opacity-40 select-none">
+        format_quote
+      </span>
+<div class="relative z-10 flex flex-col">
+<!-- 5 Gold Stars -->
+<div class="flex text-amber-500 mb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<!-- Quote -->
+<blockquote class="font-body-lg text-body-lg text-on-surface italic leading-relaxed mb-space-md">
+          “The Power Query automation track alone saved our department 14 hours every single Monday morning. My leadership noticed immediately, leading to a senior analyst promotion within 3 months.”
+        </blockquote>
+<!-- Reviewer Lockup -->
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center text-primary font-bold font-headline-sm">
+              SP
+            </div>
+<div class="absolute -bottom-0.5 -right-0.5 bg-emerald-600 text-white rounded-full p-0.5 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] leading-none">check</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Samantha Patel</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Lead Financial Analyst, Deloitte</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ ACCORDION -->
+<section class="px-gutter-mobile mt-space-xl">
+<div class="flex flex-col mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">FREQUENTLY ASKED</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Common Questions</h2>
+</div>
+<div class="flex flex-col gap-2.5" id="faq-container">
+<!-- Item 1 (Expanded) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden faq-item">
+<button class="w-full p-space-md flex items-center justify-between text-left font-label-md text-label-md text-on-surface font-bold faq-trigger" type="button">
+<span>Do I need prior coding experience for Python or SQL?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 rotate-180 faq-icon">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md font-body-sm text-body-sm text-on-surface-variant leading-relaxed faq-body">
+          No prior coding background is required. We start from ground-zero spreadsheet concepts and smoothly scaffold you into relational thinking, CTEs, and Python data manipulation using corporate syntax rather than computer science theory.
+        </div>
+</div>
+<!-- Item 2 (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden faq-item">
+<button class="w-full p-space-md flex items-center justify-between text-left font-label-md text-label-md text-on-surface font-bold faq-trigger" type="button">
+<span>Are the courses self-paced or tied to cohort schedules?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md font-body-sm text-body-sm text-on-surface-variant leading-relaxed faq-body hidden">
+          All courses feature full on-demand lifetime access with optional bi-weekly live executive office hours. You can advance at your own schedule or sync with our guided 6-week cohort structure.
+        </div>
+</div>
+<!-- Item 3 (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden faq-item">
+<button class="w-full p-space-md flex items-center justify-between text-left font-label-md text-label-md text-on-surface font-bold faq-trigger" type="button">
+<span>Can my corporate employer sponsor my enrollment?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md font-body-sm text-body-sm text-on-surface-variant leading-relaxed faq-body hidden">
+          Yes. Over 70% of our enrolled practitioners utilize employer L&D allowances. We generate formal itemized corporate invoices, syllabus briefs for manager approval, and team bulk billing.
+        </div>
+</div>
+</div>
+</section>
+<!-- NEWSLETTER BAND -->
+<section class="px-gutter-mobile mt-space-xl">
+<div class="bg-inverse-surface rounded-2xl p-space-lg shadow-xl text-inverse-on-surface flex flex-col">
+<div class="inline-flex items-center gap-1.5 self-start bg-surface-container-highest/15 text-primary-fixed-dim px-2.5 py-1 rounded-full font-label-sm text-[11px] font-semibold mb-2">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+<span>Bi-weekly Executive Briefing</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-inverse-on-surface mt-1">
+        Stay Ahead of the Data Curve
+      </h2>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1.5 mb-space-md leading-relaxed">
+        Join 35,000+ analysts receiving our bi-weekly breakdown of real-world Excel tips, SQL queries, and modern analytics architectures.
+      </p>
+<form class="flex flex-col gap-2 w-full" onsubmit="event.preventDefault();">
+<div class="relative w-full">
+<input class="w-full h-11 px-3.5 bg-surface-container-highest/10 placeholder:text-outline text-inverse-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-container-highest/20 transition-all" placeholder="Enter your work email address" required="" type="email"/>
+</div>
+<button class="w-full h-11 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-1 active:scale-[0.99] transition-all" type="submit">
+<span>Subscribe Free</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<span class="font-label-sm text-[11px] text-outline-variant mt-2 text-center">
+        Zero spam • Unsubscribe anytime
+      </span>
+</div>
+</section>
+<!-- FOOTER ACCORDION & LEGAL -->
+<footer class="mt-space-xl px-gutter-mobile flex flex-col pt-space-md">
+<!-- Brand & Mission statement -->
+<div class="flex flex-col mb-space-md">
+<div class="flex items-center gap-1.5 mb-2">
+<div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-on-primary font-bold text-[13px]">B</div>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">BICE Data Academy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Empowering modern financial analysts, data engineers, and corporate leaders with battle-tested enterprise analytics training.
+      </p>
+</div>
+<!-- Collapsible Accordion Groups -->
+<div class="flex flex-col gap-1.5 mb-space-lg" id="footer-accordion">
+<!-- Group 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden footer-item">
+<button class="w-full py-2.5 px-3 flex items-center justify-between font-label-md text-label-md text-on-surface font-semibold footer-trigger" type="button">
+<span>Courses & Curriculums</span>
+<span class="material-symbols-outlined text-[18px] text-outline footer-icon">expand_more</span>
+</button>
+<div class="px-3 pb-2.5 flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant hidden footer-content">
+<a class="py-1 hover:text-primary" href="#">Advanced Excel Dynamic Arrays</a>
+<a class="py-1 hover:text-primary" href="#">Power Query & ETL Automation</a>
+<a class="py-1 hover:text-primary" href="#">PostgreSQL & Data Warehousing</a>
+<a class="py-1 hover:text-primary" href="#">Python for Financial Engineering</a>
+</div>
+</div>
+<!-- Group 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden footer-item">
+<button class="w-full py-2.5 px-3 flex items-center justify-between font-label-md text-label-md text-on-surface font-semibold footer-trigger" type="button">
+<span>Student Support</span>
+<span class="material-symbols-outlined text-[18px] text-outline footer-icon">expand_more</span>
+</button>
+<div class="px-3 pb-2.5 flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant hidden footer-content">
+<a class="py-1 hover:text-primary" href="#">Accreditation Verification</a>
+<a class="py-1 hover:text-primary" href="#">Corporate Reimbursement Guide</a>
+<a class="py-1 hover:text-primary" href="#">Community Discord Server</a>
+<a class="py-1 hover:text-primary" href="#">Knowledge Base & FAQ</a>
+</div>
+</div>
+<!-- Group 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden footer-item">
+<button class="w-full py-2.5 px-3 flex items-center justify-between font-label-md text-label-md text-on-surface font-semibold footer-trigger" type="button">
+<span>Campus & Contact</span>
+<span class="material-symbols-outlined text-[18px] text-outline footer-icon">expand_more</span>
+</button>
+<div class="px-3 pb-2.5 flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant hidden footer-content">
+<a class="py-1 hover:text-primary" href="#">Enterprise Team Inquiries</a>
+<a class="py-1 hover:text-primary" href="#">Instructor Application</a>
+<a class="py-1 hover:text-primary" href="#">support@bicedata.academy</a>
+</div>
+</div>
+</div>
+<!-- Social Icons Row -->
+<div class="flex items-center justify-center gap-space-lg mb-space-md text-on-surface-variant">
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center hover:text-primary shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">work</span>
+</a>
+<a aria-label="X / Twitter" class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center hover:text-primary shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">tag</span>
+</a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center hover:text-primary shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</a>
+<a aria-label="GitHub" class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center hover:text-primary shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<!-- Legal & Copyright -->
+<div class="flex flex-col items-center text-center gap-1 mb-2">
+<p class="font-body-sm text-[12px] text-outline">
+        © 2025 BICE Learning Management System. All rights reserved.
+      </p>
+<div class="flex items-center gap-3 font-label-sm text-[11px] text-outline font-medium">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:underline" href="#">Terms of Service</a>
+<span>•</span>
+<a class="hover:underline" href="#">Security</a>
+</div>
+</div>
+</footer>
+</div>
+<!-- Minimal Interactive Micro-Behaviors for Accordions -->
+<script>
+  // FAQ Accordion Interactivity
+  document.querySelectorAll('#faq-container .faq-trigger').forEach(button => {
+    button.addEventListener('click', () => {
+      const parent = button.closest('.faq-item');
+      const body = parent.querySelector('.faq-body');
+      const icon = button.querySelector('.faq-icon');
+      const isHidden = body.classList.contains('hidden');
+
+      // Close all first for clean single-view accordion
+      document.querySelectorAll('#faq-container .faq-body').forEach(b => b.classList.add('hidden'));
+      document.querySelectorAll('#faq-container .faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        body.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Footer Accordion Interactivity
+  document.querySelectorAll('#footer-accordion .footer-trigger').forEach(button => {
+    button.addEventListener('click', () => {
+      const parent = button.closest('.footer-item');
+      const content = parent.querySelector('.footer-content');
+      const icon = button.querySelector('.footer-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] h-12 transition-colors text-primary font-label-md" data-path="explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalog" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Catalog</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="learning-paths" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm">Tracks</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-learning" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-sm text-label-sm">My LMS</span></a></div></nav></body></html>

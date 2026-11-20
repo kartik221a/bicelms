@@ -1,0 +1,22 @@
+{
+  "http_status": 200,
+  "result": {
+    "id": 2872,
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "text": "{\"name\":\"projects/9891734431591622481\",\"title\":\"BICE LMS Platform\",\"visibility\":\"PRIVATE\",\"projectType\":\"PROJECT_DESIGN\",\"origin\":\"MCP\"}",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {
+        "name": "projects/9891734431591622481",
+        "origin": "MCP",
+        "projectType": "PROJECT_DESIGN",
+        "title": "BICE LMS Platform",
+        "visibility": "PRIVATE"
+      }
+    }
+  }
+}

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-bright":"#f7f9fb","inverse-on-surface":"#eff1f3","surface-container-highest":"#e0e3e5","surface-container-high":"#e6e8ea","inverse-surface":"#2d3133","primary-container":"#4f46e5","surface-variant":"#e0e3e5","on-tertiary-fixed":"#261a00","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-surface":"#191c1e","on-secondary-container":"#5c647a","error":"#ba1a1a","on-tertiary-container":"#ffd681","on-surface-variant":"#464555","primary":"#3525cd","primary-fixed":"#e2dfff","on-secondary-fixed-variant":"#3f465c","on-tertiary-fixed-variant":"#5c4300","error-container":"#ffdad6","on-primary-container":"#dad7ff","tertiary-fixed":"#ffdf9f","tertiary-container":"#7b5b00","background":"#f7f9fb","on-secondary-fixed":"#131b2e","primary-fixed-dim":"#c3c0ff","outline":"#777587","inverse-primary":"#c3c0ff","on-primary":"#ffffff","secondary-container":"#dae2fd","on-primary-fixed-variant":"#3323cc","on-tertiary":"#ffffff","on-background":"#191c1e","surface-tint":"#4d44e3","on-primary-fixed":"#0f0069","secondary-fixed-dim":"#bec6e0","surface-container-low":"#f2f4f6","secondary-fixed":"#dae2fd","tertiary-fixed-dim":"#f9bd22","secondary":"#565e74","outline-variant":"#c7c4d8","surface":"#f7f9fb","on-error-container":"#93000a","surface-dim":"#d8dadc","tertiary":"#5e4400","on-secondary":"#ffffff","surface-container":"#eceef0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","margin":"2rem","space-2xl":"3rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem","gutter":"1.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","margin-mobile":"1rem"},"fontFamily":{"body-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"display-hero-mobile":["Inter"],"code-inline":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"display-hero":["Inter"],"headline-md":["Inter"]},"fontSize":{"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-inverse-surface z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-inverse-surface"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[18px]">school</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-inverse-on-surface leading-tight">BICE Admin</span></div></div><span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm border border-primary-container/40">Super Admin</span></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-sm" data-active-classes="bg-primary-container text-on-primary border-l-4 border-primary-fixed"><div class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Overview</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded transition-colors bg-primary-container text-on-primary border-l-4 border-primary-fixed" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Catalog</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-label-md text-label-md">Courses</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-label-md text-label-md">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="lessons" href="#"><span class="material-symbols-outlined text-[20px]">play_lesson</span><span class="font-label-md text-label-md">Lessons</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">People</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="students" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-md text-label-md">Students</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="instructors" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Instructors</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Sales</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-label-md text-label-md">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[20px]">credit_card</span><span class="font-label-md text-label-md">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="coupons" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span class="font-label-md text-label-md">Coupons</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Engagement</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-label-md text-label-md">Reviews</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="announcements" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="font-label-md text-label-md">Announcements</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="resources" href="#"><span class="material-symbols-outlined text-[20px]">folder</span><span class="font-label-md text-label-md">Resources</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Insights</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-label-md text-label-md">Analytics</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">System</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Audit Logs</span></a></nav></div><div class="p-space-sm border-t border-inverse-surface/40 bg-inverse-surface/90 flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-outline-variant hover:bg-surface-variant/10 hover:text-inverse-on-surface transition-colors" href="#"><span class="flex items-center gap-space-xs font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">open_in_new</span>Student Portal</span><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface leading-none">Rajesh V.</span><span class="font-label-sm text-label-sm text-outline-variant">Super Admin</span></div></div><a class="p-1.5 rounded hover:bg-surface-variant/10 text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="logout" href="#" title="Sign Out"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest border-b border-surface-container-high z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span>Admin</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dashboard</span></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-64 h-10 pl-9 pr-space-sm bg-surface-container-low border border-surface-container-high rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:bg-surface-container-lowest transition-all" placeholder="Search courses, users, logs..." type="text"/></div><button class="flex items-center gap-space-xs h-10 px-space-sm bg-surface-container-low border border-surface-container-high rounded-lg text-on-surface hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span><span>Last 30 Days (Oct 1 - Oct 31, 2024)</span><span class="material-symbols-outlined text-[18px] text-outline">expand_more</span></button><button class="flex items-center gap-space-xs h-10 px-space-md bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-all active:scale-[0.99] shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Create Course</span></button><div class="relative"><button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-label-sm text-[10px] rounded-full flex items-center justify-center">3</span></button></div><div class="flex items-center gap-space-xs pl-space-xs border-l border-surface-container-high"><div class="flex items-center gap-space-sm px-space-xs py-1 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Admin / Rajesh V.</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Super Admin</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div></header><main class="w-full pt-16 bg-surface p-margin min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header / Page Title Row -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Dashboard overview</h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+          Live Sync
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Real-time performance metrics, sales conversion, and student learning trends across BICE Data Academy.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="group flex items-center gap-space-xs h-10 px-space-md bg-surface-container-lowest text-on-surface rounded-lg shadow-sm hover:bg-surface-container-low transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:text-primary transition-colors">file_download</span>
+<span class="font-label-md text-label-md">Export Report</span>
+</button>
+<button class="flex items-center gap-space-xs h-10 px-space-md bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-md hover:bg-primary transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Announcement</span>
+</button>
+</div>
+</section>
+<!-- KPI Cards Row (5 horizontal compact cards in a responsive grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Total Students -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Students</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none tracking-tight">1,248</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +42
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">this month</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Total Courses -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Courses</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none tracking-tight">12</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 4 data domains</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Total Enrollments -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Enrollments</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none tracking-tight">3,540</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+185 active sessions</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Total Revenue -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Revenue</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">currency_rupee</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none tracking-tight">₹48,20,000</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lifetime gross</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Monthly Revenue -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Monthly Revenue</span>
+<div class="w-9 h-9 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none tracking-tight">₹6,12,400</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+            +18%
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs last month</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Analytics & Charts Row -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left Chart Card: Revenue Trend (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Revenue trend (last 12 months)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monthly gross earnings in INR</p>
+</div>
+<div class="flex items-center gap-space-md self-start sm:self-auto">
+<!-- Legend -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Course Sales</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Enterprise B2B</span>
+</div>
+</div>
+<!-- Toggle -->
+<div class="flex items-center p-0.5 bg-surface-container-low rounded-lg">
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm" type="button">Monthly</button>
+<button class="px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Quarterly</button>
+</div>
+</div>
+</div>
+<!-- SVG Area Chart -->
+<div class="relative w-full h-[280px] select-none">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 740 240">
+<defs>
+<lineargradient id="primaryAreaGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="enterpriseGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#c7c4d8" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#c7c4d8" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Lines & Y-Labels -->
+<g class="text-outline-variant opacity-60">
+<line stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="740" y1="20" y2="20"></line>
+<text class="font-body-sm text-[11px] fill-on-surface-variant" text-anchor="end" x="32" y="24">₹8L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="740" y1="75" y2="75"></line>
+<text class="font-body-sm text-[11px] fill-on-surface-variant" text-anchor="end" x="32" y="79">₹6L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="740" y1="130" y2="130"></line>
+<text class="font-body-sm text-[11px] fill-on-surface-variant" text-anchor="end" x="32" y="134">₹4L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="740" y1="185" y2="185"></line>
+<text class="font-body-sm text-[11px] fill-on-surface-variant" text-anchor="end" x="32" y="189">₹2L</text>
+</g>
+<!-- Enterprise Area (Background comparison) -->
+<path d="M 50,195 Q 110,185 170,175 T 290,165 T 410,140 T 530,135 T 650,120 T 730,105 L 730,220 L 50,220 Z" fill="url(#enterpriseGrad)"></path>
+<path d="M 50,195 Q 110,185 170,175 T 290,165 T 410,140 T 530,135 T 650,120 T 730,105" fill="none" stroke="#c7c4d8" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Main Course Sales Area Chart -->
+<path d="M 50,180 C 110,175 130,150 180,145 C 230,140 270,160 320,135 C 370,110 410,125 460,95 C 510,65 560,85 610,60 C 660,35 690,45 730,28 L 730,220 L 50,220 Z" fill="url(#primaryAreaGrad)"></path>
+<path d="M 50,180 C 110,175 130,150 180,145 C 230,140 270,160 320,135 C 370,110 410,125 460,95 C 510,65 560,85 610,60 C 660,35 690,45 730,28" fill="none" stroke="#4f46e5" stroke-linecap="round" stroke-width="3"></path>
+<!-- Active Oct Marker Anchor -->
+<line opacity="0.6" stroke="#4f46e5" stroke-dasharray="2 2" stroke-width="1.5" x1="730" x2="730" y1="28" y2="220"></line>
+<circle cx="730" cy="28" fill="#ffffff" r="6" stroke="#4f46e5" stroke-width="3"></circle>
+</svg>
+<!-- Tooltip overlay -->
+<div class="absolute top-2 right-4 bg-inverse-surface text-inverse-on-surface px-3 py-2 rounded-lg shadow-xl pointer-events-none transform -translate-x-2">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline-variant">
+<span>Oct 2024 Gross</span>
+<span class="w-1 h-1 rounded-full bg-primary-fixed"></span>
+<span class="text-primary-fixed">+18.4% YoY</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-semibold tracking-tight text-inverse-on-surface">₹6,12,400</div>
+<div class="font-body-sm text-[11px] text-surface-container-highest">₹4.8L retail + ₹1.3L enterprise</div>
+</div>
+<!-- X-Axis Months -->
+<div class="flex justify-between pl-10 pr-2 pt-2 text-on-surface-variant font-body-sm text-[11px]">
+<span>Nov</span>
+<span>Dec</span>
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+<span>Jul</span>
+<span>Aug</span>
+<span>Sep</span>
+<span class="font-semibold text-primary">Oct</span>
+</div>
+</div>
+</div>
+<!-- Right Chart Card: Enrollments by Category (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Enrollments by category</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distribution of 3,540 learners</p>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span>All Time</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- Donut Chart & Center Metric -->
+<div class="relative flex items-center justify-center my-space-sm">
+<svg class="w-48 h-48 transform -rotate-90" viewbox="0 0 160 160">
+<!-- Background track -->
+<circle cx="80" cy="80" fill="none" r="62" stroke="#f2f4f6" stroke-width="18"></circle>
+<!-- Advanced Excel: 38% (stroke-dasharray: ~148 390) -->
+<circle cx="80" cy="80" fill="none" r="62" stroke="#4f46e5" stroke-dasharray="148 390" stroke-dashoffset="0" stroke-linecap="round" stroke-width="18"></circle>
+<!-- SQL & DW: 26% (~101 390) -->
+<circle cx="80" cy="80" fill="none" r="62" stroke="#3525cd" stroke-dasharray="101 390" stroke-dashoffset="-152" stroke-linecap="round" stroke-width="18"></circle>
+<!-- Power Query: 20% (~78 390) -->
+<circle cx="80" cy="80" fill="none" r="62" stroke="#777587" stroke-dasharray="78 390" stroke-dashoffset="-257" stroke-linecap="round" stroke-width="18"></circle>
+<!-- Python & BI: 16% (~62 390) -->
+<circle cx="80" cy="80" fill="none" r="62" stroke="#7b5b00" stroke-dasharray="62 390" stroke-dashoffset="-339" stroke-linecap="round" stroke-width="18"></circle>
+</svg>
+<!-- Donut Center Content -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight">3,540</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Enrollments</span>
+</div>
+</div>
+<!-- Legend Breakdown List -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-3 h-3 rounded-full bg-primary-container shrink-0"></span>
+<span class="text-on-surface truncate">Advanced Excel & Modeling</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-semibold text-on-surface">38%</span>
+<span class="text-on-surface-variant font-label-sm">(1,345)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-3 h-3 rounded-full bg-primary shrink-0"></span>
+<span class="text-on-surface truncate">SQL & Data Warehousing</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-semibold text-on-surface">26%</span>
+<span class="text-on-surface-variant font-label-sm">(920)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-3 h-3 rounded-full bg-outline shrink-0"></span>
+<span class="text-on-surface truncate">Power Query & ETL</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-semibold text-on-surface">20%</span>
+<span class="text-on-surface-variant font-label-sm">(708)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-3 h-3 rounded-full bg-tertiary-container shrink-0"></span>
+<span class="text-on-surface truncate">Python & Executive BI</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-semibold text-on-surface">16%</span>
+<span class="text-on-surface-variant font-label-sm">(567)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Operations & Activity Row (3 Column Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Column 1: Recent Purchases Table (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent purchases</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live course transactions across gateways</p>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-1 hover:underline" href="#">
+<span>View all orders</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- High Density Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="px-space-sm py-2 rounded-l-lg">Order ID</th>
+<th class="px-space-sm py-2">Student</th>
+<th class="px-space-sm py-2">Course</th>
+<th class="px-space-sm py-2">Amount</th>
+<th class="px-space-sm py-2">Status</th>
+<th class="px-space-sm py-2 rounded-r-lg text-right">Date</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-sm py-3 font-code-inline text-code-inline text-on-surface font-semibold">#ORD-9842</td>
+<td class="px-space-sm py-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-[11px] font-bold">SP</div>
+<span class="text-on-surface font-medium whitespace-nowrap">Samantha Patel</span>
+</div>
+</td>
+<td class="px-space-sm py-3">
+<span class="text-on-surface truncate block max-w-[140px]" title="Advanced Excel Masterclass">Adv. Excel Masterclass</span>
+</td>
+<td class="px-space-sm py-3 font-semibold text-on-surface">₹4,999</td>
+<td class="px-space-sm py-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Paid</span>
+</td>
+<td class="px-space-sm py-3 text-right text-on-surface-variant whitespace-nowrap">14:20</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-sm py-3 font-code-inline text-code-inline text-on-surface font-semibold">#ORD-9841</td>
+<td class="px-space-sm py-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-[11px] font-bold">RG</div>
+<span class="text-on-surface font-medium whitespace-nowrap">Rohan Gupta</span>
+</div>
+</td>
+<td class="px-space-sm py-3">
+<span class="text-on-surface truncate block max-w-[140px]" title="SQL for Modern Data Analysis">SQL Data Analysis</span>
+</td>
+<td class="px-space-sm py-3 font-semibold text-on-surface">₹7,999</td>
+<td class="px-space-sm py-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Paid</span>
+</td>
+<td class="px-space-sm py-3 text-right text-on-surface-variant whitespace-nowrap">11:05</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-sm py-3 font-code-inline text-code-inline text-on-surface font-semibold">#ORD-9840</td>
+<td class="px-space-sm py-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm text-[11px] font-bold">ER</div>
+<span class="text-on-surface font-medium whitespace-nowrap">Elena Rostova</span>
+</div>
+</td>
+<td class="px-space-sm py-3">
+<span class="text-on-surface truncate block max-w-[140px]" title="Power Query & Automated ETL">Power Query & ETL</span>
+</td>
+<td class="px-space-sm py-3 font-semibold text-on-surface">₹6,499</td>
+<td class="px-space-sm py-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Paid</span>
+</td>
+<td class="px-space-sm py-3 text-right text-on-surface-variant whitespace-nowrap">Yesterday</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-sm py-3 font-code-inline text-code-inline text-on-surface font-semibold">#ORD-9839</td>
+<td class="px-space-sm py-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-[11px] font-bold">MC</div>
+<span class="text-on-surface font-medium whitespace-nowrap">Marcus Chen</span>
+</div>
+</td>
+<td class="px-space-sm py-3">
+<span class="text-on-surface truncate block max-w-[140px]" title="Python for Business Dashboards">Python Dashboards</span>
+</td>
+<td class="px-space-sm py-3 font-semibold text-on-surface">₹8,999</td>
+<td class="px-space-sm py-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">Processing</span>
+</td>
+<td class="px-space-sm py-3 text-right text-on-surface-variant whitespace-nowrap">Yesterday</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-sm py-3 font-code-inline text-code-inline text-on-surface font-semibold">#ORD-9838</td>
+<td class="px-space-sm py-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container/10 text-primary-container flex items-center justify-center font-label-sm text-[11px] font-bold">DK</div>
+<span class="text-on-surface font-medium whitespace-nowrap">David Kalu</span>
+</div>
+</td>
+<td class="px-space-sm py-3">
+<span class="text-on-surface truncate block max-w-[140px]" title="Advanced Excel Masterclass">Adv. Excel Masterclass</span>
+</td>
+<td class="px-space-sm py-3 font-semibold text-on-surface">₹4,999</td>
+<td class="px-space-sm py-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Paid</span>
+</td>
+<td class="px-space-sm py-3 text-right text-on-surface-variant whitespace-nowrap">Oct 29</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer -->
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing 5 of 480 orders</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors disabled:opacity-40" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Column 2: Recent Registrations (3 cols) -->
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent registrations</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active user signups</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">38 joined</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Student 1 -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md shrink-0">PS</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Priya Sharma</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant shrink-0">4m ago</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">priya.s@deloitte.com</span>
+<div class="pt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">Financial Modeling</span>
+</div>
+</div>
+</div>
+<!-- Student 2 -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md shrink-0">AK</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Arun Kumar</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant shrink-0">18m ago</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">arun.k@mckinsey.com</span>
+<div class="pt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">SQL Pipeline</span>
+</div>
+</div>
+</div>
+<!-- Student 3 -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md shrink-0">NV</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Neha Verma</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant shrink-0">1h ago</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">neha.v@amazon.com</span>
+<div class="pt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">Python Analytics</span>
+</div>
+</div>
+</div>
+<!-- Student 4 -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md text-label-md shrink-0">TB</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Tanmay Bose</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant shrink-0">3h ago</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">tbose@pwc.in</span>
+<div class="pt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">Power Query ETL</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors text-center" type="button">
+        View all 1,248 students
+      </button>
+</div>
+<!-- Column 3: Most Popular Courses (3 cols) -->
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Most popular courses</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">By enrollment velocity & revenue</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Rank 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-[11px] shrink-0 font-bold">1</span>
+<span class="font-label-md text-label-md text-on-surface truncate" title="Advanced Excel Masterclass">Advanced Excel Masterclass</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">₹14.2L</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 88%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>1,420 enrolled</span>
+<span>88% velocity</span>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-[11px] shrink-0 font-bold">2</span>
+<span class="font-label-md text-label-md text-on-surface truncate" title="SQL for Modern Data Analysis">SQL Modern Analysis</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">₹11.8L</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 62%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>980 enrolled</span>
+<span>62% velocity</span>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-[11px] shrink-0 font-bold">3</span>
+<span class="font-label-md text-label-md text-on-surface truncate" title="Power Query & Automated ETL">Power Query & ETL</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">₹7.9L</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 42%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>640 enrolled</span>
+<span>42% velocity</span>
+</div>
+</div>
+<!-- Rank 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-[11px] shrink-0 font-bold">4</span>
+<span class="font-label-md text-label-md text-on-surface truncate" title="Python for Business Dashboards">Python Dashboards</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">₹6.8L</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 34%"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>500 enrolled</span>
+<span>34% velocity</span>
+</div>
+</div>
+</div>
+<!-- Performance Note -->
+<div class="mt-space-md p-3 rounded-lg bg-surface-container-low flex items-start gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">verified</span>
+<span>Top 2 courses generate <strong>54%</strong> of total academy revenue.</span>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

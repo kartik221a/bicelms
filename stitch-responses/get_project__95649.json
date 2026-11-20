@@ -1,0 +1,217 @@
+{
+  "http_status": 200,
+  "result": {
+    "id": 95649,
+    "jsonrpc": "2.0",
+    "result": {
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://stitch.googleapis.com/project-viewer",
+          "visibility": [
+            "model",
+            "app"
+          ]
+        }
+      },
+      "content": [
+        {
+          "text": "{\"name\":\"projects/9891734431591622481\",\"title\":\"BICE LMS Platform\",\"visibility\":\"PRIVATE\",\"createTime\":\"2026-11-20T11:39:59.528253Z\",\"updateTime\":\"2026-11-20T11:52:19.415740Z\",\"projectType\":\"PROJECT_DESIGN\",\"thumbnailScreenshot\":{\"name\":\"projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ALJJyrAZQcwkWZNuhNmR03HgpJd_xXwy5BAqfn_69-0bFDuCe4bMq4iSTEMhItTS-o7EQeMA0VDkpiB6arKo_4-AXYTptfcR-bbYvCIwNsqYJzwyI_3SLaE9PTb8_Dgxd-oeCP6lfJsgb6dq2bkEMhsMP2N90mWBgYPMsFSCAZf4BMvDs52pPbiYP1ocRwF4v978rfH-hFioalj8mLTvd8gI4RYgNAD_w8v12pognKnWnhnhekpi8SB3Anrfn6I\"},\"origin\":\"MCP\",\"deviceType\":\"DESKTOP\",\"designTheme\":{\"colorMode\":\"LIGHT\",\"font\":\"INTER\",\"roundness\":\"ROUND_EIGHT\",\"customColor\":\"#4f46e5\",\"headlineFont\":\"INTER\",\"bodyFont\":\"INTER\",\"labelFont\":\"INTER\",\"namedColors\":{\"on_error_container\":\"#93000a\",\"secondary_fixed_dim\":\"#bec6e0\",\"on_secondary_fixed_variant\":\"#3f465c\",\"surface_container_low\":\"#f2f4f6\",\"surface_container_high\":\"#e6e8ea\",\"secondary\":\"#565e74\",\"surface_container\":\"#eceef0\",\"surface_container_highest\":\"#e0e3e5\",\"on_secondary_container\":\"#5c647a\",\"on_secondary_fixed\":\"#131b2e\",\"inverse_on_surface\":\"#eff1f3\",\"on_primary_fixed\":\"#0f0069\",\"surface\":\"#f7f9fb\",\"tertiary_fixed\":\"#ffdf9f\",\"surface_variant\":\"#e0e3e5\",\"on_secondary\":\"#ffffff\",\"primary_fixed\":\"#e2dfff\",\"background\":\"#f7f9fb\",\"inverse_surface\":\"#2d3133\",\"surface_tint\":\"#4d44e3\",\"on_tertiary_fixed_variant\":\"#5c4300\",\"on_tertiary_container\":\"#ffd681\",\"on_primary\":\"#ffffff\",\"primary_container\":\"#4f46e5\",\"outline\":\"#777587\",\"tertiary\":\"#5e4400\",\"on_error\":\"#ffffff\",\"error\":\"#ba1a1a\",\"tertiary_fixed_dim\":\"#f9bd22\",\"surface_bright\":\"#f7f9fb\",\"on_primary_fixed_variant\":\"#3323cc\",\"error_container\":\"#ffdad6\",\"surface_container_lowest\":\"#ffffff\",\"on_surface\":\"#191c1e\",\"tertiary_container\":\"#7b5b00\",\"outline_variant\":\"#c7c4d8\",\"on_surface_variant\":\"#464555\",\"on_tertiary\":\"#ffffff\",\"secondary_fixed\":\"#dae2fd\",\"on_tertiary_fixed\":\"#261a00\",\"surface_dim\":\"#d8dadc\",\"on_primary_container\":\"#dad7ff\",\"primary\":\"#3525cd\",\"secondary_container\":\"#dae2fd\",\"on_background\":\"#191c1e\",\"inverse_primary\":\"#c3c0ff\",\"primary_fixed_dim\":\"#c3c0ff\"},\"designMd\":\"---\\nname: Executive Analytics Academy\\ncolors:\\n  surface: '#f7f9fb'\\n  surface-dim: '#d8dadc'\\n  surface-bright: '#f7f9fb'\\n  surface-container-lowest: '#ffffff'\\n  surface-container-low: '#f2f4f6'\\n  surface-container: '#eceef0'\\n  surface-container-high: '#e6e8ea'\\n  surface-container-highest: '#e0e3e5'\\n  on-surface: '#191c1e'\\n  on-surface-variant: '#464555'\\n  inverse-surface: '#2d3133'\\n  inverse-on-surface: '#eff1f3'\\n  outline: '#777587'\\n  outline-variant: '#c7c4d8'\\n  surface-tint: '#4d44e3'\\n  primary: '#3525cd'\\n  on-primary: '#ffffff'\\n  primary-container: '#4f46e5'\\n  on-primary-container: '#dad7ff'\\n  inverse-primary: '#c3c0ff'\\n  secondary: '#565e74'\\n  on-secondary: '#ffffff'\\n  secondary-container: '#dae2fd'\\n  on-secondary-container: '#5c647a'\\n  tertiary: '#5e4400'\\n  on-tertiary: '#ffffff'\\n  tertiary-container: '#7b5b00'\\n  on-tertiary-container: '#ffd681'\\n  error: '#ba1a1a'\\n  on-error: '#ffffff'\\n  error-container: '#ffdad6'\\n  on-error-container: '#93000a'\\n  primary-fixed: '#e2dfff'\\n  primary-fixed-dim: '#c3c0ff'\\n  on-primary-fixed: '#0f0069'\\n  on-primary-fixed-variant: '#3323cc'\\n  secondary-fixed: '#dae2fd'\\n  secondary-fixed-dim: '#bec6e0'\\n  on-secondary-fixed: '#131b2e'\\n  on-secondary-fixed-variant: '#3f465c'\\n  tertiary-fixed: '#ffdf9f'\\n  tertiary-fixed-dim: '#f9bd22'\\n  on-tertiary-fixed: '#261a00'\\n  on-tertiary-fixed-variant: '#5c4300'\\n  background: '#f7f9fb'\\n  on-background: '#191c1e'\\n  surface-variant: '#e0e3e5'\\ntypography:\\n  display-hero:\\n    fontFamily: Inter\\n    fontSize: 48px\\n    fontWeight: '800'\\n    lineHeight: 56px\\n    letterSpacing: -0.025em\\n  display-hero-mobile:\\n    fontFamily: Inter\\n    fontSize: 32px\\n    fontWeight: '800'\\n    lineHeight: 40px\\n    letterSpacing: -0.02em\\n  headline-lg:\\n    fontFamily: Inter\\n    fontSize: 32px\\n    fontWeight: '700'\\n    lineHeight: 40px\\n    letterSpacing: -0.02em\\n  headline-lg-mobile:\\n    fontFamily: Inter\\n    fontSize: 24px\\n    fontWeight: '700'\\n    lineHeight: 32px\\n    letterSpacing: -0.015em\\n  headline-md:\\n    fontFamily: Inter\\n    fontSize: 24px\\n    fontWeight: '600'\\n    lineHeight: 32px\\n    letterSpacing: -0.015em\\n  headline-sm:\\n    fontFamily: Inter\\n    fontSize: 18px\\n    fontWeight: '600'\\n    lineHeight: 26px\\n    letterSpacing: -0.01em\\n  body-lg:\\n    fontFamily: Inter\\n    fontSize: 16px\\n    fontWeight: '400'\\n    lineHeight: 26px\\n    letterSpacing: -0.005em\\n  body-md:\\n    fontFamily: Inter\\n    fontSize: 14px\\n    fontWeight: '400'\\n    lineHeight: 22px\\n    letterSpacing: 0em\\n  body-sm:\\n    fontFamily: Inter\\n    fontSize: 12px\\n    fontWeight: '400'\\n    lineHeight: 18px\\n    letterSpacing: 0em\\n  label-md:\\n    fontFamily: Inter\\n    fontSize: 13px\\n    fontWeight: '600'\\n    lineHeight: 18px\\n    letterSpacing: 0.01em\\n  label-sm:\\n    fontFamily: Inter\\n    fontSize: 11px\\n    fontWeight: '600'\\n    lineHeight: 16px\\n    letterSpacing: 0.04em\\n  code-inline:\\n    fontFamily: Inter\\n    fontSize: 13px\\n    fontWeight: '500'\\n    lineHeight: 18px\\n    letterSpacing: 0em\\nrounded:\\n  sm: 0.25rem\\n  DEFAULT: 0.5rem\\n  md: 0.75rem\\n  lg: 1rem\\n  xl: 1.5rem\\n  full: 9999px\\nspacing:\\n  gutter: 1.5rem\\n  gutter-mobile: 1rem\\n  margin: 2rem\\n  margin-mobile: 1rem\\n  space-xs: 0.25rem\\n  space-sm: 0.5rem\\n  space-md: 1rem\\n  space-lg: 1.5rem\\n  space-xl: 2rem\\n  space-2xl: 3rem\\n---\\n\\n## Brand & Style\\n\\nThe design system embodies the rigor, precision, and executive polish required for career-defining data education. Tailored for corporate analysts, aspiring data engineers, and business leaders mastering Advanced Excel, Power Query, SQL, Python, and BI dashboards, the interface projects competence, clarity, and momentum.\\n\\nDrawing from modern high-end SaaS leaders (Linear, Stripe) and tier-one enterprise academies (Coursera for Business, Udemy Enterprise), the visual style adopts a **Modern Corporate / Systematic Minimalist** aesthetic. Layouts favor razor-sharp typographic hierarchy, high signal-to-noise ratios, and intentional white space over ornamental excess. The emotional response is one of instant credibility, academic rigor, and structured career advancement.\\n\\n## Colors\\n\\nThe palette balances clinical precision with purposeful contrast to sustain long study sessions and sharp data analysis.\\n\\n- **Primary (`#4F46E5` - Indigo 600):** Anchors forward progression, primary actions, active lesson highlights, and interactive states.\\n- **Secondary (`#0F172A` - Slate 900):** Used for top navigation shells, footer frameworks, high-impact headlines, and terminal/code-block frames.\\n- **Tertiary (`#FBBF24` - Amber 400):** Dedicated strictly to stars, user ratings, streak badges, and active milestone achievements.\\n- **Neutral (`#F8FAFC` - Light Slate):** Forms the global canvas backdrop, preventing eye fatigue while allowing pure white (`#FFFFFF`) content surfaces to articulate clear containment.\\n\\n### Functional Badges & Status Tones\\n- **Success & Foundational Tier (`#059669` / Emerald 600):** Completed lessons, verified certificates, and Beginner/Foundational curriculum tags.\\n- **Alert, Advanced Tier & Locked States (`#F43F5E` / Rose 500):** Locked modules, prerequisite requirements, high-difficulty Masterclass tags, and validation alerts.\\n- **Borders & Dividers (`#E2E8F0` / Slate 200):** Delimits cards, progress rails, and table cells with subtle structure.\\n- **Body & Secondary Copy (`#475569` / Slate 600):** Provides crisp contrast across light canvases.\\n\\n## Typography\\n\\nThe type scale relies entirely on **Inter** to ensure maximum legibility for complex tabular metadata, code parameters, formulas, and syllabus outlines.\\n\\n- **Headlines (`#0F172A`):** Set with negative tracking (`-0.015em` to `-0.025em`) to impart an editorial, authoritative stance reminiscent of premium technical journals.\\n- **Body Text (`#475569`):** Tuned for comfortable sustained reading across long-form problem descriptions and analytical walkthroughs.\\n- **Badges and Status Labels (`label-sm`):** Rendered in uppercase with slight positive letter spacing (`0.04em`) to establish visual punch even at small sizes.\\n\\n## Layout & Spacing\\n\\nThe layout model is governed by a strict 8px incremental grid with generous whitespace to prevent visual crowding in data-dense learning environments.\\n\\n- **Desktop (1024px+):** 12-column fluid grid, max container width of `1280px` (or `1440px` for multi-pane lesson workspaces), with `24px` gutters and `32px` page margins.\\n- **Tablet (768px - 1023px):** 8-column layout with `20px` gutters and `24px` margins. Collapsible secondary sidebar navigation for curriculum trees.\\n- **Mobile (\\u003c768px):** 4-column layout with `16px` gutters and `16px` margins. Side-by-side split screens stack into sequential vertical stacks (video/code above syllabus/tasks).\\n- **Workspace Views:** Course player interfaces (such as interactive SQL query editors and dataset previewers) break out of the standard container into a full-bleed, edge-to-edge docked workstation.\\n\\n## Elevation & Depth\\n\\nVisual hierarchy uses low-contrast outlines combined with calibrated, ambient diffused drop shadows to achieve a light, modern SaaS aesthetic.\\n\\n- **Flat Canvas (`#F8FAFC`):** The default root layer upon which cards and panels rest.\\n- **Base Surfaces (`#FFFFFF`):** Cards, lesson sidebars, and course directory panels. Paired with a `1px` border of `#E2E8F0` and `box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05)`.\\n- **Raised Surfaces (Hover / Active Focus):** Interactive course cards and flyout menus elevate slightly using `box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)` and subtle border darkening to `#CBD5E1`.\\n- **Top Bar & Shell Overlays:** Navy slate (`#0F172A`) header uses zero shadow, relying entirely on clean, planar separation and pure surface contrast. Modals and drawers utilize a dark overlay (`rgba(15, 23, 42, 0.6)`) with high-elevation soft blur (`backdrop-filter: blur(4px)`).\\n\\n## Shapes\\n\\nThe design system maintains geometric precision:\\n- **Cards and Outer Containers:** Configured at `rounded-xl` (`12px` / `0.75rem`), conveying refined containment without feeling playful or overly circular.\\n- **Buttons, Form Inputs, Badges, and Code Blocks:** Configured at `rounded-lg` (`8px` / `0.5rem`), aligning directly with Stripe and Linear component ergonomics.\\n- **Progress Trackers & Metric Pills:** Micro status chips and completion rings use full pill radii (`9999px`) to create clear differentiation from square data containers.\\n\\n## Components\\n\\n### Buttons\\n- **Primary:** Background `#4F46E5`, text `#FFFFFF`, radius `8px`, font weight `600`. Hover: `#4338CA`. Active: scale `0.99`.\\n- **Secondary:** Surface `#FFFFFF`, border `1px solid #E2E8F0`, text `#0F172A`. Hover: background `#F8FAFC`, border `#CBD5E1`.\\n- **Ghost/Tertiary:** Surface transparent, text `#475569`. Hover: background `#F1F5F9`, text `#0F172A`.\\n- **Dark Mode / Shell Actions (Header):** Surface `#1E293B`, text `#F8FAFC`, border `1px solid #334155`. Hover: background `#334155`.\\n\\n### Chips & Badges\\n- **Skill Level (Beginner / Solved):** Emerald background `rgba(5, 150, 105, 0.1)`, text `#047857`, border `1px solid rgba(5, 150, 105, 0.2)`.\\n- **Skill Level (Advanced / Locked):** Rose background `rgba(244, 63, 94, 0.1)`, text `#E11D48`, border `1px solid rgba(244, 63, 94, 0.2)`.\\n- **Tool Tags (Excel, SQL, Python):** Background `#F1F5F9`, text `#334155`, font weight `500`, radius `6px`.\\n- **Ratings:** Flex container with Amber `#FBBF24` star icon, followed by bold `#0F172A` rating number and muted review count.\\n\\n### Course & Module Cards\\n- White background (`#FFFFFF`), `12px` border radius, `1px solid #E2E8F0`.\\n- Thumbnail with top-only `12px` radius featuring subtle aspect ratio (`16:9`).\\n- Title in `headline-sm` (`#0F172A`), category tag, multi-step progress bar (Indigo `#4F46E5` over light `#E2E8F0` track), and instructor avatar lockup.\\n\\n### Input Fields & Search Bars\\n- Background `#FFFFFF`, border `1px solid #E2E8F0`, radius `8px`, height `40px` (or `44px` on mobile), font size `14px`.\\n- Focus state: border `#4F46E5`, ring `3px rgba(79, 70, 229, 0.15)`, outline none.\\n\\n### Interactive Syllabus & Checklists\\n- Modular row design: hover transition to `#F8FAFC`.\\n- Checkboxes: `18px x 18px`, `4px` radius. Unchecked: `1.5px solid #CBD5E1`. Checked: background `#4F46E5`, border `#4F46E5` with white stroke check icon.\\n- Locked indicators: Muted slate lock icon with subtle tooltip hinting at prerequisites.\\n\\n### Code & Query Playground Panel\\n- Embedded code runner styling: Dark Slate header (`#0F172A`) containing runnable actions, editor area with monospace sizing (`13px`), and clean tabular output results grid with light borders (`#E2E8F0`).\",\"colorVariant\":\"FIDELITY\",\"overridePrimaryColor\":\"#4f46e5\",\"overrideSecondaryColor\":\"#0f172a\",\"overrideTertiaryColor\":\"#fbbf24\",\"overrideNeutralColor\":\"#f8fafc\",\"spacingScale\":2,\"typography\":{\"label-sm\":{\"fontFamily\":\"Inter\",\"fontSize\":\"11px\",\"fontWeight\":\"600\",\"lineHeight\":\"16px\",\"letterSpacing\":\"0.04em\"},\"body-md\":{\"fontFamily\":\"Inter\",\"fontSize\":\"14px\",\"fontWeight\":\"400\",\"lineHeight\":\"22px\",\"letterSpacing\":\"0em\"},\"headline-lg\":{\"fontFamily\":\"Inter\",\"fontSize\":\"32px\",\"fontWeight\":\"700\",\"lineHeight\":\"40px\",\"letterSpacing\":\"-0.02em\"},\"headline-sm\":{\"fontFamily\":\"Inter\",\"fontSize\":\"18px\",\"fontWeight\":\"600\",\"lineHeight\":\"26px\",\"letterSpacing\":\"-0.01em\"},\"display-hero-mobile\":{\"fontFamily\":\"Inter\",\"fontSize\":\"32px\",\"fontWeight\":\"800\",\"lineHeight\":\"40px\",\"letterSpacing\":\"-0.02em\"},\"headline-md\":{\"fontFamily\":\"Inter\",\"fontSize\":\"24px\",\"fontWeight\":\"600\",\"lineHeight\":\"32px\",\"letterSpacing\":\"-0.015em\"},\"body-lg\":{\"fontFamily\":\"Inter\",\"fontSize\":\"16px\",\"fontWeight\":\"400\",\"lineHeight\":\"26px\",\"letterSpacing\":\"-0.005em\"},\"label-md\":{\"fontFamily\":\"Inter\",\"fontSize\":\"13px\",\"fontWeight\":\"600\",\"lineHeight\":\"18px\",\"letterSpacing\":\"0.01em\"},\"code-inline\":{\"fontFamily\":\"Inter\",\"fontSize\":\"13px\",\"fontWeight\":\"500\",\"lineHeight\":\"18px\",\"letterSpacing\":\"0em\"},\"headline-lg-mobile\":{\"fontFamily\":\"Inter\",\"fontSize\":\"24px\",\"fontWeight\":\"700\",\"lineHeight\":\"32px\",\"letterSpacing\":\"-0.015em\"},\"display-hero\":{\"fontFamily\":\"Inter\",\"fontSize\":\"48px\",\"fontWeight\":\"800\",\"lineHeight\":\"56px\",\"letterSpacing\":\"-0.025em\"},\"body-sm\":{\"fontFamily\":\"Inter\",\"fontSize\":\"12px\",\"fontWeight\":\"400\",\"lineHeight\":\"18px\",\"letterSpacing\":\"0em\"}},\"spacing\":{\"margin-mobile\":\"1rem\",\"gutter\":\"1.5rem\",\"space-xs\":\"0.25rem\",\"margin\":\"2rem\",\"space-xl\":\"2rem\",\"space-md\":\"1rem\",\"gutter-mobile\":\"1rem\",\"space-2xl\":\"3rem\",\"space-sm\":\"0.5rem\",\"space-lg\":\"1.5rem\"},\"headlineFontFamily\":\"Inter\",\"bodyFontFamily\":\"Inter\",\"labelFontFamily\":\"Inter\"},\"metadata\":{\"userRole\":\"OWNER\"},\"sharingSettings\":{\"permissions\":[{\"id\":\"105733097770\",\"role\":\"OWNER\",\"email\":\"kartikkumar221a@gmail.com\"}],\"accessType\":\"RESTRICTED\"}}",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {
+        "createTime": "2026-11-20T11:39:59.528253Z",
+        "designTheme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#4f46e5",
+          "designMd": "---\nname: Executive Analytics Academy\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#464555'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#777587'\n  outline-variant: '#c7c4d8'\n  surface-tint: '#4d44e3'\n  primary: '#3525cd'\n  on-primary: '#ffffff'\n  primary-container: '#4f46e5'\n  on-primary-container: '#dad7ff'\n  inverse-primary: '#c3c0ff'\n  secondary: '#565e74'\n  on-secondary: '#ffffff'\n  secondary-container: '#dae2fd'\n  on-secondary-container: '#5c647a'\n  tertiary: '#5e4400'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#7b5b00'\n  on-tertiary-container: '#ffd681'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e2dfff'\n  primary-fixed-dim: '#c3c0ff'\n  on-primary-fixed: '#0f0069'\n  on-primary-fixed-variant: '#3323cc'\n  secondary-fixed: '#dae2fd'\n  secondary-fixed-dim: '#bec6e0'\n  on-secondary-fixed: '#131b2e'\n  on-secondary-fixed-variant: '#3f465c'\n  tertiary-fixed: '#ffdf9f'\n  tertiary-fixed-dim: '#f9bd22'\n  on-tertiary-fixed: '#261a00'\n  on-tertiary-fixed-variant: '#5c4300'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  display-hero:\n    fontFamily: Inter\n    fontSize: 48px\n    fontWeight: '800'\n    lineHeight: 56px\n    letterSpacing: -0.025em\n  display-hero-mobile:\n    fontFamily: Inter\n    fontSize: 32px\n    fontWeight: '800'\n    lineHeight: 40px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Inter\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.015em\n  headline-md:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: -0.015em\n  headline-sm:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 26px\n    letterSpacing: -0.01em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 26px\n    letterSpacing: -0.005em\n  body-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 22px\n    letterSpacing: 0em\n  body-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 18px\n    letterSpacing: 0em\n  label-md:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: '600'\n    lineHeight: 18px\n    letterSpacing: 0.01em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.04em\n  code-inline:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: '500'\n    lineHeight: 18px\n    letterSpacing: 0em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  gutter-mobile: 1rem\n  margin: 2rem\n  margin-mobile: 1rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2rem\n  space-2xl: 3rem\n---\n\n## Brand & Style\n\nThe design system embodies the rigor, precision, and executive polish required for career-defining data education. Tailored for corporate analysts, aspiring data engineers, and business leaders mastering Advanced Excel, Power Query, SQL, Python, and BI dashboards, the interface projects competence, clarity, and momentum.\n\nDrawing from modern high-end SaaS leaders (Linear, Stripe) and tier-one enterprise academies (Coursera for Business, Udemy Enterprise), the visual style adopts a **Modern Corporate / Systematic Minimalist** aesthetic. Layouts favor razor-sharp typographic hierarchy, high signal-to-noise ratios, and intentional white space over ornamental excess. The emotional response is one of instant credibility, academic rigor, and structured career advancement.\n\n## Colors\n\nThe palette balances clinical precision with purposeful contrast to sustain long study sessions and sharp data analysis.\n\n- **Primary (`#4F46E5` - Indigo 600):** Anchors forward progression, primary actions, active lesson highlights, and interactive states.\n- **Secondary (`#0F172A` - Slate 900):** Used for top navigation shells, footer frameworks, high-impact headlines, and terminal/code-block frames.\n- **Tertiary (`#FBBF24` - Amber 400):** Dedicated strictly to stars, user ratings, streak badges, and active milestone achievements.\n- **Neutral (`#F8FAFC` - Light Slate):** Forms the global canvas backdrop, preventing eye fatigue while allowing pure white (`#FFFFFF`) content surfaces to articulate clear containment.\n\n### Functional Badges & Status Tones\n- **Success & Foundational Tier (`#059669` / Emerald 600):** Completed lessons, verified certificates, and Beginner/Foundational curriculum tags.\n- **Alert, Advanced Tier & Locked States (`#F43F5E` / Rose 500):** Locked modules, prerequisite requirements, high-difficulty Masterclass tags, and validation alerts.\n- **Borders & Dividers (`#E2E8F0` / Slate 200):** Delimits cards, progress rails, and table cells with subtle structure.\n- **Body & Secondary Copy (`#475569` / Slate 600):** Provides crisp contrast across light canvases.\n\n## Typography\n\nThe type scale relies entirely on **Inter** to ensure maximum legibility for complex tabular metadata, code parameters, formulas, and syllabus outlines.\n\n- **Headlines (`#0F172A`):** Set with negative tracking (`-0.015em` to `-0.025em`) to impart an editorial, authoritative stance reminiscent of premium technical journals.\n- **Body Text (`#475569`):** Tuned for comfortable sustained reading across long-form problem descriptions and analytical walkthroughs.\n- **Badges and Status Labels (`label-sm`):** Rendered in uppercase with slight positive letter spacing (`0.04em`) to establish visual punch even at small sizes.\n\n## Layout & Spacing\n\nThe layout model is governed by a strict 8px incremental grid with generous whitespace to prevent visual crowding in data-dense learning environments.\n\n- **Desktop (1024px+):** 12-column fluid grid, max container width of `1280px` (or `1440px` for multi-pane lesson workspaces), with `24px` gutters and `32px` page margins.\n- **Tablet (768px - 1023px):** 8-column layout with `20px` gutters and `24px` margins. Collapsible secondary sidebar navigation for curriculum trees.\n- **Mobile (<768px):** 4-column layout with `16px` gutters and `16px` margins. Side-by-side split screens stack into sequential vertical stacks (video/code above syllabus/tasks).\n- **Workspace Views:** Course player interfaces (such as interactive SQL query editors and dataset previewers) break out of the standard container into a full-bleed, edge-to-edge docked workstation.\n\n## Elevation & Depth\n\nVisual hierarchy uses low-contrast outlines combined with calibrated, ambient diffused drop shadows to achieve a light, modern SaaS aesthetic.\n\n- **Flat Canvas (`#F8FAFC`):** The default root layer upon which cards and panels rest.\n- **Base Surfaces (`#FFFFFF`):** Cards, lesson sidebars, and course directory panels. Paired with a `1px` border of `#E2E8F0` and `box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05)`.\n- **Raised Surfaces (Hover / Active Focus):** Interactive course cards and flyout menus elevate slightly using `box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)` and subtle border darkening to `#CBD5E1`.\n- **Top Bar & Shell Overlays:** Navy slate (`#0F172A`) header uses zero shadow, relying entirely on clean, planar separation and pure surface contrast. Modals and drawers utilize a dark overlay (`rgba(15, 23, 42, 0.6)`) with high-elevation soft blur (`backdrop-filter: blur(4px)`).\n\n## Shapes\n\nThe design system maintains geometric precision:\n- **Cards and Outer Containers:** Configured at `rounded-xl` (`12px` / `0.75rem`), conveying refined containment without feeling playful or overly circular.\n- **Buttons, Form Inputs, Badges, and Code Blocks:** Configured at `rounded-lg` (`8px` / `0.5rem`), aligning directly with Stripe and Linear component ergonomics.\n- **Progress Trackers & Metric Pills:** Micro status chips and completion rings use full pill radii (`9999px`) to create clear differentiation from square data containers.\n\n## Components\n\n### Buttons\n- **Primary:** Background `#4F46E5`, text `#FFFFFF`, radius `8px`, font weight `600`. Hover: `#4338CA`. Active: scale `0.99`.\n- **Secondary:** Surface `#FFFFFF`, border `1px solid #E2E8F0`, text `#0F172A`. Hover: background `#F8FAFC`, border `#CBD5E1`.\n- **Ghost/Tertiary:** Surface transparent, text `#475569`. Hover: background `#F1F5F9`, text `#0F172A`.\n- **Dark Mode / Shell Actions (Header):** Surface `#1E293B`, text `#F8FAFC`, border `1px solid #334155`. Hover: background `#334155`.\n\n### Chips & Badges\n- **Skill Level (Beginner / Solved):** Emerald background `rgba(5, 150, 105, 0.1)`, text `#047857`, border `1px solid rgba(5, 150, 105, 0.2)`.\n- **Skill Level (Advanced / Locked):** Rose background `rgba(244, 63, 94, 0.1)`, text `#E11D48`, border `1px solid rgba(244, 63, 94, 0.2)`.\n- **Tool Tags (Excel, SQL, Python):** Background `#F1F5F9`, text `#334155`, font weight `500`, radius `6px`.\n- **Ratings:** Flex container with Amber `#FBBF24` star icon, followed by bold `#0F172A` rating number and muted review count.\n\n### Course & Module Cards\n- White background (`#FFFFFF`), `12px` border radius, `1px solid #E2E8F0`.\n- Thumbnail with top-only `12px` radius featuring subtle aspect ratio (`16:9`).\n- Title in `headline-sm` (`#0F172A`), category tag, multi-step progress bar (Indigo `#4F46E5` over light `#E2E8F0` track), and instructor avatar lockup.\n\n### Input Fields & Search Bars\n- Background `#FFFFFF`, border `1px solid #E2E8F0`, radius `8px`, height `40px` (or `44px` on mobile), font size `14px`.\n- Focus state: border `#4F46E5`, ring `3px rgba(79, 70, 229, 0.15)`, outline none.\n\n### Interactive Syllabus & Checklists\n- Modular row design: hover transition to `#F8FAFC`.\n- Checkboxes: `18px x 18px`, `4px` radius. Unchecked: `1.5px solid #CBD5E1`. Checked: background `#4F46E5`, border `#4F46E5` with white stroke check icon.\n- Locked indicators: Muted slate lock icon with subtle tooltip hinting at prerequisites.\n\n### Code & Query Playground Panel\n- Embedded code runner styling: Dark Slate header (`#0F172A`) containing runnable actions, editor area with monospace sizing (`13px`), and clean tabular output results grid with light borders (`#E2E8F0`).",
+          "font": "INTER",
+          "headlineFont": "INTER",
+          "headlineFontFamily": "Inter",
+          "labelFont": "INTER",
+          "labelFontFamily": "Inter",
+          "namedColors": {
+            "background": "#f7f9fb",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#eff1f3",
+            "inverse_primary": "#c3c0ff",
+            "inverse_surface": "#2d3133",
+            "on_background": "#191c1e",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#dad7ff",
+            "on_primary_fixed": "#0f0069",
+            "on_primary_fixed_variant": "#3323cc",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#5c647a",
+            "on_secondary_fixed": "#131b2e",
+            "on_secondary_fixed_variant": "#3f465c",
+            "on_surface": "#191c1e",
+            "on_surface_variant": "#464555",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#ffd681",
+            "on_tertiary_fixed": "#261a00",
+            "on_tertiary_fixed_variant": "#5c4300",
+            "outline": "#777587",
+            "outline_variant": "#c7c4d8",
+            "primary": "#3525cd",
+            "primary_container": "#4f46e5",
+            "primary_fixed": "#e2dfff",
+            "primary_fixed_dim": "#c3c0ff",
+            "secondary": "#565e74",
+            "secondary_container": "#dae2fd",
+            "secondary_fixed": "#dae2fd",
+            "secondary_fixed_dim": "#bec6e0",
+            "surface": "#f7f9fb",
+            "surface_bright": "#f7f9fb",
+            "surface_container": "#eceef0",
+            "surface_container_high": "#e6e8ea",
+            "surface_container_highest": "#e0e3e5",
+            "surface_container_low": "#f2f4f6",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#d8dadc",
+            "surface_tint": "#4d44e3",
+            "surface_variant": "#e0e3e5",
+            "tertiary": "#5e4400",
+            "tertiary_container": "#7b5b00",
+            "tertiary_fixed": "#ffdf9f",
+            "tertiary_fixed_dim": "#f9bd22"
+          },
+          "overrideNeutralColor": "#f8fafc",
+          "overridePrimaryColor": "#4f46e5",
+          "overrideSecondaryColor": "#0f172a",
+          "overrideTertiaryColor": "#fbbf24",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "2rem",
+            "margin-mobile": "1rem",
+            "space-2xl": "3rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "-0.005em",
+              "lineHeight": "26px"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "letterSpacing": "0em",
+              "lineHeight": "22px"
+            },
+            "body-sm": {
+              "fontFamily": "Inter",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "letterSpacing": "0em",
+              "lineHeight": "18px"
+            },
+            "code-inline": {
+              "fontFamily": "Inter",
+              "fontSize": "13px",
+              "fontWeight": "500",
+              "letterSpacing": "0em",
+              "lineHeight": "18px"
+            },
+            "display-hero": {
+              "fontFamily": "Inter",
+              "fontSize": "48px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.025em",
+              "lineHeight": "56px"
+            },
+            "display-hero-mobile": {
+              "fontFamily": "Inter",
+              "fontSize": "32px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "40px"
+            },
+            "headline-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "40px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Inter",
+              "fontSize": "24px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.015em",
+              "lineHeight": "32px"
+            },
+            "headline-md": {
+              "fontFamily": "Inter",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "letterSpacing": "-0.015em",
+              "lineHeight": "32px"
+            },
+            "headline-sm": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "600",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "26px"
+            },
+            "label-md": {
+              "fontFamily": "Inter",
+              "fontSize": "13px",
+              "fontWeight": "600",
+              "letterSpacing": "0.01em",
+              "lineHeight": "18px"
+            },
+            "label-sm": {
+              "fontFamily": "Inter",
+              "fontSize": "11px",
+              "fontWeight": "600",
+              "letterSpacing": "0.04em",
+              "lineHeight": "16px"
+            }
+          }
+        },
+        "deviceType": "DESKTOP",
+        "metadata": {
+          "userRole": "OWNER"
+        },
+        "name": "projects/9891734431591622481",
+        "origin": "MCP",
+        "projectType": "PROJECT_DESIGN",
+        "sharingSettings": {
+          "accessType": "RESTRICTED",
+          "permissions": [
+            {
+              "email": "kartikkumar221a@gmail.com",
+              "id": "105733097770",
+              "role": "OWNER"
+            }
+          ]
+        },
+        "thumbnailScreenshot": {
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/ALJJyrAZQcwkWZNuhNmR03HgpJd_xXwy5BAqfn_69-0bFDuCe4bMq4iSTEMhItTS-o7EQeMA0VDkpiB6arKo_4-AXYTptfcR-bbYvCIwNsqYJzwyI_3SLaE9PTb8_Dgxd-oeCP6lfJsgb6dq2bkEMhsMP2N90mWBgYPMsFSCAZf4BMvDs52pPbiYP1ocRwF4v978rfH-hFioalj8mLTvd8gI4RYgNAD_w8v12pognKnWnhnhekpi8SB3Anrfn6I",
+          "name": "projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535"
+        },
+        "title": "BICE LMS Platform",
+        "updateTime": "2026-11-20T11:52:19.415740Z",
+        "visibility": "PRIVATE"
+      }
+    }
+  }
+}

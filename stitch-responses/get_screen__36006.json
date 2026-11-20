@@ -1,0 +1,42 @@
+{
+  "http_status": 200,
+  "result": {
+    "id": 36006,
+    "jsonrpc": "2.0",
+    "result": {
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://stitch.googleapis.com/project-viewer",
+          "visibility": [
+            "model",
+            "app"
+          ]
+        }
+      },
+      "content": [
+        {
+          "text": "{\"name\":\"projects/9891734431591622481/screens/7433de32445544fbaf445b06815fbd06\",\"title\":\"BICE Data Academy - Homepage\",\"screenshot\":{\"name\":\"projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535:download\",\"mimeType\":\"png\"},\"htmlCode\":{\"name\":\"projects/9891734431591622481/files/d56c59de29d546719bc0fee030a1b646\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/9891734431591622481/files/d56c59de29d546719bc0fee030a1b646:download\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"11318\",\"deviceType\":\"DESKTOP\",\"screenType\":\"DESIGN\"}",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {
+        "deviceType": "DESKTOP",
+        "height": "11318",
+        "htmlCode": {
+          "downloadUrl": "https://stitch.googleapis.com/v1/projects/9891734431591622481/files/d56c59de29d546719bc0fee030a1b646:download",
+          "mimeType": "text/html",
+          "name": "projects/9891734431591622481/files/d56c59de29d546719bc0fee030a1b646"
+        },
+        "name": "projects/9891734431591622481/screens/7433de32445544fbaf445b06815fbd06",
+        "screenType": "DESIGN",
+        "screenshot": {
+          "downloadUrl": "https://stitch.googleapis.com/v1/projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535:download",
+          "mimeType": "png",
+          "name": "projects/9891734431591622481/files/e0a52adb05694245adb2baf0523a6535"
+        },
+        "title": "BICE Data Academy - Homepage",
+        "width": "2560"
+      }
+    }
+  }
+}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#dae2fd", "surface-tint": "#4d44e3", "error": "#ba1a1a", "on-primary-container": "#dad7ff", "primary-fixed-dim": "#c3c0ff", "on-error": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#bec6e0", "on-background": "#191c1e", "inverse-on-surface": "#eff1f3", "tertiary-fixed-dim": "#f9bd22", "background": "#f7f9fb", "primary-fixed": "#e2dfff", "on-surface": "#191c1e", "on-primary-fixed": "#0f0069", "tertiary-fixed": "#ffdf9f", "on-surface-variant": "#464555", "on-tertiary": "#ffffff", "surface": "#f7f9fb", "tertiary-container": "#7b5b00", "on-secondary-fixed-variant": "#3f465c", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "outline": "#777587", "surface-container-high": "#e6e8ea", "on-tertiary-fixed-variant": "#5c4300", "surface-container": "#eceef0", "surface-container-highest": "#e0e3e5", "surface-bright": "#f7f9fb", "surface-variant": "#e0e3e5", "tertiary": "#5e4400", "on-tertiary-container": "#ffd681", "outline-variant": "#c7c4d8", "on-primary": "#ffffff", "surface-dim": "#d8dadc", "on-primary-fixed-variant": "#3323cc", "on-secondary-fixed": "#131b2e", "on-secondary": "#ffffff", "on-tertiary-fixed": "#261a00", "primary-container": "#4f46e5", "primary": "#3525cd", "on-secondary-container": "#5c647a", "secondary": "#565e74", "secondary-fixed": "#dae2fd", "error-container": "#ffdad6", "inverse-surface": "#2d3133", "inverse-primary": "#c3c0ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-xs": "0.25rem", "space-2xl": "3rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "space-md": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "code-inline": ["Inter"], "display-hero": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "display-hero-mobile": ["Inter"] }, fontSize: { "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high/50 active:scale-95 transition-all -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate pr-space-xs font-semibold">Course Detail</h1></div><div class="flex items-center gap-1 flex-shrink-0"><button aria-label="Share Course" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 active:scale-95 transition-all"><span class="material-symbols-outlined text-[20px]">share</span></button><button aria-label="Add to Wishlist" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-error hover:bg-surface-container-high/50 active:scale-95 transition-all"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16"><div class="flex flex-col w-full pb-32">
+<!-- Hero Section -->
+<section class="px-gutter-mobile pt-space-md flex flex-col gap-space-md">
+<!-- Category & Status Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 bg-secondary-container/70 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[14px]">query_stats</span>
+        Data &amp; Financial Modeling
+      </span>
+<span class="inline-flex items-center bg-error-container/40 text-error font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">
+        Advanced
+      </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full tracking-wider font-medium">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+        BICE Track
+      </span>
+</div>
+<!-- Course Title & Subtitle -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-extrabold">
+        Advanced Excel Masterclass: Dynamic Arrays &amp; Financial Modeling
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        From spreadsheet basics to automation-grade Excel for enterprise analysts. Master nested lookups, automated Power Query ETL pipelines, and C-Suite presentation dashboards.
+      </p>
+</div>
+<!-- Rating & Social Proof Meta -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-2 flex-wrap">
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">4.8</span>
+<div aria-label="4.8 stars rating" class="flex items-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm font-medium underline underline-offset-2">(1,240 reviews)</span>
+<span class="text-outline-variant font-body-sm text-body-sm">•</span>
+<span class="text-on-surface font-body-sm text-body-sm font-medium">8,420 students enrolled</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">history</span> Updated Oct 2024
+        </span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">translate</span> English [CC]
+        </span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface font-label-md text-label-md">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-[11px]">RM</div>
+<p class="truncate text-on-surface-variant">Created by <span class="font-semibold text-on-surface">CA Rohan Mehta</span> • Ex-Deloitte Strategy Lead</p>
+</div>
+</div>
+<!-- Video Trailer Hero Preview Card -->
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-md group">
+<div class="w-full h-full bg-cover bg-center" data-alt="High-resolution close-up of a modern corporate financial model spreadsheet displayed on a sleek multi-monitor executive trading terminal, highlighting vibrant nested formulas, dynamic array bar charts, indigo data tables, and subtle ambient blue office lighting in a polished minimalist corporate atmosphere" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBabjtTYoAafVPEuxwimFHDk9J8IVMtZppTNDnkRezmGLNqGRt254hxL9jDswiSJqiVFX3iR3UTn7ENf-X5BdDYK8mFkpelT16MCHwiSSJo_gQXx35dYtxqFDBmH8weqNvsO0xLvTNDUC7SWbMYBaPlymYKJ3dfz0FDcY2HKBxykG5NpVfUy2I3RsXMG_-MuueUp36OnXqBdgPodBnMTpLi4LD8l-7dr2ERI-S8rClXpfjC4NugKWnLfR7FcgbuXuquFhOxW1A8EsE')"></div>
+<!-- Dark Vignette Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent flex flex-col justify-between p-4">
+<div class="flex items-center justify-between w-full">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">hd</span> 1080p HD Stream
+          </span>
+<span class="bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim">verified_user</span> Enterprise Safe
+          </span>
+</div>
+<!-- Center Play Button with Pulsing Wave -->
+<div class="self-center flex flex-col items-center gap-2">
+<div class="relative flex items-center justify-center">
+<span class="absolute inline-flex h-16 w-16 rounded-full bg-primary/40 animate-ping opacity-60"></span>
+<button aria-label="Play course video trailer" class="relative w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[32px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<span class="text-inverse-on-surface font-label-md text-label-md font-semibold tracking-wide shadow-sm">
+            Preview this course (4:15 min)
+          </span>
+</div>
+<div class="flex items-center justify-between text-inverse-on-surface font-body-sm text-body-sm opacity-90">
+<span>Module 01: Setup &amp; Matrix Logic</span>
+<span>Sample Clip</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Metrics Ribbon -->
+<section class="px-gutter-mobile mt-space-md">
+<div class="grid grid-cols-3 gap-2 bg-surface-container-lowest p-space-sm rounded-xl shadow-sm text-center">
+<div class="flex flex-col items-center justify-center py-2 px-1">
+<span class="material-symbols-outlined text-primary text-[22px] mb-0.5">timer</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">32 Hours</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">On-demand video</span>
+</div>
+<div class="flex flex-col items-center justify-center py-2 px-1 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-[22px] mb-0.5">dataset</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">96 Models</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clean workbooks</span>
+</div>
+<div class="flex flex-col items-center justify-center py-2 px-1">
+<span class="material-symbols-outlined text-primary text-[22px] mb-0.5">all_inclusive</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Lifetime</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">App &amp; Web sync</span>
+</div>
+</div>
+</section>
+<!-- What You'll Learn Section -->
+<section class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">What you'll learn in this masterclass</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Dynamic lookup formulas: master <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">XLOOKUP</code>, dual-axis <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">INDEX-MATCH-MATCH</code>, and multi-tier <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">CHOOSE</code>.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Multi-table financial models with automated scenarios, sensitivity tables, and Goal Seek iteration loops.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Cleanse, unpivot, and merge messy enterprise ERP datasets seamlessly using Power Query M-code pipelines.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Interactive Pivot Tables, timeline slicers, calculated items, and synced multi-cache data summaries.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            McKinsey-style executive KPI dashboards with automated custom conditional formatting and zero-clutter layouts.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Reusable LAMBDA functions and dynamic array manipulation (<code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">FILTER</code>, <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">SORT</code>, <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">UNIQUE</code>, <code class="bg-surface-container px-1 py-0.5 rounded text-primary font-code-inline text-code-inline font-semibold">LET</code>).
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Automated recurring weekly reporting routines and file consolidations via defensive VBA/macro scripts.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[15px] font-bold">check</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Financial audit trail calculation chains, circular dependency detection, and institutional error-proofing.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills & Tags Covered -->
+<section class="px-gutter-mobile mt-space-lg flex flex-col gap-2">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">
+      Core Skills &amp; Competencies
+    </h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">XLOOKUP &amp; Dynamic Arrays</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">Power Query ETL</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">Financial Modeling</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">Pivot Tables &amp; Slicers</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">VBA Automation</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">Dashboard UI Design</span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg font-medium">SUMIFS Logic</span>
+</div>
+</section>
+<!-- This Course Includes Summary Box -->
+<section class="px-gutter-mobile mt-space-lg">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">This course includes:</h3>
+<div class="grid grid-cols-1 gap-space-xs text-on-surface font-body-md text-body-md pt-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_display</span>
+<span>32 hours on-demand HD video</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_zip</span>
+<span>96 downloadable corporate models (.xlsx, .pbix)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<span>4 real-world capstone portfolio reviews</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
+<span>Verified BICE Certificate of Completion</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">devices</span>
+<span>Accessible on iOS, Android &amp; Desktop</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span>30-Day Money-Back Guarantee</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Curriculum Section (Interactive Accordion) -->
+<section class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Course Curriculum</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">
+        4 sections • 24 modules • 96 lessons • 32h 15m total
+      </p>
+</div>
+<!-- Accordion Wrapper -->
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Section 1 (Expanded) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('sec-1', this)">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Section 1: Modern Excel Architecture &amp; Dynamic Formulas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6 lessons • 4h 30m</span>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-200" id="icon-sec-1">expand_less</span>
+</button>
+<div class="flex flex-col px-space-md pb-space-md gap-space-xs bg-surface-container-lowest" id="sec-1">
+<!-- Lesson 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">1. Course Architecture &amp; Sanitized Enterprise Data Files</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12:40</span>
+</div>
+</div>
+<span class="bg-secondary-container text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold flex-shrink-0">Free Preview</span>
+</div>
+<!-- Lesson 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">2. Dynamic Arrays &amp; The Death of Legacy VLOOKUP: Deep Dive</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24:15</span>
+</div>
+</div>
+<span class="bg-secondary-container text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold flex-shrink-0">Free Preview</span>
+</div>
+<!-- Lesson 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">3. Two-Way Matrix Matching: Combining INDEX, MATCH, and XMATCH</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">38:20</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">38:20</span>
+</div>
+<!-- Lesson 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">4. Array Extraction: FILTER, SORT, SORTBY, and UNIQUE with Multiple Conditions</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">29:10</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">29:10</span>
+</div>
+<!-- Lesson 5 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">5. Formula Error Resiliency: Defensive Logic with IFERROR, ISNUMBER, and SWITCH</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18:45</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">18:45</span>
+</div>
+<!-- Lesson 6 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-2.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">task</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">6. Capstone Project 1: Multi-Tier Cohort Retention &amp; ARR Modeling Sheet</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45:00</span>
+</div>
+</div>
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold flex-shrink-0">Assignment</span>
+</div>
+</div>
+</div>
+<!-- Section 2 (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('sec-2', this)">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Section 2: Institutional Financial Modeling &amp; Scenario Sensitivity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8 lessons • 8h 15m</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-sec-2">expand_more</span>
+</button>
+<div class="hidden flex flex-col px-space-md pb-space-md gap-space-xs bg-surface-container-lowest" id="sec-2">
+<div class="p-3 text-on-surface-variant font-body-sm text-body-sm italic">
+            Covers Dynamic 3-Statement modeling, DCF valuation builds, Monte Carlo scenario tables, and circular interest reconciliation mechanics.
+          </div>
+</div>
+</div>
+<!-- Section 3 (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('sec-3', this)">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Section 3: Power Query &amp; Automated Multi-Source ETL Workflows</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10 lessons • 11h 20m</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-sec-3">expand_more</span>
+</button>
+<div class="hidden flex flex-col px-space-md pb-space-md gap-space-xs bg-surface-container-lowest" id="sec-3">
+<div class="p-3 text-on-surface-variant font-body-sm text-body-sm italic">
+            Connecting SQL databases, SAP CSV exports, JSON web feeds, and compiling scheduled automatic refreshes with advanced M syntax.
+          </div>
+</div>
+</div>
+<!-- Section 4 (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('sec-4', this)">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Section 4: Executive Dashboard Design, VBA Automation &amp; Final Portfolio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8 lessons • 9h 10m</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-sec-4">expand_more</span>
+</button>
+<div class="hidden flex flex-col px-space-md pb-space-md gap-space-xs bg-surface-container-lowest" id="sec-4">
+<div class="p-3 text-on-surface-variant font-body-sm text-body-sm italic">
+            Building presentation-ready dynamic C-suite dashboard interfaces, writing reusable VBA scripts, and enterprise capstone project defense.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructor Spotlight Card -->
+<section class="px-gutter-mobile mt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Professional corporate headshot portrait of CA Rohan Mehta, a seasoned male executive financial strategy leader with sharp tailored navy blazer, warm confident expression, clean corporate lighting against a modern architectural studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVvgyk3QMRj3eqL6ma7qCqjDk55wxYBU6hsnWuYNYn9eakRlXUiqbrBph2dnK2e7_5ZpTTVnKKLCGrszKpdetoZSm6lnbmW7T9Na-bdsSyMnkirAMwbVG-hIaZNyNbzr-oWRNQ4yXYCd93hzxyLxqH4Bo2fU5e1uUnbL2zOFIEKA-ZOQ0toZfXYgiz1YG9pslBI2a-vlideeOJ7bJyrIXmowSWkXlVB7QS2HbhnO0_2RcdRIWN0GFls3YnZzV499wJPh5LqVMSYkU"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">CA Rohan Mehta</h3>
+<p class="font-body-sm text-body-sm text-primary font-semibold truncate">Principal Financial Architect &amp; Former Deloitte Strategy Lead</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center gap-0.5 text-on-surface font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+            </span>
+<span class="text-outline-variant text-[11px]">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">42,000+ Students</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-lg text-center">
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface">14 Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enterprise Practice</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface">Fortune 100</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Advisory Experience</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Rohan has directed capital structuring and financial automation projects across Wall Street banking syndicates and Big 4 corporate finance teams. He specializes in turning manual, high-risk spreadsheet workbooks into rock-solid institutional systems.
+      </p>
+</div>
+</section>
+<!-- Student Ratings & Reviews Section -->
+<section class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Student Feedback &amp; Verification</h2>
+<!-- Rating Breakdown Bento -->
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center">
+<span class="font-display-hero-mobile text-display-hero-mobile font-extrabold text-on-surface leading-none">4.8</span>
+<div class="flex items-center text-tertiary-fixed-dim mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Course Rating</span>
+</div>
+<!-- Rating Bars -->
+<div class="flex-1 flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant w-3">5</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84%"></div>
+</div>
+<span class="text-on-surface-variant w-7 text-right">84%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant w-3">4</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary/80 h-full rounded-full" style="width: 12%"></div>
+</div>
+<span class="text-on-surface-variant w-7 text-right">12%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant w-3">3</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary/60 h-full rounded-full" style="width: 3%"></div>
+</div>
+<span class="text-on-surface-variant w-7 text-right">3%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant w-3">2</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary/40 h-full rounded-full" style="width: 1%"></div>
+</div>
+<span class="text-on-surface-variant w-7 text-right">1%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant w-3">1</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary/20 h-full rounded-full" style="width: 0%"></div>
+</div>
+<span class="text-on-surface-variant w-7 text-right">0%</span>
+</div>
+</div>
+</div>
+<!-- Verified Review Cards -->
+<div class="flex flex-col gap-space-sm pt-2">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-body-sm font-label-md">SP</div>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Samantha Patel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Financial Analyst, Deloitte</span>
+</div>
+</div>
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            "The XLOOKUP and Power Query workflow alone saved my team 15+ hours weekly. The capstone financial model is identical to what we use on live engagements."
+          </p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-body-sm font-label-md">DK</div>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">David Kalu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">FP&amp;A Team Lead, FinTech</span>
+</div>
+</div>
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            "Clear, structured, zero fluff. The breakdown of dynamic arrays and scenario matrices made complex model audits second nature for our corporate treasury group."
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-space-xs">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 text-left flex items-center justify-between font-label-md text-label-md font-semibold text-on-surface active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('faq-1', this)">
+<span>Do I need prior financial modeling or VBA experience?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-faq-1">expand_more</span>
+</button>
+<div class="hidden p-4 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed" id="faq-1">
+          No prior modeling or coding knowledge is mandatory. We start from intermediate fundamentals and build directly into production-grade multi-tier models and VBA scripts step-by-step.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 text-left flex items-center justify-between font-label-md text-label-md font-semibold text-on-surface active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('faq-2', this)">
+<span>Is the certificate recognized for corporate training reimbursement?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-faq-2">expand_more</span>
+</button>
+<div class="hidden p-4 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed" id="faq-2">
+          Yes! BICE certification is fully accredited with verifiable cryptographic serial codes. We supply automated corporate invoice receipts recognized by HR and L&amp;D training reimbursement policies worldwide.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 text-left flex items-center justify-between font-label-md text-label-md font-semibold text-on-surface active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('faq-3', this)">
+<span>Does this course cover Excel for Mac or only Windows?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-faq-3">expand_more</span>
+</button>
+<div class="hidden p-4 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed" id="faq-3">
+          Every formula and dynamic array function is 100% platform-agnostic (Excel 365 / 2021 on Mac and Windows). Keyboard shortcuts and Power Query/VBA differences are clearly annotated with dual Mac/PC instruction callouts.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 text-left flex items-center justify-between font-label-md text-label-md font-semibold text-on-surface active:bg-surface-container-high transition-colors" onclick="toggleCurriculum('faq-4', this)">
+<span>How long do I maintain access to the sandbox files and video lessons?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-faq-4">expand_more</span>
+</button>
+<div class="hidden p-4 pt-0 font-body-md text-body-md text-on-surface-variant leading-relaxed" id="faq-4">
+          You receive permanent, lifetime access including all future curriculum revisions, downloadable templates, and offline mobile video caching.
+        </div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Purchase Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.06)] px-gutter-mobile py-3 pb-safe">
+<div class="flex items-center justify-between gap-4 max-w-md mx-auto">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">₹4,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹9,999</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-bold px-1.5 py-0.2 rounded">50% OFF</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">30-day guarantee</span>
+</div>
+</div>
+<button class="flex-1 bg-primary text-on-primary py-3.5 px-4 rounded-lg font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform">
+<span>Enroll Now</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function toggleCurriculum(id, buttonEl) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById('icon-' + id);
+    if (!content) return;
+    
+    const isHidden = content.classList.contains('hidden');
+    if (isHidden) {
+      content.classList.remove('hidden');
+      if (icon) {
+        icon.textContent = 'expand_less';
+        icon.classList.add('text-primary');
+        icon.classList.remove('text-on-surface-variant');
+      }
+    } else {
+      content.classList.add('hidden');
+      if (icon) {
+        icon.textContent = 'expand_more';
+        icon.classList.remove('text-primary');
+        icon.classList.add('text-on-surface-variant');
+      }
+    }
+  }
+</script></main></body></html>
