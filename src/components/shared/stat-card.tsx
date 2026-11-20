@@ -15,7 +15,7 @@ export function StatCard({
   return (
     <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
       <CardContent className="flex items-center gap-4 p-5">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
           <Icon className="h-5 w-5" />
         </span>
         <div className="min-w-0">

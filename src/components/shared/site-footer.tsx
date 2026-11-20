@@ -4,12 +4,15 @@ import { FOOTER_LINKS, site } from "@/config/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto bg-[#0f172a] text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="relative mt-auto bg-[#0a0a0a] text-neutral-300">
+      {/* brand hairline */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-600 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 dot-grid opacity-40" />
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4f46e5] text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#dc2626] text-white">
                 <GraduationCap className="h-5 w-5" />
               </span>
               <span className="text-lg font-bold text-white">{site.shortName.toUpperCase()} Academy</span>
@@ -26,7 +29,7 @@ export function SiteFooter() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="rounded-lg bg-white/5 p-2 text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+                  className="rounded-lg bg-white/5 p-2 text-neutral-300 transition-all duration-300 hover:-translate-y-0.5 hover:bg-red-600 hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>

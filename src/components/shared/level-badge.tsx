@@ -1,9 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 
+// Red / white / black palette: Beginner = neutral, Intermediate = red,
+// Advanced = solid black (strongest visual weight for the hardest level).
 const CONFIG = {
-  beginner: { label: "Beginner", className: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-  intermediate: { label: "Intermediate", className: "bg-amber-50 text-amber-700 border-amber-200" },
-  advanced: { label: "Advanced", className: "bg-rose-50 text-rose-700 border-rose-200" },
+  beginner: { label: "Beginner", className: "bg-neutral-100 text-neutral-700 border-neutral-200" },
+  intermediate: { label: "Intermediate", className: "bg-red-50 text-red-700 border-red-200" },
+  advanced: { label: "Advanced", className: "bg-black text-white border-black" },
 } as const;
 
 export function LevelBadge({ level }: { level: string }) {

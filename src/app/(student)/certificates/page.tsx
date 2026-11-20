@@ -59,13 +59,13 @@ export default async function CertificatesPage() {
           {certificates.map((cert) => (
             <div key={cert.id} className="space-y-4">
               {/* Certificate itself */}
-              <div className="rounded-xl border-4 border-[#0f172a] bg-white p-1.5 shadow-[0_2px_8px_rgba(15,23,42,0.12)]">
-                <div className="rounded-lg border border-[#0f172a]/30 px-6 py-10 text-center sm:px-10">
+              <div className="rounded-xl border-4 border-[#0a0a0a] bg-white p-1.5 shadow-[0_2px_8px_rgba(15,23,42,0.12)]">
+                <div className="rounded-lg border border-[#0a0a0a]/30 px-6 py-10 text-center sm:px-10">
                   <div className="flex items-center justify-center gap-2.5">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0f172a] text-white">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0a0a0a] text-white">
                       <BookOpen className="h-5 w-5" />
                     </span>
-                    <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#0f172a]">
+                    <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#0a0a0a]">
                       BICE Academy
                     </span>
                   </div>
@@ -73,14 +73,14 @@ export default async function CertificatesPage() {
                     Certificate of Completion
                   </p>
                   <p className="mt-6 text-xs text-slate-500">This certifies that</p>
-                  <p className="mt-2 font-serif text-3xl font-bold italic text-[#0f172a] sm:text-4xl">
+                  <p className="mt-2 font-serif text-3xl font-bold italic text-[#0a0a0a] sm:text-4xl">
                     {cert.user?.name ?? session.name}
                   </p>
                   <p className="mt-4 text-xs text-slate-500">has successfully completed the course</p>
                   <p className="mx-auto mt-2 max-w-md font-serif text-xl font-semibold leading-snug text-slate-900">
                     {cert.course?.title ?? "Course"}
                   </p>
-                  <div className="mx-auto mt-2 h-px w-24 bg-[#0f172a]/20" />
+                  <div className="mx-auto mt-2 h-px w-24 bg-[#0a0a0a]/20" />
                   <div className="mt-6 flex flex-col items-center justify-between gap-4 text-sm text-slate-600 sm:flex-row sm:px-4">
                     <div className="text-center sm:text-left">
                       <p className="text-[10px] uppercase tracking-wider text-slate-400">Instructor</p>
@@ -140,7 +140,7 @@ export default async function CertificatesPage() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-3">
                       <h3 className="truncate font-semibold text-slate-900">{enrollment.course.title}</h3>
-                      <span className="shrink-0 text-sm font-bold text-[#4f46e5]">{progress.percent}%</span>
+                      <span className="shrink-0 text-sm font-bold text-[#dc2626]">{progress.percent}%</span>
                     </div>
                     <Progress value={progress.percent} className="mt-2 h-2 bg-slate-100" />
                     <p className="mt-2 text-xs text-slate-500">

@@ -16,7 +16,7 @@ export function RatingStars({
         {[1, 2, 3, 4, 5].map((i) => (
           <Star
             key={i}
-            className={`${cls} ${i <= Math.round(rating) ? "fill-[#fbbf24] text-[#fbbf24]" : "fill-slate-200 text-slate-200"}`}
+            className={`${cls} ${i <= Math.round(rating) ? "fill-[#ef4444] text-[#ef4444]" : "fill-slate-200 text-slate-200"}`}
           />
         ))}
       </span>

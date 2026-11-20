@@ -83,7 +83,7 @@ export function ResourceDialog({
             <Pencil className="h-3.5 w-3.5" />
           </Button>
         ) : (
-          <Button type="button" className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+          <Button type="button" className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
             <FolderPlus className="h-4 w-4" /> Add resource
           </Button>
         )}
@@ -188,7 +188,7 @@ export function ResourceDialog({
             <Button type="button" variant="outline" onClick={() => setOpen(false)}>
               Cancel
             </Button>
-            <Button type="submit" disabled={pending} className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+            <Button type="submit" disabled={pending} className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
               {initial ? "Save changes" : "Add resource"}
             </Button>

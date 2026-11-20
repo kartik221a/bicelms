@@ -211,7 +211,7 @@ export function CourseForm({
         </div>
       </div>
       <div className="flex items-center gap-3">
-        <Button type="submit" disabled={pending} className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+        <Button type="submit" disabled={pending} className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
           {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
           {mode === "create" ? "Create course" : "Save changes"}
         </Button>

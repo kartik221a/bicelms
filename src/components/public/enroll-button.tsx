@@ -171,7 +171,7 @@ export function EnrollButton({
         name: "BICE Academy",
         description: courseTitle,
         prefill: { name: studentName, email: studentEmail },
-        theme: { color: "#4f46e5" },
+        theme: { color: "#dc2626" },
         handler: verifyAndFinish,
         modal: { ondismiss: () => toast.info("Checkout closed before payment.") },
       });
@@ -201,7 +201,7 @@ export function EnrollButton({
         onClick={handleEnroll}
         disabled={loading}
         size="lg"
-        className="h-12 w-full gap-2 bg-[#4f46e5] text-base font-semibold hover:bg-[#4338ca]"
+        className="h-12 w-full gap-2 bg-[#dc2626] text-base font-semibold hover:bg-[#b91c1c]"
       >
         {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <BadgeCheck className="h-5 w-5" />}
         {isLoggedIn ? "Enroll now" : "Log in to enroll"}

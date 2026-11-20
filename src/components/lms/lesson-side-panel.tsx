@@ -85,7 +85,7 @@ export function LessonSidePanel({
       <TabsList className="h-auto w-full justify-start gap-4 rounded-none border-b border-slate-200 bg-transparent p-0 px-4">
         <TabsTrigger
           value="notes"
-          className="relative h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#4f46e5] data-[state=active]:bg-transparent data-[state=active]:text-[#4f46e5] data-[state=active]:shadow-none"
+          className="relative h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#dc2626] data-[state=active]:bg-transparent data-[state=active]:text-[#dc2626] data-[state=active]:shadow-none"
         >
           <NotebookPen className="h-4 w-4" /> Notes
           {notes.length ? (
@@ -94,7 +94,7 @@ export function LessonSidePanel({
         </TabsTrigger>
         <TabsTrigger
           value="resources"
-          className="h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#4f46e5] data-[state=active]:bg-transparent data-[state=active]:text-[#4f46e5] data-[state=active]:shadow-none"
+          className="h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#dc2626] data-[state=active]:bg-transparent data-[state=active]:text-[#dc2626] data-[state=active]:shadow-none"
         >
           <FileText className="h-4 w-4" /> Resources
           {resources.length ? (
@@ -103,7 +103,7 @@ export function LessonSidePanel({
         </TabsTrigger>
         <TabsTrigger
           value="qa"
-          className="h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#4f46e5] data-[state=active]:bg-transparent data-[state=active]:text-[#4f46e5] data-[state=active]:shadow-none"
+          className="h-auto rounded-none border-0 border-b-2 border-transparent bg-transparent px-1 py-3 text-[13px] font-semibold text-slate-500 shadow-none data-[state=active]:border-[#dc2626] data-[state=active]:bg-transparent data-[state=active]:text-[#dc2626] data-[state=active]:shadow-none"
         >
           <MessageCircle className="h-4 w-4" /> Q&amp;A
         </TabsTrigger>
@@ -253,7 +253,7 @@ function NotesTab({
         </div>
       </div>
 
-      <div className="space-y-2 rounded-lg border border-slate-200 bg-slate-50 p-3 shadow-sm focus-within:shadow-[0_0_0_2px_#4f46e5]">
+      <div className="space-y-2 rounded-lg border border-slate-200 bg-slate-50 p-3 shadow-sm focus-within:shadow-[0_0_0_2px_#dc2626]">
         <Input
           value={title}
           onChange={(e) => {
@@ -313,12 +313,12 @@ function NotesTab({
                 key={n.id}
                 className={cn(
                   "group rounded-lg border p-3 transition-colors",
-                  activeId === n.id ? "border-[#c7d2fe] bg-[#eef2ff]/60" : "border-slate-200 bg-slate-50/70 hover:bg-slate-50"
+                  activeId === n.id ? "border-[#fecaca] bg-[#fef2f2]/60" : "border-slate-200 bg-slate-50/70 hover:bg-slate-50"
                 )}
               >
                 <div className="mb-1 flex items-center justify-between gap-2">
                   {n.timestampSeconds != null ? (
-                    <span className="inline-flex items-center gap-1 rounded bg-[#eef2ff] px-1.5 py-0.5 font-mono text-[11px] font-bold text-[#4f46e5]">
+                    <span className="inline-flex items-center gap-1 rounded bg-[#fef2f2] px-1.5 py-0.5 font-mono text-[11px] font-bold text-[#dc2626]">
                       {formatDuration(n.timestampSeconds)}
                     </span>
                   ) : (
@@ -376,7 +376,7 @@ function ResourceRow({ resource, enrolled }: { resource: SidePanelResource; enro
         ? "bg-emerald-50 text-emerald-700"
         : resource.type === "external"
           ? "bg-amber-50 text-amber-700"
-          : "bg-[#eef2ff] text-[#4f46e5]";
+          : "bg-[#fef2f2] text-[#dc2626]";
 
   return (
     <div className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3">
@@ -416,7 +416,7 @@ function ResourceRow({ resource, enrolled }: { resource: SidePanelResource; enro
           {enrolled && resource.downloadUrl && resource.downloadable && !resource.locked ? (
             <a
               href={resource.downloadUrl}
-              className="inline-flex h-8 items-center gap-1 rounded-md bg-[#4f46e5] px-2.5 text-xs font-medium text-white transition-colors hover:bg-[#4338ca]"
+              className="inline-flex h-8 items-center gap-1 rounded-md bg-[#dc2626] px-2.5 text-xs font-medium text-white transition-colors hover:bg-[#b91c1c]"
             >
               <Download className="h-3.5 w-3.5" /> Download
             </a>

@@ -85,7 +85,7 @@ export default async function AdminOrdersPage({
               className={cn(
                 "rounded-lg px-3.5 py-1.5 text-sm font-medium transition-colors",
                 active
-                  ? "bg-[#0f172a] text-white shadow-sm"
+                  ? "bg-[#0a0a0a] text-white shadow-sm"
                   : "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
               )}
             >

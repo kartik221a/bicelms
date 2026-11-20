@@ -50,7 +50,7 @@ export default function RefundPolicyPage() {
     <div className="flex w-full flex-col">
       <section className="w-full bg-slate-50 py-14">
         <div className="mx-auto max-w-4xl space-y-3 px-4 sm:px-6 lg:px-8">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Legal</span>
+          <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Legal</span>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Refund Policy</h1>
           <p className="text-sm text-slate-500">Last updated: 1 January 2025 · 30-day money-back guarantee</p>
         </div>
@@ -138,11 +138,11 @@ export default function RefundPolicyPage() {
 
         <p className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-500">
           This policy is part of our{" "}
-          <Link href="/terms" className="font-semibold text-[#4f46e5] hover:underline">
+          <Link href="/terms" className="font-semibold text-[#dc2626] hover:underline">
             Terms of Service
           </Link>
           . Data handling during refunds is described in the{" "}
-          <Link href="/privacy-policy" className="font-semibold text-[#4f46e5] hover:underline">
+          <Link href="/privacy-policy" className="font-semibold text-[#dc2626] hover:underline">
             Privacy Policy
           </Link>
           .

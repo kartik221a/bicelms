@@ -35,7 +35,7 @@ export default async function AdminAnnouncementsPage() {
         <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] lg:col-span-2">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-              <Megaphone className="h-4 w-4 text-[#4f46e5]" /> Publish announcement
+              <Megaphone className="h-4 w-4 text-[#dc2626]" /> Publish announcement
             </CardTitle>
             <CardDescription>Appears instantly on student dashboards for the selected audience.</CardDescription>
           </CardHeader>
@@ -61,7 +61,7 @@ export default async function AdminAnnouncementsPage() {
                     <li key={a.id} className="px-5 py-4">
                       <div className="flex flex-wrap items-center gap-2">
                         {a.pinned ? (
-                          <Badge className="border-0 bg-[#eef2ff] text-[#4f46e5] ring-1 ring-inset ring-[#4f46e5]/20">
+                          <Badge className="border-0 bg-[#fef2f2] text-[#dc2626] ring-1 ring-inset ring-[#dc2626]/20">
                             <Pin className="h-3 w-3" /> Pinned
                           </Badge>
                         ) : null}

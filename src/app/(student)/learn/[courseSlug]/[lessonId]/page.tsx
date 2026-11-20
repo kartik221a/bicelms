@@ -129,7 +129,7 @@ export default async function LessonPage({
             {sidebar}
           </SheetContent>
         </Sheet>
-        <span className="rounded-full bg-[#eef2ff] px-3 py-1.5 text-sm font-semibold text-[#4f46e5]">
+        <span className="rounded-full bg-[#fef2f2] px-3 py-1.5 text-sm font-semibold text-[#dc2626]">
           {progress?.percent ?? 0}%
         </span>
       </div>
@@ -156,7 +156,7 @@ export default async function LessonPage({
                 {section.title}
               </span>
             ) : null}
-            <span className="rounded-full bg-[#4f46e5] px-2.5 py-1 font-semibold text-white">
+            <span className="rounded-full bg-[#dc2626] px-2.5 py-1 font-semibold text-white">
               {lesson.title}
             </span>
           </nav>
@@ -326,14 +326,14 @@ function AttachmentChip({
             ? "text-rose-600"
             : resource.type === "practice_file" || resource.type === "template" || resource.type === "assignment"
               ? "text-emerald-700"
-              : "text-[#4f46e5]"
+              : "text-[#dc2626]"
         }`}
       />
       <span className="text-[13px] font-medium text-slate-800">{resource.title}</span>
       {canDownload ? (
         <a
           href={resource.downloadUrl!}
-          className="text-xs font-semibold text-[#4f46e5] hover:underline"
+          className="text-xs font-semibold text-[#dc2626] hover:underline"
           aria-label={`Download ${resource.title}`}
         >
           Download
@@ -343,7 +343,7 @@ function AttachmentChip({
           href={resource.externalUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs font-semibold text-[#4f46e5] hover:underline"
+          className="text-xs font-semibold text-[#dc2626] hover:underline"
         >
           View
         </a>

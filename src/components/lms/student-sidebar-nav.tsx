@@ -19,8 +19,8 @@ export function StudentSidebarNav({ items }: { items: { href: string; label: str
             className={cn(
               "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               active
-                ? "bg-[#4f46e5] text-white"
-                : "text-slate-300 hover:bg-[#1e293b] hover:text-white"
+                ? "bg-[#dc2626] text-white"
+                : "text-slate-300 hover:bg-[#171717] hover:text-white"
             )}
             aria-current={active ? "page" : undefined}
           >

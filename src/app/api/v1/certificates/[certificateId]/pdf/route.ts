@@ -14,20 +14,20 @@ export const GET = handler(async (_req: Request, ctx: { params: Promise<{ certif
   const page = doc.addPage([842, 595]); // A4 landscape
   const helvetica = await doc.embedFont(StandardFonts.Helvetica);
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
-  const navy = rgb(0.06, 0.09, 0.16);
-  const indigo = rgb(0.31, 0.27, 0.9);
+  const navy = rgb(0.04, 0.04, 0.04);
+  const brandRed = rgb(0.86, 0.15, 0.15);
   const gray = rgb(0.35, 0.4, 0.47);
 
   page.drawRectangle({ x: 0, y: 0, width: 842, height: 595, color: rgb(1, 1, 1) });
   page.drawRectangle({ x: 24, y: 24, width: 794, height: 547, borderColor: navy, borderWidth: 3 });
-  page.drawRectangle({ x: 30, y: 30, width: 782, height: 535, borderColor: indigo, borderWidth: 1 });
+  page.drawRectangle({ x: 30, y: 30, width: 782, height: 535, borderColor: brandRed, borderWidth: 1 });
 
   const center = (text: string, y: number, size: number, font = helvetica, color = navy) => {
     const width = font.widthOfTextAtSize(text, size);
     page.drawText(text, { x: (842 - width) / 2, y, size, font, color });
   };
 
-  center("BICE ACADEMY", 505, 22, bold, indigo);
+  center("BICE ACADEMY", 505, 22, bold, brandRed);
   center("Certificate of Completion", 452, 34, bold);
   center("This is to certify that", 405, 13, helvetica, gray);
   center(info.studentName, 355, 30, bold);

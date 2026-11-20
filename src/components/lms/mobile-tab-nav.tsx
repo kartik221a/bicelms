@@ -21,7 +21,7 @@ export function MobileTabNav({ items }: { items: { href: string; label: string; 
             href={item.href}
             className={cn(
               "flex min-h-[48px] flex-1 flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium",
-              active ? "text-[#4f46e5]" : "text-slate-500"
+              active ? "text-[#dc2626]" : "text-slate-500"
             )}
             aria-current={active ? "page" : undefined}
           >

@@ -43,7 +43,7 @@ function RatingStars({ rating }: { rating: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={cn("h-3.5 w-3.5", i < rating ? "fill-amber-400 text-amber-400" : "fill-slate-200 text-slate-200")}
+          className={cn("h-3.5 w-3.5", i < rating ? "fill-red-500 text-red-500" : "fill-slate-200 text-slate-200")}
         />
       ))}
     </span>
@@ -110,7 +110,7 @@ export default async function AdminReviewsPage() {
                         <TableCell className="max-w-[300px]">
                           <p className="line-clamp-2 text-sm text-slate-600">{r.comment}</p>
                           {r.adminReply ? (
-                            <p className="mt-1 line-clamp-1 text-xs text-[#4f46e5]">Reply: {r.adminReply}</p>
+                            <p className="mt-1 line-clamp-1 text-xs text-[#dc2626]">Reply: {r.adminReply}</p>
                           ) : null}
                         </TableCell>
                         <TableCell>

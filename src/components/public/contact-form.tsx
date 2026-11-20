@@ -79,7 +79,7 @@ export function ContactForm({ supportEmail }: { supportEmail: string }) {
         />
         {errors.message ? <p className="text-xs text-red-600">{errors.message}</p> : null}
       </div>
-      <Button type="submit" disabled={pending} size="lg" className="h-11 w-fit gap-2 bg-[#4f46e5] hover:bg-[#4338ca]">
+      <Button type="submit" disabled={pending} size="lg" className="h-11 w-fit gap-2 bg-[#dc2626] hover:bg-[#b91c1c]">
         {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
         Send message
       </Button>

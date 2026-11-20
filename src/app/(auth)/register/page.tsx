@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import {
@@ -59,6 +59,7 @@ export default function RegisterPage() {
 
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors, isSubmitting },
     setError,
@@ -232,23 +233,36 @@ export default function RegisterPage() {
           </div>
 
           <div className="space-y-1.5 pt-1">
-            <label className="flex cursor-pointer select-none items-start gap-2.5">
-              <Checkbox
-                className="mt-0.5"
-                aria-invalid={Boolean(errors.terms)}
-                {...register("terms")}
-              />
-              <span className="text-xs leading-relaxed text-slate-600">
-                I agree to the{" "}
-                <Link href="/terms" className="font-medium text-primary hover:underline">
-                  Terms of Service
-                </Link>{" "}
-                and{" "}
-                <Link href="/privacy-policy" className="font-medium text-primary hover:underline">
-                  Privacy Policy
-                </Link>
-              </span>
-            </label>
+            {/* Radix Checkbox is a button (not a native input), so it must be
+                wired through a Controller — register() cannot read its state. */}
+            <Controller
+              control={control}
+              name="terms"
+              render={({ field }) => (
+                <label
+                  htmlFor="terms-consent"
+                  className="flex cursor-pointer select-none items-start gap-2.5"
+                >
+                  <Checkbox
+                    id="terms-consent"
+                    className="mt-0.5"
+                    checked={field.value === true}
+                    onCheckedChange={(v) => field.onChange(v === true)}
+                    aria-invalid={Boolean(errors.terms)}
+                  />
+                  <span className="text-xs leading-relaxed text-slate-600">
+                    I agree to the{" "}
+                    <Link href="/terms" className="font-medium text-primary hover:underline">
+                      Terms of Service
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/privacy-policy" className="font-medium text-primary hover:underline">
+                      Privacy Policy
+                    </Link>
+                  </span>
+                </label>
+              )}
+            />
             {errors.terms ? (
               <p className="text-xs text-destructive">{errors.terms.message}</p>
             ) : null}

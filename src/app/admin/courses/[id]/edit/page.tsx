@@ -76,8 +76,8 @@ export default async function AdminEditCoursePage({ params }: { params: Promise<
         </PageHeader>
       </div>
 
-      <div className="flex items-center gap-2 rounded-xl border border-[#c7d2fe] bg-[#eef2ff]/60 px-4 py-3 text-sm text-slate-600">
-        <Info className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+      <div className="flex items-center gap-2 rounded-xl border border-[#fecaca] bg-[#fef2f2]/60 px-4 py-3 text-sm text-slate-600">
+        <Info className="h-4 w-4 shrink-0 text-[#dc2626]" />
         Drag sections and lessons by their handles to reorder. Switch a lesson to &ldquo;free preview&rdquo; to expose it as a
         taster; keep the rest locked behind enrollment. Total content drives the certificate automatically.
       </div>
@@ -99,7 +99,7 @@ export default async function AdminEditCoursePage({ params }: { params: Promise<
       <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-            <Layers className="h-4 w-4 text-[#4f46e5]" /> Basic course fields
+            <Layers className="h-4 w-4 text-[#dc2626]" /> Basic course fields
           </CardTitle>
           <CardDescription>Card copy, pricing, category and status — visible on the public course page.</CardDescription>
         </CardHeader>

@@ -30,9 +30,9 @@ export default async function StudentLayout({ children }: { children: React.Reac
     <>
       <SetupBanner />
       <div className="flex min-h-screen">
-        <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r bg-[#0f172a] lg:flex">
+        <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r bg-[#0a0a0a] lg:flex">
           <div className="flex h-16 items-center gap-2 px-5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#4f46e5] text-white">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#dc2626] text-white">
               <GraduationCap className="h-5 w-5" />
             </span>
             <Link href="/" className="font-bold text-white">
@@ -44,7 +44,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
             <form action="/api/v1/auth/logout" method="post">
               <Link
                 href="/"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:bg-[#1e293b] hover:text-white"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:bg-[#171717] hover:text-white"
               >
                 <LogOut className="h-4 w-4" /> Log out
               </Link>
@@ -64,7 +64,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
               </Link>
             ) : null}
             <Link href="/profile" className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#eef2ff] text-sm font-semibold text-[#4f46e5]">
+              <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#fef2f2] text-sm font-semibold text-[#dc2626]">
                 {session.photoUrl ? (
                    
                   <img src={session.photoUrl} alt={session.name} className="h-8 w-8 object-cover" />

@@ -113,13 +113,13 @@ export default function FaqPage() {
     <div className="flex w-full flex-col">
       <section className="w-full bg-slate-50 py-14">
         <div className="mx-auto max-w-7xl space-y-3 px-4 text-center sm:px-6 lg:px-8">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Help center</span>
+          <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Help center</span>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Frequently asked questions
           </h1>
           <p className="mx-auto max-w-2xl text-sm text-slate-600 sm:text-base">
             Everything about courses, payments, certificates and your account. Still stuck?{" "}
-            <Link href="/contact" className="font-semibold text-[#4f46e5] hover:underline">
+            <Link href="/contact" className="font-semibold text-[#dc2626] hover:underline">
               Contact the team
             </Link>{" "}
             — we reply within one business day.
@@ -131,7 +131,7 @@ export default function FaqPage() {
         {GROUPS.map((group) => (
           <div key={group.id} className="space-y-4">
             <h2 className="flex items-center gap-2.5 text-lg font-bold text-slate-900">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
                 <group.icon className="h-4.5 w-4.5" />
               </span>
               {group.title}

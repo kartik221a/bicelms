@@ -48,7 +48,7 @@ export default async function AdminDashboardPage() {
       >
         <Link
           href="/admin/courses/create"
-          className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#4f46e5] px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#4338ca]"
+          className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#dc2626] px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#b91c1c]"
         >
           <BookOpen className="h-4 w-4" /> Create course
         </Link>
@@ -150,7 +150,7 @@ export default async function AdminDashboardPage() {
               <ul className="space-y-3">
                 {stats.recentRegistrations.map((r) => (
                   <li key={r.email} className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#eef2ff] text-sm font-bold text-[#4f46e5]">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fef2f2] text-sm font-bold text-[#dc2626]">
                       {r.name.charAt(0).toUpperCase()}
                     </span>
                     <div className="min-w-0 flex-1">
@@ -179,7 +179,7 @@ export default async function AdminDashboardPage() {
             <ol className="space-y-4">
               {stats.popularCourses.map((c, i) => (
                 <li key={c.title} className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0f172a] text-xs font-bold text-white">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0a0a0a] text-xs font-bold text-white">
                     {i + 1}
                   </span>
                   <div className="min-w-0 flex-1">

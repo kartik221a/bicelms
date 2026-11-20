@@ -41,7 +41,7 @@ export function StudentRowActions({
 
   return (
     <div className="flex items-center justify-end gap-1">
-      <Button asChild variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#4f46e5] hover:bg-[#eef2ff]">
+      <Button asChild variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#dc2626] hover:bg-[#fef2f2]">
         <Link href={`/admin/students?student=${userId}`}>
           <UserRoundSearch className="h-3.5 w-3.5" /> Detail
         </Link>

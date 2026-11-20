@@ -18,8 +18,8 @@ import {
 } from "recharts";
 import { formatINR } from "@/lib/money";
 
-const INDIGO = "#4f46e5";
-const PIE_COLORS = ["#4f46e5", "#7c3aed", "#0d9488", "#f59e0b", "#e11d48", "#64748b"];
+const INDIGO = "#dc2626";
+const PIE_COLORS = ["#dc2626", "#7c3aed", "#0d9488", "#f59e0b", "#e11d48", "#64748b"];
 
 const tooltipStyle = {
   borderRadius: 10,

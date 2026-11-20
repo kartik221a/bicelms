@@ -208,7 +208,7 @@ export function CurriculumBuilder(props: CurriculumBuilderProps) {
             <GripVertical className="h-3.5 w-3.5" /> Drag handles to reorder
           </span>
           {pending ? (
-            <span className="inline-flex items-center gap-1.5 text-xs text-[#4f46e5]">
+            <span className="inline-flex items-center gap-1.5 text-xs text-[#dc2626]">
               <Loader2 className="h-3.5 w-3.5 animate-spin" /> Saving…
             </span>
           ) : null}
@@ -217,14 +217,14 @@ export function CurriculumBuilder(props: CurriculumBuilderProps) {
           type="button"
           size="sm"
           onClick={() => setAddingSection(true)}
-          className="bg-[#4f46e5] text-white hover:bg-[#4338ca]"
+          className="bg-[#dc2626] text-white hover:bg-[#b91c1c]"
         >
           <Plus className="h-4 w-4" /> Add section
         </Button>
       </div>
 
       {addingSection ? (
-        <div className="flex flex-col gap-2 rounded-xl border border-dashed border-[#c7d2fe] bg-[#eef2ff]/50 p-4 sm:flex-row">
+        <div className="flex flex-col gap-2 rounded-xl border border-dashed border-[#fecaca] bg-[#fef2f2]/50 p-4 sm:flex-row">
           <Input
             autoFocus
             value={newSectionTitle}
@@ -239,7 +239,7 @@ export function CurriculumBuilder(props: CurriculumBuilderProps) {
             className="flex-1"
           />
           <div className="flex gap-2">
-            <Button type="button" onClick={submitNewSection} className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+            <Button type="button" onClick={submitNewSection} className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
               Add
             </Button>
             <Button type="button" variant="ghost" onClick={() => setAddingSection(false)}>
@@ -371,7 +371,7 @@ function SectionCard({
     <Card
       ref={setNodeRef}
       style={{ transform: CSS.Transform.toString(transform), transition }}
-      className={cn("border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]", isDragging && "z-20 opacity-80 ring-2 ring-[#4f46e5]")}
+      className={cn("border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]", isDragging && "z-20 opacity-80 ring-2 ring-[#dc2626]")}
     >
       <CardContent className="p-0">
         <div className="flex items-center gap-2 px-4 py-3">
@@ -408,7 +408,7 @@ function SectionCard({
                   }}
                   className="h-8"
                 />
-                <Button type="button" size="sm" className="h-8 bg-[#4f46e5] text-white hover:bg-[#4338ca]" onClick={saveRename}>
+                <Button type="button" size="sm" className="h-8 bg-[#dc2626] text-white hover:bg-[#b91c1c]" onClick={saveRename}>
                   Save
                 </Button>
                 <Button type="button" size="sm" variant="ghost" className="h-8" onClick={() => setRenaming(false)}>
@@ -439,7 +439,7 @@ function SectionCard({
             >
               <Pencil className="h-3.5 w-3.5" /> Rename
             </Button>
-            <Button type="button" variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#4f46e5]" onClick={onAddLesson}>
+            <Button type="button" variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#dc2626]" onClick={onAddLesson}>
               <Plus className="h-3.5 w-3.5" /> Add lesson
             </Button>
             <ConfirmDialogButton
@@ -483,7 +483,7 @@ function SectionCard({
             <button
               type="button"
               onClick={onAddLesson}
-              className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:border-[#4f46e5] hover:bg-[#eef2ff]/60 hover:text-[#4f46e5]"
+              className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:border-[#dc2626] hover:bg-[#fef2f2]/60 hover:text-[#dc2626]"
             >
               <Plus className="h-4 w-4" /> Add lesson to &ldquo;{section.title}&rdquo;
             </button>
@@ -518,7 +518,7 @@ function LessonRow({
       style={{ transform: CSS.Transform.toString(transform), transition }}
       className={cn(
         "group flex items-center gap-3 rounded-lg border border-slate-100 bg-white px-3 py-2 transition-colors hover:bg-slate-50",
-        isDragging && "z-20 shadow-md ring-2 ring-[#4f46e5]"
+        isDragging && "z-20 shadow-md ring-2 ring-[#dc2626]"
       )}
     >
       <button
@@ -702,7 +702,7 @@ function LessonEditorDialog({
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit" className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+            <Button type="submit" className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
               {state.mode === "create" ? "Add lesson" : "Save lesson"}
             </Button>
           </DialogFooter>

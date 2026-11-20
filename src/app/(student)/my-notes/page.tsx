@@ -99,7 +99,7 @@ export default async function MyNotesPage({
                 className={cn(
                   "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
                   !courseId
-                    ? "border-[#4f46e5] bg-[#eef2ff] text-[#4f46e5]"
+                    ? "border-[#dc2626] bg-[#fef2f2] text-[#dc2626]"
                     : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
                 )}
               >
@@ -112,7 +112,7 @@ export default async function MyNotesPage({
                   className={cn(
                     "max-w-[180px] truncate rounded-full border px-3 py-1 text-xs font-medium transition-colors",
                     courseId === e.courseId
-                      ? "border-[#4f46e5] bg-[#eef2ff] text-[#4f46e5]"
+                      ? "border-[#dc2626] bg-[#fef2f2] text-[#dc2626]"
                       : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
                   )}
                 >
@@ -189,7 +189,7 @@ function NoteListItem({
       className={cn(
         "block rounded-lg border p-3 transition-colors",
         active
-          ? "border-[#c7d2fe] bg-[#eef2ff]"
+          ? "border-[#fecaca] bg-[#fef2f2]"
           : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
       )}
       aria-current={active ? "true" : undefined}

@@ -31,7 +31,7 @@ export default async function ProfilePage() {
       <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardContent className="p-6">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#eef2ff] text-2xl font-bold text-[#4f46e5]">
+            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#fef2f2] text-2xl font-bold text-[#dc2626]">
               {session.photoUrl ? (
                  
                 <img src={session.photoUrl} alt={session.name} className="h-20 w-20 rounded-full object-cover" />
@@ -72,7 +72,7 @@ export default async function ProfilePage() {
         <CardContent className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-              <ShieldCheck className="h-5 w-5 text-[#4f46e5]" /> Account &amp; security
+              <ShieldCheck className="h-5 w-5 text-[#dc2626]" /> Account &amp; security
             </h2>
             <p className="mt-1 text-sm text-slate-500">
               Role: <span className="font-medium capitalize text-slate-700">{session.role.replace("_", " ")}</span>.

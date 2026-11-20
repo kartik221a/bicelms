@@ -67,7 +67,7 @@ export function ReviewActions({ reviewId, currentStatus, onModerate }: ReviewMod
       )}
       <Dialog open={replyOpen} onOpenChange={setReplyOpen}>
         <DialogTrigger asChild>
-          <Button type="button" variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#4f46e5] hover:bg-[#eef2ff]" aria-label="Reply to review">
+          <Button type="button" variant="ghost" size="sm" className="h-8 gap-1 text-xs text-[#dc2626] hover:bg-[#fef2f2]" aria-label="Reply to review">
             <MessageSquareReply className="h-3.5 w-3.5" /> Reply
           </Button>
         </DialogTrigger>
@@ -92,7 +92,7 @@ export function ReviewActions({ reviewId, currentStatus, onModerate }: ReviewMod
               <Button type="button" variant="outline" onClick={() => setReplyOpen(false)}>
                 Cancel
               </Button>
-              <Button type="submit" disabled={pending} className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+              <Button type="submit" disabled={pending} className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
                 {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
                 Save reply
               </Button>

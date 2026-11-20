@@ -47,12 +47,12 @@ export function NewsletterForm() {
         placeholder="you@company.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="h-11 flex-1 border-white/20 bg-white/10 text-white placeholder:text-indigo-200 focus-visible:ring-white/40"
+        className="h-11 flex-1 border-white/20 bg-white/10 text-white placeholder:text-red-200 focus-visible:ring-white/40"
       />
       <Button
         type="submit"
         disabled={pending}
-        className="h-11 gap-2 bg-white text-[#4f46e5] hover:bg-indigo-50"
+        className="h-11 gap-2 bg-white text-[#dc2626] hover:bg-red-50"
       >
         Subscribe <Send className="h-4 w-4" />
       </Button>

@@ -50,7 +50,7 @@ export default async function ContactPage() {
       {/* Header band */}
       <section className="w-full bg-slate-50 py-14">
         <div className="mx-auto max-w-7xl space-y-3 px-4 text-center sm:px-6 lg:px-8">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Contact</span>
+          <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Contact</span>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Talk to the BICE team
           </h1>
@@ -69,7 +69,7 @@ export default async function ContactPage() {
               {infoCards.map((c) => (
                 <Card key={c.label} className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                   <CardContent className="flex items-start gap-4 p-5">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
                       <c.icon className="h-5 w-5" />
                     </span>
                     <div className="min-w-0">
@@ -82,14 +82,14 @@ export default async function ContactPage() {
               ))}
             </div>
 
-            <Card className="border-[#4f46e5]/30 bg-[#eef2ff]/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+            <Card className="border-[#dc2626]/30 bg-[#fef2f2]/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
               <CardContent className="flex flex-col gap-2 p-5">
                 <span className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <MessageCircleQuestion className="h-4 w-4 text-[#4f46e5]" /> Looking for quick answers?
+                  <MessageCircleQuestion className="h-4 w-4 text-[#dc2626]" /> Looking for quick answers?
                 </span>
                 <p className="text-sm text-slate-600">
                   Payments, certificates and refunds are covered in our{" "}
-                  <Link href="/faq" className="font-semibold text-[#4f46e5] hover:underline">
+                  <Link href="/faq" className="font-semibold text-[#dc2626] hover:underline">
                     FAQ
                   </Link>
                   . Already a student? Raise questions from your dashboard after login.

@@ -72,7 +72,7 @@ export default async function AdminCouponsPage() {
                             variant="outline"
                             className={
                               c.type === "percent"
-                                ? "border-0 bg-[#eef2ff] text-[#4f46e5] ring-1 ring-inset ring-[#4f46e5]/20"
+                                ? "border-0 bg-[#fef2f2] text-[#dc2626] ring-1 ring-inset ring-[#dc2626]/20"
                                 : "border-0 bg-teal-50 text-teal-700 ring-1 ring-inset ring-teal-600/20"
                             }
                           >

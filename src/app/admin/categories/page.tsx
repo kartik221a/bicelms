@@ -41,7 +41,7 @@ export default async function AdminCategoriesPage() {
         <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] lg:col-span-1">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-              <Plus className="h-4 w-4 text-[#4f46e5]" /> New category
+              <Plus className="h-4 w-4 text-[#dc2626]" /> New category
             </CardTitle>
             <CardDescription>The slug is generated from the name automatically.</CardDescription>
           </CardHeader>
@@ -55,7 +55,7 @@ export default async function AdminCategoriesPage() {
                 <Label htmlFor="cat-desc">Description</Label>
                 <Textarea id="cat-desc" name="description" rows={3} placeholder="Shown on the category card…" />
               </div>
-              <Button type="submit" className="w-full bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+              <Button type="submit" className="w-full bg-[#dc2626] text-white hover:bg-[#b91c1c]">
                 Create category
               </Button>
             </form>
@@ -77,7 +77,7 @@ export default async function AdminCategoriesPage() {
                 <ul className="divide-y divide-slate-100">
                   {categories.map((cat, i) => (
                     <li key={cat.id} className="flex items-center gap-3 px-5 py-3.5">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#eef2ff] text-xs font-bold text-[#4f46e5]">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fef2f2] text-xs font-bold text-[#dc2626]">
                         {i + 1}
                       </span>
                       <div className="min-w-0 flex-1">

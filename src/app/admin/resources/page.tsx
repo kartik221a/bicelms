@@ -103,7 +103,7 @@ export default async function AdminResourcesPage() {
                     const gate = r.availableAfterLessonId ? lessonById.get(r.availableAfterLessonId) : undefined;
                     return (
                       <li key={r.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
                           <Icon className="h-4 w-4" />
                         </span>
                         <div className="min-w-0 flex-1">
@@ -138,7 +138,7 @@ export default async function AdminResourcesPage() {
                               href={r.externalUrl}
                               target="_blank"
                               rel="noreferrer"
-                              className="inline-flex items-center gap-1 text-xs font-medium text-[#4f46e5] hover:underline"
+                              className="inline-flex items-center gap-1 text-xs font-medium text-[#dc2626] hover:underline"
                             >
                               <ExternalLink className="h-3 w-3" /> Open
                             </a>

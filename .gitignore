@@ -49,3 +49,4 @@ next-env.d.ts
 /Caddyfile
 /PROGRESS.md
 /agent-ctx/
+tool-results/

@@ -112,10 +112,10 @@ export default async function AdminAnalyticsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-[#c7d2fe] bg-[#eef2ff]/50 lg:col-span-2">
+        <Card className="border-[#fecaca] bg-[#fef2f2]/50 lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-              <Lightbulb className="h-4 w-4 text-[#4f46e5]" /> Insights from your data
+              <Lightbulb className="h-4 w-4 text-[#dc2626]" /> Insights from your data
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">

@@ -80,22 +80,22 @@ export default async function AboutPage() {
   return (
     <div className="flex w-full flex-col">
       {/* Hero */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#4f46e5] py-20 text-white">
+      <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#1e1b4b] to-[#dc2626] py-20 text-white">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
         <div className="relative mx-auto max-w-4xl space-y-6 px-4 text-center sm:px-6 lg:px-8">
-          <Badge className="bg-white/10 uppercase tracking-wider text-indigo-200 hover:bg-white/10">
+          <Badge className="bg-white/10 uppercase tracking-wider text-red-200 hover:bg-white/10">
             Business Intelligence &amp; Corporate Education
           </Badge>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl">
             We turn spreadsheet users into data professionals
           </h1>
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-indigo-200 sm:text-base">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-red-200 sm:text-base">
             BICE Academy is a Mumbai-based coaching institute for working professionals. Since 2016 we
             have helped analysts, accountants and operations teams move from copy-paste Excel to
             automated Power Query pipelines, production SQL and decision-grade dashboards.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Button asChild size="lg" className="h-12 bg-white px-6 text-base font-semibold text-[#4f46e5] hover:bg-indigo-50">
+            <Button asChild size="lg" className="h-12 bg-white px-6 text-base font-semibold text-[#dc2626] hover:bg-red-50">
               <Link href="/courses">Explore courses</Link>
             </Button>
             <Button
@@ -116,7 +116,7 @@ export default async function AboutPage() {
           {milestones.map((m) => (
             <div key={m.label} className="flex flex-col space-y-1">
               <div className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{m.value}</div>
-              <div className="text-sm font-semibold text-[#4f46e5]">{m.label}</div>
+              <div className="text-sm font-semibold text-[#dc2626]">{m.label}</div>
               <p className="text-xs text-slate-500">{m.hint}</p>
             </div>
           ))}
@@ -127,7 +127,7 @@ export default async function AboutPage() {
       <section className="w-full bg-slate-50 py-20">
         <div className="mx-auto max-w-3xl space-y-6 px-4 sm:px-6 lg:px-8">
           <div className="space-y-2 text-center">
-            <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Our story</span>
+            <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Our story</span>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
               Built by practitioners, for practitioners
             </h2>
@@ -153,7 +153,7 @@ export default async function AboutPage() {
       <section className="w-full bg-white py-20">
         <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
           <div className="space-y-2 text-center">
-            <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Mission</span>
+            <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Mission</span>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
               What we promise every learner
             </h2>
@@ -162,7 +162,7 @@ export default async function AboutPage() {
             {mission.map((m) => (
               <Card key={m.title} className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                 <CardContent className="flex flex-col gap-3 p-6">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
                     <m.icon className="h-5 w-5" />
                   </span>
                   <h3 className="font-semibold text-slate-900">{m.title}</h3>
@@ -184,22 +184,22 @@ export default async function AboutPage() {
                   <img
                     src={leadInstructor.photoUrl}
                     alt={leadInstructor.name}
-                    className="h-28 w-28 rounded-full object-cover ring-4 ring-[#eef2ff]"
+                    className="h-28 w-28 rounded-full object-cover ring-4 ring-[#fef2f2]"
                   />
                 ) : (
-                  <span className="flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-[#0f172a] to-[#4f46e5] text-3xl font-bold text-white ring-4 ring-[#eef2ff]">
+                  <span className="flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-[#0a0a0a] to-[#dc2626] text-3xl font-bold text-white ring-4 ring-[#fef2f2]">
                     {initialsOf(leadInstructor.name)}
                   </span>
                 )}
                 <div className="flex flex-col gap-3">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#4f46e5]">Faculty spotlight</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#dc2626]">Faculty spotlight</span>
                   <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{leadInstructor.name}</h2>
                   <p className="text-sm font-medium text-slate-600">{leadInstructor.title}</p>
                   {leadInstructor.bio ? (
                     <p className="text-sm leading-relaxed text-slate-600">{leadInstructor.bio}</p>
                   ) : null}
                   {leadInstructor.credentials ? (
-                    <Badge className="w-fit bg-[#eef2ff] text-[#4f46e5] hover:bg-[#eef2ff]">
+                    <Badge className="w-fit bg-[#fef2f2] text-[#dc2626] hover:bg-[#fef2f2]">
                       <Award className="h-3.5 w-3.5" /> {leadInstructor.credentials}
                     </Badge>
                   ) : null}
@@ -214,7 +214,7 @@ export default async function AboutPage() {
       <section className="w-full bg-white py-20">
         <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
           <div className="space-y-2 text-center">
-            <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Teaching approach</span>
+            <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Teaching approach</span>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
               The BICE learning loop
             </h2>
@@ -228,7 +228,7 @@ export default async function AboutPage() {
             ].map((s) => (
               <div key={s.step} className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-slate-50 p-5">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#eef2ff] text-[#4f46e5]">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fef2f2] text-[#dc2626]">
                     <s.icon className="h-5 w-5" />
                   </span>
                   <span className="text-2xl font-extrabold text-slate-200">{s.step}</span>
@@ -244,13 +244,13 @@ export default async function AboutPage() {
       {/* CTA */}
       <section className="w-full bg-slate-50 py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 text-center sm:px-6 lg:px-8">
-          <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#eef2ff] text-[#4f46e5]">
+          <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#fef2f2] text-[#dc2626]">
             <Users className="h-7 w-7" />
           </span>
           <h2 className="max-w-2xl text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             Join the next cohort and upgrade the way you work with data
           </h2>
-          <Button asChild size="lg" className="h-12 bg-[#4f46e5] px-6 text-base font-semibold hover:bg-[#4338ca]">
+          <Button asChild size="lg" className="h-12 bg-[#dc2626] px-6 text-base font-semibold hover:bg-[#b91c1c]">
             <Link href="/courses">
               Browse courses <ArrowRight className="h-4 w-4" />
             </Link>

@@ -22,7 +22,7 @@ export default async function SettingsPage() {
       <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardContent className="p-6">
           <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-            <KeyRound className="h-5 w-5 text-[#4f46e5]" /> Change password
+            <KeyRound className="h-5 w-5 text-[#dc2626]" /> Change password
           </h2>
           <p className="mb-5 mt-1 text-sm text-slate-500">
             Use at least 8 characters. You will stay signed in on this device after the change.
@@ -35,7 +35,7 @@ export default async function SettingsPage() {
       <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardContent className="p-6">
           <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-            <MoonStar className="h-5 w-5 text-[#4f46e5]" /> Preferences
+            <MoonStar className="h-5 w-5 text-[#dc2626]" /> Preferences
           </h2>
           <div className="mt-3 flex flex-col gap-3 rounded-lg border border-dashed border-slate-300 bg-slate-50/60 p-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -75,7 +75,7 @@ export default async function SettingsPage() {
           </div>
           <p className="mt-4 text-xs text-slate-400">
             Looking for name or phone changes?{" "}
-            <Link href="/profile" className="font-semibold text-[#4f46e5] hover:underline">
+            <Link href="/profile" className="font-semibold text-[#dc2626] hover:underline">
               Edit your profile
             </Link>
             .

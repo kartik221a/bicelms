@@ -55,7 +55,7 @@ export default async function AdminInstructorsPage() {
             <Card key={inst.id} className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
               <CardContent className="p-5">
                 <div className="flex items-start gap-3">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#eef2ff] text-lg font-bold text-[#4f46e5]">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#fef2f2] text-lg font-bold text-[#dc2626]">
                     {inst.photoUrl ? (
                        
                       <img src={inst.photoUrl} alt={inst.name} className="h-full w-full object-cover" />

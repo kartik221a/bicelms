@@ -140,7 +140,7 @@ export default async function AdminStudentsPage({
                       <TableRow key={student.id}>
                         <TableCell>
                           <div className="flex items-center gap-3">
-                            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#eef2ff] text-sm font-bold text-[#4f46e5]">
+                            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fef2f2] text-sm font-bold text-[#dc2626]">
                               {student.name.charAt(0).toUpperCase()}
                             </span>
                             <div className="min-w-0">
@@ -154,7 +154,7 @@ export default async function AdminStudentsPage({
                           {s && s.count > 0 ? (
                             <div className="flex items-center gap-2">
                               <div className="h-1.5 w-28 overflow-hidden rounded-full bg-slate-100">
-                                <div className="h-full rounded-full bg-[#4f46e5]" style={{ width: `${Math.round(s.avgProgress)}%` }} />
+                                <div className="h-full rounded-full bg-[#dc2626]" style={{ width: `${Math.round(s.avgProgress)}%` }} />
                               </div>
                               <span className="text-xs font-medium text-slate-600">{Math.round(s.avgProgress)}%</span>
                             </div>

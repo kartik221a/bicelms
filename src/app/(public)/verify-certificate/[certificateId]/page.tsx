@@ -35,7 +35,7 @@ export default async function CertificateResultPage({ params }: Params) {
     <div className="flex w-full flex-col">
       <section className="w-full bg-slate-50 py-14">
         <div className="mx-auto max-w-7xl space-y-3 px-4 text-center sm:px-6 lg:px-8">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#4f46e5]">Credential check</span>
+          <span className="text-sm font-bold uppercase tracking-wider text-[#dc2626]">Credential check</span>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Certificate verification result
           </h1>
@@ -60,17 +60,17 @@ export default async function CertificateResultPage({ params }: Params) {
 
               <dl className="divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-200 text-sm">
                 <div className="flex items-center gap-3 px-4 py-3">
-                  <User className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                  <User className="h-4 w-4 shrink-0 text-[#dc2626]" />
                   <dt className="w-36 shrink-0 text-slate-500">Student</dt>
                   <dd className="font-semibold text-slate-900">{info.studentName}</dd>
                 </div>
                 <div className="flex items-center gap-3 px-4 py-3">
-                  <GraduationCap className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                  <GraduationCap className="h-4 w-4 shrink-0 text-[#dc2626]" />
                   <dt className="w-36 shrink-0 text-slate-500">Course</dt>
                   <dd className="font-semibold text-slate-900">{info.courseTitle}</dd>
                 </div>
                 <div className="flex items-center gap-3 px-4 py-3">
-                  <CalendarDays className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                  <CalendarDays className="h-4 w-4 shrink-0 text-[#dc2626]" />
                   <dt className="w-36 shrink-0 text-slate-500">Issued on</dt>
                   <dd className="font-semibold text-slate-900">
                     {new Date(info.issuedAt).toLocaleDateString("en-IN", {
@@ -81,19 +81,19 @@ export default async function CertificateResultPage({ params }: Params) {
                   </dd>
                 </div>
                 <div className="flex items-center gap-3 px-4 py-3">
-                  <BadgeCheck className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                  <BadgeCheck className="h-4 w-4 shrink-0 text-[#dc2626]" />
                   <dt className="w-36 shrink-0 text-slate-500">Instructor</dt>
                   <dd className="font-semibold text-slate-900">{info.instructorName ?? "BICE Academy"}</dd>
                 </div>
                 <div className="flex items-center gap-3 px-4 py-3">
-                  <ShieldCheck className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                  <ShieldCheck className="h-4 w-4 shrink-0 text-[#dc2626]" />
                   <dt className="w-36 shrink-0 text-slate-500">Certificate ID</dt>
                   <dd className="font-mono font-semibold text-slate-900">{info.certificateId}</dd>
                 </div>
               </dl>
 
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild className="h-11 flex-1 gap-2 bg-[#4f46e5] hover:bg-[#4338ca]">
+                <Button asChild className="h-11 flex-1 gap-2 bg-[#dc2626] hover:bg-[#b91c1c]">
                   <a
                     href={`/api/v1/certificates/${encodeURIComponent(info.certificateId)}/pdf`}
                     download
@@ -138,7 +138,7 @@ export default async function CertificateResultPage({ params }: Params) {
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild className="h-11 flex-1 bg-[#4f46e5] hover:bg-[#4338ca]">
+                <Button asChild className="h-11 flex-1 bg-[#dc2626] hover:bg-[#b91c1c]">
                   <Link href="/verify-certificate">Try another ID</Link>
                 </Button>
                 <Button asChild variant="outline" className="h-11 flex-1 border-slate-300">

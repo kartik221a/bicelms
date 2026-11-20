@@ -26,7 +26,7 @@ export default async function AdminSettingsPage() {
       <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardHeader className="pb-3">
           <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-            <KeyRound className="h-4 w-4 text-[#4f46e5]" /> Payments — Razorpay
+            <KeyRound className="h-4 w-4 text-[#dc2626]" /> Payments — Razorpay
           </CardTitle>
           <CardDescription>
             Checkout, webhook verification and refunds run through Razorpay. Status is read from server environment
@@ -52,9 +52,9 @@ export default async function AdminSettingsPage() {
               {env.RAZORPAY_WEBHOOK_SECRET ? "Configured" : "Not set — webhooks will be rejected"}
             </Badge>
           </div>
-          <div className="rounded-lg border border-[#c7d2fe] bg-[#eef2ff]/50 p-4">
+          <div className="rounded-lg border border-[#fecaca] bg-[#fef2f2]/50 p-4">
             <p className="flex items-center gap-2 text-sm font-medium text-slate-800">
-              <Webhook className="h-4 w-4 text-[#4f46e5]" /> Webhook endpoint
+              <Webhook className="h-4 w-4 text-[#dc2626]" /> Webhook endpoint
             </p>
             <p className="mt-1 text-xs text-slate-500">
               Register this URL in the Razorpay dashboard for <span className="font-mono">payment.captured</span>,{" "}

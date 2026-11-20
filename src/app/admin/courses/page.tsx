@@ -76,7 +76,7 @@ export default async function AdminCoursesPage({
         </Link>
         <Link
           href="/admin/courses/create"
-          className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#4f46e5] px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#4338ca]"
+          className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#dc2626] px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#b91c1c]"
         >
           Create course
         </Link>
@@ -134,13 +134,13 @@ export default async function AdminCoursesPage({
                 }
                 action={
                   hasFilters ? (
-                    <Link href="/admin/courses" className="text-sm font-medium text-[#4f46e5] hover:underline">
+                    <Link href="/admin/courses" className="text-sm font-medium text-[#dc2626] hover:underline">
                       Clear filters
                     </Link>
                   ) : (
                     <Link
                       href="/admin/courses/create"
-                      className="inline-flex h-10 items-center rounded-lg bg-[#4f46e5] px-4 text-sm font-medium text-white hover:bg-[#4338ca]"
+                      className="inline-flex h-10 items-center rounded-lg bg-[#dc2626] px-4 text-sm font-medium text-white hover:bg-[#b91c1c]"
                     >
                       Create course
                     </Link>
@@ -180,7 +180,7 @@ export default async function AdminCoursesPage({
                           <div className="min-w-0">
                             <Link
                               href={`/admin/courses/${course.id}/edit`}
-                              className="block max-w-[240px] truncate font-medium text-slate-900 hover:text-[#4f46e5] hover:underline"
+                              className="block max-w-[240px] truncate font-medium text-slate-900 hover:text-[#dc2626] hover:underline"
                             >
                               {course.title}
                             </Link>

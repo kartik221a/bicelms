@@ -118,7 +118,7 @@ export default async function MyResourcesPage({
           className={cn(
             "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
             !courseId
-              ? "border-[#4f46e5] bg-[#eef2ff] text-[#4f46e5]"
+              ? "border-[#dc2626] bg-[#fef2f2] text-[#dc2626]"
               : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
           )}
         >
@@ -131,7 +131,7 @@ export default async function MyResourcesPage({
             className={cn(
               "max-w-[220px] truncate rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
               courseId === e.courseId
-                ? "border-[#4f46e5] bg-[#eef2ff] text-[#4f46e5]"
+                ? "border-[#dc2626] bg-[#fef2f2] text-[#dc2626]"
                 : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
             )}
           >
@@ -166,7 +166,7 @@ export default async function MyResourcesPage({
                     <h2 className="truncate font-bold text-slate-900">{g.course.title}</h2>
                     <Link
                       href={`/learn/${g.course.slug}`}
-                      className="shrink-0 text-xs font-semibold text-[#4f46e5] hover:underline"
+                      className="shrink-0 text-xs font-semibold text-[#dc2626] hover:underline"
                     >
                       Open course
                     </Link>
@@ -213,7 +213,7 @@ function ResourceRow({
       ? "bg-rose-50 text-rose-600"
       : resource.type === "practice_file" || resource.type === "template" || resource.type === "assignment"
         ? "bg-emerald-50 text-emerald-700"
-        : "bg-[#eef2ff] text-[#4f46e5]";
+        : "bg-[#fef2f2] text-[#dc2626]";
 
   const size = formatSize(resource.sizeBytes);
 
@@ -255,7 +255,7 @@ function ResourceRow({
         {resource.downloadUrl ? (
           <a
             href={resource.downloadUrl}
-            className="inline-flex h-9 items-center gap-1.5 rounded-md bg-[#4f46e5] px-3 text-sm font-medium text-white transition-colors hover:bg-[#4338ca]"
+            className="inline-flex h-9 items-center gap-1.5 rounded-md bg-[#dc2626] px-3 text-sm font-medium text-white transition-colors hover:bg-[#b91c1c]"
           >
             <Download className="h-4 w-4" /> Download
           </a>

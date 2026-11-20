@@ -153,7 +153,7 @@ export default async function AdminLessonsPage({
                         {course ? (
                           <Link
                             href={`/admin/courses/${course.id}/edit`}
-                            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#4f46e5] hover:underline"
+                            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#dc2626] hover:underline"
                           >
                             <BookOpen className="h-3.5 w-3.5" /> Edit course curriculum
                           </Link>

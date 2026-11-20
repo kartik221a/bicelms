@@ -108,7 +108,7 @@ export default async function DashboardPage() {
     <div className="mx-auto max-w-[1200px] space-y-6">
       {/* Welcome banner */}
       <section className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.05)] sm:p-8">
-        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gradient-to-br from-[#4f46e5]/10 to-transparent blur-2xl" />
+        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-gradient-to-br from-[#dc2626]/10 to-transparent blur-2xl" />
         <div className="relative z-10 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div className="max-w-2xl">
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -157,12 +157,12 @@ export default async function DashboardPage() {
         <div className="space-y-5 lg:col-span-8">
           <div className="flex items-center justify-between">
             <h2 className="flex items-center gap-2 text-xl font-semibold text-slate-900">
-              <Play className="h-5 w-5 text-[#4f46e5]" /> Continue learning
+              <Play className="h-5 w-5 text-[#dc2626]" /> Continue learning
             </h2>
             {enrollments.length ? (
               <Link
                 href="/my-courses"
-                className="text-sm font-semibold text-[#4f46e5] hover:underline"
+                className="text-sm font-semibold text-[#dc2626] hover:underline"
               >
                 View all ({enrollments.length})
               </Link>
@@ -175,7 +175,7 @@ export default async function DashboardPage() {
                 <div className="flex min-w-0 flex-1 items-start gap-4">
                   <Thumbnail course={hero.course} className="h-20 w-32 shrink-0" />
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-[#4f46e5]">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#dc2626]">
                       {heroIsCompleted ? "Course completed" : "Pick up where you left off"}
                     </p>
                     <h3 className="mt-1 truncate text-lg font-bold text-slate-900">{hero.course.title}</h3>
@@ -267,7 +267,7 @@ export default async function DashboardPage() {
           <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
             <CardContent className="p-5">
               <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                <TrendingUp className="h-4 w-4 text-[#4f46e5]" /> Learning activity
+                <TrendingUp className="h-4 w-4 text-[#dc2626]" /> Learning activity
               </h3>
               <p className="mt-1 text-sm text-slate-600">
                 <span className="text-xl font-bold text-slate-900">{weekCompletions}</span> lessons completed
@@ -286,15 +286,15 @@ export default async function DashboardPage() {
                     <div
                       className={`w-full rounded-t transition-all ${
                         count === maxDay && count > 0
-                          ? "bg-[#4f46e5]"
+                          ? "bg-[#dc2626]"
                           : count > 0
-                            ? "bg-[#4f46e5]/40 group-hover:bg-[#4f46e5]/60"
+                            ? "bg-[#dc2626]/40 group-hover:bg-[#dc2626]/60"
                             : "bg-slate-200"
                       }`}
                       style={{ height: `${Math.max(count === 0 ? 6 : 12, (count / maxDay) * 100)}%` }}
                     />
                     <span
-                      className={`text-[11px] ${count === maxDay && count > 0 ? "font-bold text-[#4f46e5]" : "text-slate-400"}`}
+                      className={`text-[11px] ${count === maxDay && count > 0 ? "font-bold text-[#dc2626]" : "text-slate-400"}`}
                     >
                       {dayLabels[i]}
                     </span>
@@ -307,7 +307,7 @@ export default async function DashboardPage() {
           <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
             <CardContent className="p-5">
               <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                <Megaphone className="h-4 w-4 text-[#4f46e5]" /> Recent announcements
+                <Megaphone className="h-4 w-4 text-[#dc2626]" /> Recent announcements
               </h3>
               {announcements.length === 0 ? (
                 <p className="mt-4 rounded-lg bg-slate-50 px-3 py-6 text-center text-sm text-slate-500">
@@ -323,10 +323,10 @@ export default async function DashboardPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-slate-200 bg-[#0f172a] text-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+          <Card className="border-slate-200 bg-[#0a0a0a] text-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
             <CardContent className="flex items-center gap-4 p-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white/10">
-                <Target className="h-5 w-5 text-[#a5b4fc]" />
+                <Target className="h-5 w-5 text-[#fca5a5]" />
               </span>
               <div className="min-w-0">
                 <p className="text-sm font-semibold">Certificates earned</p>
@@ -335,7 +335,7 @@ export default async function DashboardPage() {
                     ? `Congratulations — ${certificates.length} certificate${certificates.length === 1 ? "" : "s"} issued.`
                     : "Complete all lessons of a course to receive your certificate."}
                 </p>
-                <Link href="/certificates" className="mt-1 inline-block text-xs font-semibold text-[#a5b4fc] hover:underline">
+                <Link href="/certificates" className="mt-1 inline-block text-xs font-semibold text-[#fca5a5] hover:underline">
                   View certificates →
                 </Link>
               </div>
@@ -374,7 +374,7 @@ function ProgressRing({ percent }: { percent: number }) {
       <svg className="h-full w-full -rotate-90" viewBox="0 0 100 100">
         <circle className="text-slate-100" cx="50" cy="50" fill="none" r={radius} stroke="currentColor" strokeWidth="8" />
         <circle
-          className="text-[#4f46e5]"
+          className="text-[#dc2626]"
           cx="50"
           cy="50"
           fill="none"
@@ -407,10 +407,10 @@ function AnnouncementItem({
       : "BICE Academy";
   return (
     <li className="flex items-start gap-3">
-      <span className={`mt-2 h-2 w-2 shrink-0 rounded-full ${announcement.pinned ? "bg-[#4f46e5]" : "bg-slate-300"}`} />
+      <span className={`mt-2 h-2 w-2 shrink-0 rounded-full ${announcement.pinned ? "bg-[#dc2626]" : "bg-slate-300"}`} />
       <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between gap-2">
-          <span className="truncate text-xs font-semibold uppercase tracking-wide text-[#4f46e5]">{label}</span>
+          <span className="truncate text-xs font-semibold uppercase tracking-wide text-[#dc2626]">{label}</span>
           <span className="shrink-0 text-xs text-slate-400">
             {announcement.publishedAt
               ? formatDistanceToNow(new Date(announcement.publishedAt), { addSuffix: true })

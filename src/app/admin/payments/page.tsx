@@ -61,10 +61,10 @@ export default async function AdminPaymentsPage() {
         <StatCard icon={CreditCard} label="Provider" value="Razorpay" hint={flags.razorpayConfigured ? "Configured" : "Not configured"} />
       </section>
 
-      <Card className="border-[#c7d2fe] bg-[#eef2ff]/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+      <Card className="border-[#fecaca] bg-[#fef2f2]/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2 text-base font-semibold text-slate-900">
-            <Webhook className="h-4 w-4 text-[#4f46e5]" /> Razorpay webhook configuration
+            <Webhook className="h-4 w-4 text-[#dc2626]" /> Razorpay webhook configuration
           </CardTitle>
           <CardDescription>
             Point a Razorpay webhook of type <span className="font-mono text-xs">payment.captured</span>,{" "}

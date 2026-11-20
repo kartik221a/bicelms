@@ -76,7 +76,7 @@ export function CurriculumSidebar({
         <h2 className="text-lg font-bold leading-tight tracking-tight text-slate-900">{courseTitle}</h2>
         {instructorName ? (
           <p className="mt-0.5 flex items-center gap-1.5 text-xs text-slate-500">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#4f46e5]" />
+            <span className="inline-block h-2 w-2 rounded-full bg-[#dc2626]" />
             By {instructorName}
           </p>
         ) : null}
@@ -86,11 +86,11 @@ export function CurriculumSidebar({
         <div className="rounded-lg bg-slate-50 p-3">
           <div className="mb-2 flex items-center justify-between text-[13px] font-semibold">
             <span className="text-slate-900">Course progress</span>
-            <span className="font-bold text-[#4f46e5]">{percent}%</span>
+            <span className="font-bold text-[#dc2626]">{percent}%</span>
           </div>
           <Progress value={percent} className="h-2 bg-slate-200" />
           <p className="mt-2 flex items-center gap-1 text-xs text-slate-500">
-            <CheckCircle2 className="h-3.5 w-3.5 text-[#4f46e5]" />
+            <CheckCircle2 className="h-3.5 w-3.5 text-[#dc2626]" />
             {completedCount} of {totalCount} lessons completed
           </p>
         </div>
@@ -164,7 +164,7 @@ export function CurriculumSidebar({
                     ) : lesson.completed ? (
                       <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
                     ) : isCurrent ? (
-                      <PlayCircle className="h-[18px] w-[18px] shrink-0 text-[#4f46e5]" />
+                      <PlayCircle className="h-[18px] w-[18px] shrink-0 text-[#dc2626]" />
                     ) : (
                       <Circle className="h-4 w-4 shrink-0 text-slate-300" />
                     );
@@ -176,7 +176,7 @@ export function CurriculumSidebar({
                         className={cn(
                           "group flex items-center justify-between gap-2 rounded-md px-2.5 py-2 transition-colors",
                           isCurrent
-                            ? "bg-[#eef2ff] shadow-[inset_3px_0_0_0_#4f46e5]"
+                            ? "bg-[#fef2f2] shadow-[inset_3px_0_0_0_#dc2626]"
                             : "hover:bg-slate-50"
                         )}
                       >
@@ -185,7 +185,7 @@ export function CurriculumSidebar({
                           <span
                             className={cn(
                               "truncate text-xs",
-                              isCurrent ? "font-bold text-[#3730a3]" : "text-slate-700 group-hover:text-[#4f46e5]"
+                              isCurrent ? "font-bold text-[#991b1b]" : "text-slate-700 group-hover:text-[#dc2626]"
                             )}
                           >
                             {lesson.title}
@@ -196,7 +196,7 @@ export function CurriculumSidebar({
                             </span>
                           ) : null}
                         </div>
-                        <span className={cn("shrink-0 text-[11px]", isCurrent ? "font-semibold text-[#4f46e5]" : "text-slate-400")}>
+                        <span className={cn("shrink-0 text-[11px]", isCurrent ? "font-semibold text-[#dc2626]" : "text-slate-400")}>
                           {formatDuration(lesson.durationSeconds)}
                         </span>
                       </Link>

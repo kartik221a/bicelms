@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { CourseCard } from "@/components/shared/course-card";
 import { EmptyState } from "@/components/shared/empty-state";
 import { SortSelect } from "@/components/public/sort-select";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { courseQuerySchema, type CourseQuery } from "@/validators";
 import { listPublishedCourses } from "@/services/course.service";
 import { store } from "@/repositories";
@@ -123,10 +124,10 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
   return (
     <div className="flex w-full flex-col">
       {/* Header band */}
-      <div className="w-full bg-slate-50">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="w-full border-b border-neutral-200 bg-neutral-50">
+        <Reveal y={18} className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-slate-500">
-            <Link href="/" className="hover:text-[#4f46e5]">
+            <Link href="/" className="hover:text-[#dc2626]">
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5 text-slate-300" />
@@ -136,7 +137,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">All Courses</h1>
-                <Badge className="bg-[#eef2ff] text-[#4f46e5] hover:bg-[#eef2ff]">{result.total} available</Badge>
+                <Badge className="bg-[#fef2f2] text-[#dc2626] hover:bg-[#fef2f2]">{result.total} available</Badge>
               </div>
               <p className="max-w-3xl text-sm text-slate-600 sm:text-base">
                 Master corporate-grade Excel, Power Query ETL, SQL pipelines, Python analytics and BI
@@ -147,10 +148,10 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
           <div className="flex items-center gap-2 overflow-x-auto pb-1">
             <Link
               href={buildPageUrl({ ...query, category: undefined, page: 1 }, 1)}
-              className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold shadow-sm transition-colors ${
+              className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold shadow-sm transition-all duration-300 ${
                 query.category
-                  ? "bg-white text-slate-600 hover:bg-slate-100"
-                  : "bg-slate-900 text-white"
+                  ? "bg-white text-neutral-600 hover:bg-neutral-100"
+                  : "bg-black text-white ring-2 ring-red-600/30"
               }`}
             >
               All Disciplines
@@ -159,17 +160,17 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
               <Link
                 key={c.id}
                 href={buildPageUrl({ ...query, category: c.slug, page: 1 }, 1)}
-                className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold shadow-sm transition-colors ${
+                className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold shadow-sm transition-all duration-300 ${
                   query.category === c.slug
-                    ? "bg-slate-900 text-white"
-                    : "bg-white text-slate-600 hover:bg-slate-100"
+                    ? "bg-black text-white ring-2 ring-red-600/30"
+                    : "bg-white text-neutral-600 hover:bg-neutral-100"
                 }`}
               >
                 {c.name}
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -184,9 +185,9 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
             >
               <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                 <span className="flex items-center gap-2 text-base font-semibold text-slate-900">
-                  <SlidersHorizontal className="h-4.5 w-4.5 text-[#4f46e5]" /> Filters
+                  <SlidersHorizontal className="h-4.5 w-4.5 text-[#dc2626]" /> Filters
                 </span>
-                <Link href="/courses" className="text-xs font-medium text-[#4f46e5] hover:underline">
+                <Link href="/courses" className="text-xs font-medium text-[#dc2626] hover:underline">
                   Clear all
                 </Link>
               </div>
@@ -215,7 +216,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                       type="radio"
                       name="category"
                       value=""
-                      className="h-4 w-4 accent-[#4f46e5]"
+                      className="h-4 w-4 accent-[#dc2626]"
                       defaultChecked={!query.category}
                     />
                     All categories
@@ -229,7 +230,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                         type="radio"
                         name="category"
                         value={c.slug}
-                        className="h-4 w-4 accent-[#4f46e5]"
+                        className="h-4 w-4 accent-[#dc2626]"
                         defaultChecked={query.category === c.slug}
                       />
                       {c.name}
@@ -247,7 +248,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                       type="radio"
                       name="level"
                       value=""
-                      className="h-4 w-4 accent-[#4f46e5]"
+                      className="h-4 w-4 accent-[#dc2626]"
                       defaultChecked={!query.level}
                     />
                     Any level
@@ -261,7 +262,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                         type="radio"
                         name="level"
                         value={l.value}
-                        className="h-4 w-4 accent-[#4f46e5]"
+                        className="h-4 w-4 accent-[#dc2626]"
                         defaultChecked={query.level === l.value}
                       />
                       {l.label}
@@ -279,7 +280,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                       type="radio"
                       name="minRating"
                       value=""
-                      className="h-4 w-4 accent-[#4f46e5]"
+                      className="h-4 w-4 accent-[#dc2626]"
                       defaultChecked={query.minRating === undefined}
                     />
                     Any rating
@@ -292,11 +293,11 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                         type="radio"
                         name="minRating"
                         value={r}
-                        className="h-4 w-4 accent-[#4f46e5]"
+                        className="h-4 w-4 accent-[#dc2626]"
                         defaultChecked={query.minRating === Number(r)}
                       />
                       <span className="flex items-center gap-1 font-medium text-slate-700">
-                        <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" /> {r} &amp; up
+                        <Star className="h-3.5 w-3.5 fill-red-500 text-red-500" /> {r} &amp; up
                       </span>
                     </span>
                     <span className="text-xs text-slate-400">{matches((c) => c.ratingAvg >= Number(r))}</span>
@@ -312,7 +313,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                       type="radio"
                       name="maxPrice"
                       value=""
-                      className="h-4 w-4 accent-[#4f46e5]"
+                      className="h-4 w-4 accent-[#dc2626]"
                       defaultChecked={query.maxPrice === undefined}
                     />
                     Any price
@@ -325,7 +326,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                         type="radio"
                         name="maxPrice"
                         value={p.value}
-                        className="h-4 w-4 accent-[#4f46e5]"
+                        className="h-4 w-4 accent-[#dc2626]"
                         defaultChecked={query.maxPrice === Number(p.value)}
                       />
                       {p.label}
@@ -343,7 +344,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                       type="radio"
                       name="maxDurationHours"
                       value=""
-                      className="h-4 w-4 accent-[#4f46e5]"
+                      className="h-4 w-4 accent-[#dc2626]"
                       defaultChecked={query.maxDurationHours === undefined}
                     />
                     Any duration
@@ -356,7 +357,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                         type="radio"
                         name="maxDurationHours"
                         value={d.value}
-                        className="h-4 w-4 accent-[#4f46e5]"
+                        className="h-4 w-4 accent-[#dc2626]"
                         defaultChecked={query.maxDurationHours === Number(d.value)}
                       />
                       {d.label}
@@ -368,7 +369,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                 ))}
               </fieldset>
 
-              <Button type="submit" className="mt-1 bg-[#4f46e5] hover:bg-[#4338ca]">
+              <Button type="submit" className="mt-1 bg-[#dc2626] hover:bg-[#b91c1c]">
                 Apply filters
               </Button>
             </form>
@@ -404,18 +405,20 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
             </div>
 
             {result.items.length ? (
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3" stagger={0.07}>
                 {result.items.map((course) => (
-                  <CourseCard key={course.id} course={course} />
+                  <StaggerItem key={course.id} className="h-full">
+                    <CourseCard course={course} />
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
             ) : (
               <EmptyState
                 icon={Search}
                 title="No courses found"
                 description="Try widening your filters — clear the search term, pick a different category or raise the price cap."
                 action={
-                  <Button asChild className="bg-[#4f46e5] hover:bg-[#4338ca]">
+                  <Button asChild className="bg-[#dc2626] hover:bg-[#b91c1c]">
                     <Link href="/courses">Clear all filters</Link>
                   </Button>
                 }
@@ -437,7 +440,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                     asChild
                     variant={n === result.page ? "default" : "outline"}
                     size="sm"
-                    className={n === result.page ? "bg-[#4f46e5] hover:bg-[#4338ca]" : ""}
+                    className={n === result.page ? "bg-[#dc2626] hover:bg-[#b91c1c]" : ""}
                   >
                     <Link href={buildPageUrl(query, n)}>{n}</Link>
                   </Button>

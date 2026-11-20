@@ -71,7 +71,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <>
       <SetupBanner />
       <div className="flex min-h-screen">
-        <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col overflow-y-auto bg-[#0f172a] scrollbar-thin lg:flex">
+        <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col overflow-y-auto bg-[#0a0a0a] scrollbar-thin lg:flex">
           <div className="flex h-16 items-center justify-between px-5">
             <span className="font-bold tracking-tight text-white">
               BICE <span className="font-normal text-slate-400">Admin</span>

@@ -168,11 +168,11 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           aria-label="Breadcrumb"
           className="mx-auto flex max-w-7xl items-center gap-2 px-4 text-xs text-slate-500 sm:px-6 lg:px-8"
         >
-          <Link href="/" className="flex items-center gap-1.5 font-medium hover:text-[#4f46e5]">
+          <Link href="/" className="flex items-center gap-1.5 font-medium hover:text-[#dc2626]">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5 text-slate-300" />
-          <Link href="/courses" className="font-medium hover:text-[#4f46e5]">
+          <Link href="/courses" className="font-medium hover:text-[#dc2626]">
             Courses
           </Link>
           {category ? (
@@ -180,7 +180,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               <ChevronRight className="h-3.5 w-3.5 text-slate-300" />
               <Link
                 href={`/courses?category=${encodeURIComponent(category.slug)}`}
-                className="font-medium hover:text-[#4f46e5]"
+                className="font-medium hover:text-[#dc2626]"
               >
                 {category.name}
               </Link>
@@ -197,14 +197,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-2.5">
               {category ? (
-                <Badge className="gap-1.5 bg-[#eef2ff] text-[#4f46e5] uppercase tracking-wider hover:bg-[#eef2ff]">
+                <Badge className="gap-1.5 bg-[#fef2f2] text-[#dc2626] uppercase tracking-wider hover:bg-[#fef2f2]">
                   <BarChart3 className="h-3.5 w-3.5" /> {category.name}
                 </Badge>
               ) : null}
               <LevelBadge level={course.level} />
               {course.certificateEnabled ? (
                 <Badge variant="outline" className="gap-1 bg-white text-slate-600">
-                  <BadgeCheck className="h-3.5 w-3.5 text-[#4f46e5]" /> BICE certified track
+                  <BadgeCheck className="h-3.5 w-3.5 text-[#dc2626]" /> BICE certified track
                 </Badge>
               ) : null}
             </div>
@@ -240,17 +240,17 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                   <img
                     src={instructor.photoUrl}
                     alt={instructor.name}
-                    className="h-10 w-10 rounded-full object-cover ring-2 ring-[#4f46e5]/20"
+                    className="h-10 w-10 rounded-full object-cover ring-2 ring-[#dc2626]/20"
                   />
                 ) : (
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#0f172a] to-[#4f46e5] text-xs font-bold text-white ring-2 ring-[#4f46e5]/20">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#0a0a0a] to-[#dc2626] text-xs font-bold text-white ring-2 ring-[#dc2626]/20">
                     {initialsOf(instructor.name)}
                   </span>
                 )}
                 <div className="flex flex-col">
                   <span className="flex items-center gap-1.5 text-sm font-semibold text-slate-900">
                     Created by {instructor.name}
-                    <BadgeCheck className="h-4 w-4 text-[#4f46e5]" />
+                    <BadgeCheck className="h-4 w-4 text-[#dc2626]" />
                   </span>
                   <span className="text-xs text-slate-500">{instructor.title}</span>
                 </div>
@@ -277,12 +277,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 />
               </div>
             ) : (
-              <div className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#4f46e5] text-white shadow-xl">
+              <div className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-[#0a0a0a] via-[#1e1b4b] to-[#dc2626] text-white shadow-xl">
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/15 backdrop-blur">
                   <PlayCircle className="h-8 w-8" />
                 </span>
                 <p className="text-sm font-semibold">Preview trailer coming soon</p>
-                <p className="text-xs text-indigo-200">
+                <p className="text-xs text-red-200">
                   Free-preview lessons are available in the curriculum below.
                 </p>
               </div>
@@ -290,19 +290,19 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
             <Tabs defaultValue="overview" className="gap-6">
               <TabsList className="h-auto w-full flex-wrap justify-start gap-1 bg-white p-1 shadow-sm ring-1 ring-slate-200">
-                <TabsTrigger value="overview" className="data-[state=active]:bg-[#eef2ff] data-[state=active]:text-[#4f46e5]">
+                <TabsTrigger value="overview" className="data-[state=active]:bg-[#fef2f2] data-[state=active]:text-[#dc2626]">
                   Overview
                 </TabsTrigger>
-                <TabsTrigger value="curriculum" className="data-[state=active]:bg-[#eef2ff] data-[state=active]:text-[#4f46e5]">
+                <TabsTrigger value="curriculum" className="data-[state=active]:bg-[#fef2f2] data-[state=active]:text-[#dc2626]">
                   Curriculum
                 </TabsTrigger>
-                <TabsTrigger value="instructor" className="data-[state=active]:bg-[#eef2ff] data-[state=active]:text-[#4f46e5]">
+                <TabsTrigger value="instructor" className="data-[state=active]:bg-[#fef2f2] data-[state=active]:text-[#dc2626]">
                   Instructor
                 </TabsTrigger>
-                <TabsTrigger value="reviews" className="data-[state=active]:bg-[#eef2ff] data-[state=active]:text-[#4f46e5]">
+                <TabsTrigger value="reviews" className="data-[state=active]:bg-[#fef2f2] data-[state=active]:text-[#dc2626]">
                   Reviews {reviewTotal > 0 ? `(${reviewTotal})` : ""}
                 </TabsTrigger>
-                <TabsTrigger value="faq" className="data-[state=active]:bg-[#eef2ff] data-[state=active]:text-[#4f46e5]">
+                <TabsTrigger value="faq" className="data-[state=active]:bg-[#fef2f2] data-[state=active]:text-[#dc2626]">
                   FAQ
                 </TabsTrigger>
               </TabsList>
@@ -314,7 +314,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                     <CardContent className="space-y-5 p-6">
                       <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                         <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                          <BadgeCheck className="h-5 w-5 text-[#4f46e5]" /> What you&apos;ll learn
+                          <BadgeCheck className="h-5 w-5 text-[#dc2626]" /> What you&apos;ll learn
                         </h2>
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                           {objectives.length} objectives
@@ -353,7 +353,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                       <h2 className="text-lg font-bold text-slate-900">Skills you&apos;ll gain</h2>
                       <div className="flex flex-wrap gap-2">
                         {skills.map((s) => (
-                          <Badge key={s} variant="secondary" className="bg-[#eef2ff] text-[#4f46e5]">
+                          <Badge key={s} variant="secondary" className="bg-[#fef2f2] text-[#dc2626]">
                             {s}
                           </Badge>
                         ))}
@@ -367,7 +367,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                     <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                       <CardContent className="space-y-4 p-6">
                         <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                          <Lock className="h-4.5 w-4.5 text-[#4f46e5]" /> Prerequisites
+                          <Lock className="h-4.5 w-4.5 text-[#dc2626]" /> Prerequisites
                         </h2>
                         <ul className="list-disc space-y-2 pl-5 text-sm text-slate-600">
                           {prerequisites.map((p) => (
@@ -381,7 +381,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                     <Card className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                       <CardContent className="space-y-4 p-6">
                         <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                          <Target className="h-4.5 w-4.5 text-[#4f46e5]" /> Who this course is for
+                          <Target className="h-4.5 w-4.5 text-[#dc2626]" /> Who this course is for
                         </h2>
                         <ul className="list-disc space-y-2 pl-5 text-sm text-slate-600">
                           {audience.map((a) => (
@@ -437,13 +437,13 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                                   className="flex items-center gap-3 py-2.5 text-sm first:pt-0 last:pb-0"
                                 >
                                   {lesson.isFreePreview ? (
-                                    <PlayCircle className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                                    <PlayCircle className="h-4 w-4 shrink-0 text-[#dc2626]" />
                                   ) : (
                                     <Lock className="h-4 w-4 shrink-0 text-slate-300" />
                                   )}
                                   <span className="flex-1 text-slate-700">{lesson.title}</span>
                                   {lesson.isFreePreview ? (
-                                    <Badge className="bg-[#eef2ff] text-[#4f46e5] hover:bg-[#eef2ff]">
+                                    <Badge className="bg-[#fef2f2] text-[#dc2626] hover:bg-[#fef2f2]">
                                       Free Preview
                                     </Badge>
                                   ) : null}
@@ -481,10 +481,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                         <img
                           src={instructor.photoUrl}
                           alt={instructor.name}
-                          className="h-20 w-20 rounded-full object-cover ring-4 ring-[#eef2ff]"
+                          className="h-20 w-20 rounded-full object-cover ring-4 ring-[#fef2f2]"
                         />
                       ) : (
-                        <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#0f172a] to-[#4f46e5] text-xl font-bold text-white ring-4 ring-[#eef2ff]">
+                        <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#0a0a0a] to-[#dc2626] text-xl font-bold text-white ring-4 ring-[#fef2f2]">
                           {initialsOf(instructor.name)}
                         </span>
                       )}
@@ -492,7 +492,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                         <h2 className="text-lg font-bold text-slate-900">{instructor.name}</h2>
                         <p className="text-sm font-medium text-slate-600">{instructor.title}</p>
                         {instructor.credentials ? (
-                          <Badge className="bg-[#eef2ff] text-[#4f46e5] hover:bg-[#eef2ff]">
+                          <Badge className="bg-[#fef2f2] text-[#dc2626] hover:bg-[#fef2f2]">
                             {instructor.credentials}
                           </Badge>
                         ) : null}
@@ -537,10 +537,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                             return (
                               <div key={stars} className="flex items-center gap-3 text-sm">
                                 <span className="flex w-14 items-center gap-1 text-slate-600">
-                                  {stars} <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                                  {stars} <Star className="h-3.5 w-3.5 fill-red-500 text-red-500" />
                                 </span>
                                 <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100">
-                                  <div className="h-full rounded-full bg-amber-400" style={{ width: `${pct}%` }} />
+                                  <div className="h-full rounded-full bg-red-500" style={{ width: `${pct}%` }} />
                                 </div>
                                 <span className="w-10 text-right text-xs text-slate-500">
                                   {count} {pct}%
@@ -557,7 +557,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                         <Card key={r.id} className="border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                           <CardContent className="space-y-3 p-6">
                             <div className="flex items-center gap-3">
-                              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#eef2ff] text-sm font-bold text-[#4f46e5]">
+                              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fef2f2] text-sm font-bold text-[#dc2626]">
                                 {initialsOf(r.user?.name ?? "BICE Student")}
                               </span>
                               <div className="flex flex-col">
@@ -579,7 +579,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                             {r.title ? <p className="font-semibold text-slate-900">{r.title}</p> : null}
                             <p className="text-sm leading-relaxed text-slate-600">{r.comment}</p>
                             {r.adminReply ? (
-                              <div className="rounded-lg border-l-4 border-[#4f46e5] bg-slate-50 p-3 text-sm text-slate-600">
+                              <div className="rounded-lg border-l-4 border-[#dc2626] bg-slate-50 p-3 text-sm text-slate-600">
                                 <span className="font-semibold text-slate-900">BICE team: </span>
                                 {r.adminReply}
                               </div>
@@ -663,25 +663,25 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                   <h3 className="text-sm font-bold text-slate-900">This course includes</h3>
                   <ul className="space-y-2.5 text-sm text-slate-600">
                     <li className="flex items-center gap-2.5">
-                      <MonitorPlay className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                      <MonitorPlay className="h-4 w-4 shrink-0 text-[#dc2626]" />
                       {formatHours(videoMinutes)} on-demand video
                     </li>
                     <li className="flex items-center gap-2.5">
-                      <PlayCircle className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                      <PlayCircle className="h-4 w-4 shrink-0 text-[#dc2626]" />
                       {curriculum.totals.lessons} published lessons
                     </li>
                     <li className="flex items-center gap-2.5">
-                      <FileDown className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                      <FileDown className="h-4 w-4 shrink-0 text-[#dc2626]" />
                       Practice files &amp; downloadable resources
                     </li>
                     {course.certificateEnabled ? (
                       <li className="flex items-center gap-2.5">
-                        <Award className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                        <Award className="h-4 w-4 shrink-0 text-[#dc2626]" />
                         Verified certificate of completion
                       </li>
                     ) : null}
                     <li className="flex items-center gap-2.5">
-                      <InfinityIcon className="h-4 w-4 shrink-0 text-[#4f46e5]" />
+                      <InfinityIcon className="h-4 w-4 shrink-0 text-[#dc2626]" />
                       Lifetime access, including future updates
                     </li>
                   </ul>

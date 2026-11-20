@@ -119,7 +119,7 @@ function OrderRow({ order, course }: { order: OrderDoc; course: { title: string;
             )}
             <Link
               href={`/courses/${course.slug}`}
-              className="line-clamp-2 max-w-[220px] text-sm font-medium text-slate-800 hover:text-[#4f46e5]"
+              className="line-clamp-2 max-w-[220px] text-sm font-medium text-slate-800 hover:text-[#dc2626]"
             >
               {course.title}
             </Link>

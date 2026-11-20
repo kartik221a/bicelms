@@ -32,7 +32,7 @@ export function PublishToggleButton({
       variant="outline"
       onClick={toggle}
       disabled={pending}
-      className={published ? "" : "bg-[#4f46e5] text-white hover:bg-[#4338ca]"}
+      className={published ? "" : "bg-[#dc2626] text-white hover:bg-[#b91c1c]"}
     >
       {published ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
       {published ? "Unpublish" : "Publish course"}

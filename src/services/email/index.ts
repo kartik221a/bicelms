@@ -48,9 +48,9 @@ export async function sendTemplatedEmail(to: string, tpl: { subject: string; htm
 const layout = (title: string, body: string) => `
 <div style="font-family:Inter,Arial,sans-serif;background:#f8fafc;padding:32px">
   <div style="max-width:560px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden">
-    <div style="background:#0f172a;color:#fff;padding:20px 28px;font-weight:700;letter-spacing:.5px">BICE Academy</div>
+    <div style="background:#0a0a0a;color:#fff;padding:20px 28px;font-weight:700;letter-spacing:.5px">BICE Academy</div>
     <div style="padding:28px">
-      <h2 style="margin:0 0 12px;color:#0f172a">${title}</h2>
+      <h2 style="margin:0 0 12px;color:#0a0a0a">${title}</h2>
       <div style="color:#334155;line-height:1.6;font-size:14px">${body}</div>
     </div>
     <div style="padding:16px 28px;background:#f8fafc;color:#64748b;font-size:12px">
@@ -60,7 +60,7 @@ const layout = (title: string, body: string) => `
 </div>`;
 
 const btn = (href: string, label: string) =>
-  `<a href="${href}" style="display:inline-block;background:#4f46e5;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:14px">${label}</a>`;
+  `<a href="${href}" style="display:inline-block;background:#dc2626;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:14px">${label}</a>`;
 
 export const emailTemplates = {
   verifyEmail: (name: string, token: string) => ({

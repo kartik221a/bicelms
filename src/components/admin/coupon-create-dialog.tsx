@@ -61,7 +61,7 @@ export function CouponCreateDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+        <Button className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
           <Plus className="h-4 w-4" /> New coupon
         </Button>
       </DialogTrigger>
@@ -121,7 +121,7 @@ export function CouponCreateDialog({
             <Button type="button" variant="outline" onClick={() => setOpen(false)}>
               Cancel
             </Button>
-            <Button type="submit" disabled={pending} className="bg-[#4f46e5] text-white hover:bg-[#4338ca]">
+            <Button type="submit" disabled={pending} className="bg-[#dc2626] text-white hover:bg-[#b91c1c]">
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
               Create coupon
             </Button>

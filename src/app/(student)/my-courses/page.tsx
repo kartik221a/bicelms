@@ -78,7 +78,7 @@ export default async function MyCoursesPage({
               className={cn(
                 "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
                 filter === f.key
-                  ? "bg-[#4f46e5] text-white shadow-sm"
+                  ? "bg-[#dc2626] text-white shadow-sm"
                   : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
               )}
               aria-current={filter === f.key ? "page" : undefined}
@@ -137,7 +137,7 @@ export default async function MyCoursesPage({
                 <CardContent className="flex flex-1 flex-col gap-3 p-5">
                   <div>
                     <h3 className="line-clamp-2 font-bold leading-snug text-slate-900">
-                      <Link href={`/courses/${course.slug}`} className="hover:text-[#4f46e5]">
+                      <Link href={`/courses/${course.slug}`} className="hover:text-[#dc2626]">
                         {course.title}
                       </Link>
                     </h3>

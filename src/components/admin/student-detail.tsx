@@ -77,7 +77,7 @@ export function StudentDetailDialog({
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eef2ff] text-sm font-bold text-[#4f46e5]">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fef2f2] text-sm font-bold text-[#dc2626]">
               {student.name.charAt(0).toUpperCase()}
             </span>
             {student.name}
@@ -94,7 +94,7 @@ export function StudentDetailDialog({
 
         <section aria-label="Purchased courses">
           <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-900">
-            <BookOpen className="h-4 w-4 text-[#4f46e5]" /> Purchased courses
+            <BookOpen className="h-4 w-4 text-[#dc2626]" /> Purchased courses
           </h3>
           {student.enrollments.length === 0 ? (
             <p className="rounded-lg border border-dashed border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-500">
@@ -139,7 +139,7 @@ export function StudentDetailDialog({
 
         <section aria-label="Order history">
           <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-900">
-            <Receipt className="h-4 w-4 text-[#4f46e5]" /> Order history
+            <Receipt className="h-4 w-4 text-[#dc2626]" /> Order history
           </h3>
           {student.orders.length === 0 ? (
             <p className="rounded-lg border border-dashed border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-500">No orders yet.</p>
@@ -161,7 +161,7 @@ export function StudentDetailDialog({
 
         <section aria-label="Manually enroll">
           <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-900">
-            <UserRound className="h-4 w-4 text-[#4f46e5]" /> Manually enroll
+            <UserRound className="h-4 w-4 text-[#dc2626]" /> Manually enroll
           </h3>
           <div className="flex flex-col gap-2 sm:flex-row">
             <input type="hidden" name="courseId" value={courseId} />
@@ -182,7 +182,7 @@ export function StudentDetailDialog({
               type="button"
               onClick={enroll}
               disabled={pending}
-              className="bg-[#4f46e5] text-white hover:bg-[#4338ca]"
+              className="bg-[#dc2626] text-white hover:bg-[#b91c1c]"
             >
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
               Enroll

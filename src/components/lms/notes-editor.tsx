@@ -117,7 +117,7 @@ export function NotesEditor({
         {note.lessonId && course ? (
           <Link
             href={`/learn/${course.slug}/${note.lessonId}`}
-            className="inline-flex h-6 items-center gap-1 rounded-md bg-[#eef2ff] px-2 text-xs font-semibold text-[#4f46e5] transition-colors hover:bg-[#e0e7ff]"
+            className="inline-flex h-6 items-center gap-1 rounded-md bg-[#fef2f2] px-2 text-xs font-semibold text-[#dc2626] transition-colors hover:bg-[#fee2e2]"
           >
             <ExternalLink className="h-3 w-3" /> Open lesson
           </Link>
