@@ -1,23 +1,22 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import {
-  LayoutDashboard, BookOpen, StickyNote, FolderOpen, Award, ShoppingBag,
-  User, Settings, GraduationCap, LogOut,
-} from "lucide-react";
+import { GraduationCap, LogOut } from "lucide-react";
 import { SetupBanner } from "@/components/shared/setup-banner";
 import { getSession } from "@/services/auth/session";
 import { StudentSidebarNav } from "@/components/lms/student-sidebar-nav";
 import { MobileTabNav } from "@/components/lms/mobile-tab-nav";
 
+// Icon values are STRING KEYS resolved inside the client nav components —
+// component references cannot cross the server→client boundary as props.
 const NAV = [
-  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/my-courses", label: "My Courses", icon: BookOpen },
-  { href: "/my-notes", label: "My Notes", icon: StickyNote },
-  { href: "/my-resources", label: "My Resources", icon: FolderOpen },
-  { href: "/certificates", label: "Certificates", icon: Award },
-  { href: "/orders", label: "Orders", icon: ShoppingBag },
-  { href: "/profile", label: "Profile", icon: User },
-  { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard", label: "Dashboard", icon: "dashboard" },
+  { href: "/my-courses", label: "My Courses", icon: "my-courses" },
+  { href: "/my-notes", label: "My Notes", icon: "my-notes" },
+  { href: "/my-resources", label: "My Resources", icon: "my-resources" },
+  { href: "/certificates", label: "Certificates", icon: "certificates" },
+  { href: "/orders", label: "Orders", icon: "orders" },
+  { href: "/profile", label: "Profile", icon: "profile" },
+  { href: "/settings", label: "Settings", icon: "settings" },
 ];
 
 export default async function StudentLayout({ children }: { children: React.ReactNode }) {
@@ -67,7 +66,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
             <Link href="/profile" className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#eef2ff] text-sm font-semibold text-[#4f46e5]">
                 {session.photoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
+                   
                   <img src={session.photoUrl} alt={session.name} className="h-8 w-8 object-cover" />
                 ) : (
                   session.name.slice(0, 1).toUpperCase()

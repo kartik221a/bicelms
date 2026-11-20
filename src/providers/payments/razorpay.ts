@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import { env, flags } from "@/config/env";
 
 /**
@@ -13,12 +14,11 @@ export interface RazorpayOrder {
   status: string;
 }
 
-export function getRazorpayClient() {
+export async function getRazorpayClient() {
   if (!flags.razorpayConfigured) {
     throw new Error("Razorpay is not configured (RAZORPAY_KEY_ID / RAZORPAY_KEY_SECRET missing)");
   }
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const Razorpay = require("razorpay");
+  const Razorpay = (await import("razorpay")).default;
   return new Razorpay({
     key_id: env.RAZORPAY_KEY_ID,
     key_secret: env.RAZORPAY_KEY_SECRET,
@@ -42,7 +42,6 @@ export async function createRazorpayOrder(input: {
 /** Checkout callback verification: HMAC-SHA256(order_id + "|" + payment_id). */
 export function verifyRazorpaySignature(orderId: string, paymentId: string, signature: string): boolean {
   if (!flags.razorpayConfigured) return false;
-  const crypto = require("node:crypto") as typeof import("node:crypto");
   const expected = crypto
     .createHmac("sha256", env.RAZORPAY_KEY_SECRET!)
     .update(`${orderId}|${paymentId}`)
@@ -55,7 +54,6 @@ export function verifyRazorpaySignature(orderId: string, paymentId: string, sign
 /** Webhook verification: HMAC-SHA256 of the RAW request body. */
 export function verifyWebhookSignature(rawBody: string, signature: string): boolean {
   if (!env.RAZORPAY_WEBHOOK_SECRET || !signature) return false;
-  const crypto = require("node:crypto") as typeof import("node:crypto");
   const expected = crypto.createHmac("sha256", env.RAZORPAY_WEBHOOK_SECRET).update(rawBody).digest("hex");
   const a = Buffer.from(signature);
   const b = Buffer.from(expected);

@@ -1,7 +1,7 @@
 "use client";
 
 import Hls from "hls.js";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import {
   Play, Pause, Volume2, VolumeX, Maximize, Minimize, Settings2, PictureInPicture2,
@@ -54,6 +54,7 @@ export function ProtectedVideoPlayer({
   const [speed, setSpeed] = useState(1);
   const [quality, setQuality] = useState("auto");
   const [showQuality, setShowQuality] = useState(false);
+  const [qualities, setQualities] = useState<string[]>(["1080p", "720p"]);
   const [fullscreen, setFullscreen] = useState(false);
 
   useEffect(() => {
@@ -85,6 +86,14 @@ export function ProtectedVideoPlayer({
     };
   }, [lessonId]);
 
+  // HLS support probe (render-derived; avoids setState inside effects)
+  const hlsUnsupported = useMemo(() => {
+    if (!auth || auth.kind !== "hls") return false;
+    if (typeof window === "undefined") return false;
+    const probe = document.createElement("video");
+    return !probe.canPlayType("application/vnd.apple.mpegurl") && !Hls.isSupported();
+  }, [auth]);
+
   // Attach source (HLS or MP4)
   useEffect(() => {
     const video = videoRef.current;
@@ -92,15 +101,18 @@ export function ProtectedVideoPlayer({
     hlsRef.current?.destroy();
     hlsRef.current = null;
 
-    if (auth.kind === "hls" && !video.canPlayType("application/vnd.apple.mpegurl")) {
+    if (auth.kind === "hls") {
       if (Hls.isSupported()) {
         const hls = new Hls({ xhrSetup: (xhr) => xhr.setRequestHeader("X-Playback-Token", auth.token) });
         hls.loadSource(auth.src);
         hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          const heights = [...new Set(hls.levels.map((l) => `${l.height}p`))];
+          if (heights.length) setQualities(heights);
+        });
         hlsRef.current = hls;
-      } else {
-        setError("HLS playback is not supported in this browser.");
       }
+      // unsupported case handled via hlsUnsupported derived flag
     } else {
       video.src = auth.src;
     }
@@ -178,9 +190,7 @@ export function ProtectedVideoPlayer({
     }
   }
 
-  const qualities = hlsRef.current?.levels?.length
-    ? hlsRef.current.levels.map((l) => `${l.height}p`).filter((v, i, a) => a.indexOf(v) === i)
-    : ["1080p", "720p"];
+  const qualityOptions = qualities;
 
   return (
     <div
@@ -192,9 +202,11 @@ export function ProtectedVideoPlayer({
         <VideoWatermark {...watermark} />
       ) : null}
 
-      {error ? (
+      {error || hlsUnsupported ? (
         <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
-          <p className="text-sm font-medium text-slate-300">{error}</p>
+          <p className="text-sm font-medium text-slate-300">
+            {error ?? "HLS playback is not supported in this browser."}
+          </p>
         </div>
       ) : !auth ? (
         <div className="flex h-full items-center justify-center">
@@ -268,7 +280,7 @@ export function ProtectedVideoPlayer({
             </Button>
             {showQuality ? (
               <div className="absolute bottom-9 right-0 rounded-lg border border-slate-700 bg-slate-900/95 py-1 shadow-xl">
-                {["auto", ...qualities].map((q) => (
+                {["auto", ...qualityOptions].map((q) => (
                   <button
                     key={q}
                     className={`block w-full px-3 py-1.5 text-left text-xs hover:bg-slate-800 ${q === quality ? "text-[#8b95f6]" : "text-slate-200"}`}

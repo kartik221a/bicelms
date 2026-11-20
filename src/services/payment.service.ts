@@ -36,7 +36,7 @@ export interface OrderDoc {
 
 export interface PaymentResult {
   order: OrderDoc;
-  razorpay: { keyId: string; orderId: string; amount: number; currency: string } | null;
+  razorpay?: { keyId: string; orderId: string; amount: number; currency: string } | null;
   setupRequired?: { integration: string; envVars: string[] };
 }
 
@@ -262,11 +262,12 @@ export async function enrollAfterVerifiedPayment(userId: string, courseId: strin
   });
   if (existing.length) {
     if (existing[0].status === "active") return existing[0];
-    return store.update<EnrollmentDoc>("enrollments", existing[0].id, {
+    const revived = await store.update<EnrollmentDoc>("enrollments", existing[0].id, {
       status: "active",
       source: "purchase",
       orderId,
     });
+    if (revived) return revived;
   }
   const enrollment = await store.create<EnrollmentDoc>("enrollments", {
     userId,

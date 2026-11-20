@@ -2,11 +2,12 @@ import { store } from "@/repositories";
 import { errors } from "@/lib/api";
 import { hashPassword, verifyPassword, randomId } from "@/lib/crypto";
 import { flags } from "@/config/env";
-import { setSessionCookie, clearSessionCookie, setSessionCookie as _s } from "./session";
+import { setSessionCookie, clearSessionCookie } from "./session";
 import { getFirebaseAuth, SESSION_MAX_AGE_SECONDS, SESSION_COOKIE } from "@/providers/auth/firebase-admin";
 import { RegisterInput, LoginInput } from "@/validators";
 import { sendTemplatedEmail, emailTemplates } from "@/services/email";
 import { audit } from "@/services/audit.service";
+import { signToken } from "@/lib/crypto";
 
 /**
  * Authentication service. Two providers behind one interface:
@@ -77,7 +78,7 @@ export async function loginUser(input: LoginInput) {
 }
 
 export async function issueLocalSession(user: DbUser) {
-  const token = require("@/lib/crypto").signToken({ uid: user.id, ver: 1 }, SESSION_MAX_AGE_SECONDS);
+  const token = signToken({ uid: user.id, ver: 1 }, SESSION_MAX_AGE_SECONDS);
   await setSessionCookie(token);
 }
 

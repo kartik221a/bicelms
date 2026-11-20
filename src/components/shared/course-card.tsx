@@ -16,7 +16,6 @@ export function CourseCard({ course, href }: { course: CourseDoc; href?: string 
     >
       <div className="relative aspect-video overflow-hidden bg-slate-100">
         {course.thumbnailUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={course.thumbnailUrl}
             alt={course.title}

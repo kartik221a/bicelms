@@ -1,4 +1,4 @@
-import { getApp, initializeApp, cert, applicationDefault } from "firebase-admin/app";
+import { getApp, getApps, initializeApp, cert, applicationDefault } from "firebase-admin/app";
 import { getAuth, Auth } from "firebase-admin/auth";
 import { env, flags } from "@/config/env";
 

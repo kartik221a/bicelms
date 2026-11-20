@@ -1,4 +1,4 @@
-import { store, QueryOptions, WhereClause } from "@/repositories";
+import { store, WhereInput, QueryOptions } from "@/repositories";
 import { CourseQuery } from "@/validators";
 import { errors } from "@/lib/api";
 import { slugify } from "@/lib/slug";
@@ -76,7 +76,7 @@ export function parseFaqs(v?: string | null): { q: string; a: string }[] {
 }
 
 export async function listPublishedCourses(query: CourseQuery) {
-  const where: WhereClause[] = [["status", "==", "published"]];
+  const where: WhereInput[] = [["status", "==", "published"]];
   if (query.category) {
     const cat = await store.getByField<{ id: string }>("categories", "slug", query.category);
     where.push(["categoryId", "==", cat?.id ?? "__none__"]);

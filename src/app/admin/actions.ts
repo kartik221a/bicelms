@@ -34,7 +34,7 @@ export async function createCourse(formData: FormData) {
     status: formData.get("status") || "draft",
   });
   const slug = formData.get("slug") ? String(formData.get("slug")) : await uniqueSlug(raw.title);
-  const course = await store.create("courses", { ...raw, slug });
+  const course = await store.create<{ id: string }>("courses", { ...raw, slug });
   await audit({ actorUserId: admin.id, action: "course.create", entity: "course", entityId: course.id });
   revalidatePath("/admin/courses");
   return course;
@@ -176,9 +176,11 @@ export async function toggleFreePreview(courseId: string, lessonId: string, isFr
 export async function manuallyEnrollStudent(userId: string, courseId: string) {
   const admin = await assertAdmin();
   const enrollment = await enrollAfterVerifiedPayment(userId, courseId, "manual");
-  await store.update("enrollments", enrollment.id, { source: "manual" });
-  await audit({ actorUserId: admin.id, action: "enrollment.manual", entity: "enrollment", entityId: enrollment.id, meta: { userId, courseId } });
-  revalidatePath("/admin/students");
+  if (enrollment) {
+    await store.update("enrollments", enrollment.id, { source: "manual" });
+    await audit({ actorUserId: admin.id, action: "enrollment.manual", entity: "enrollment", entityId: enrollment.id, meta: { userId, courseId } });
+    revalidatePath("/admin/students");
+  }
   return enrollment;
 }
 
@@ -200,12 +202,16 @@ export async function setUserStatus(userId: string, status: "active" | "suspende
 
 export async function createCoupon(formData: FormData) {
   await assertAdmin();
+  const maxUses = formData.get("maxUses") ? Number(formData.get("maxUses")) : null;
+  const maxUsesPerUser = formData.get("maxUsesPerUser") ? Number(formData.get("maxUsesPerUser")) : null;
   const input = couponSchema.parse({
     code: formData.get("code"),
     type: formData.get("type"),
     value: Number(formData.get("value")),
     minOrderValue: Number(formData.get("minOrderValue") ?? 0),
     expiresAt: formData.get("expiresAt") || null,
+    maxUses: maxUses && maxUses > 0 ? maxUses : null,
+    maxUsesPerUser: maxUsesPerUser && maxUsesPerUser > 0 ? maxUsesPerUser : null,
     active: formData.get("active") === "on",
   });
   const coupon = await couponService.create(input);
@@ -265,4 +271,95 @@ export async function updateSettingsAction(formData: FormData) {
     seoDescription: (formData.get("seoDescription") as string) || undefined,
   });
   revalidatePath("/admin/settings");
+}
+
+/* ---------------- Categories ---------------- */
+
+export async function createCategory(formData: FormData) {
+  await assertAdmin();
+  const name = String(formData.get("name") ?? "").trim();
+  const existing = await store.list("categories", { where: [["name", "==", name]] });
+  if (existing.length) throw errors.conflict("Category already exists");
+  const count = await store.count("categories");
+  await store.create("categories", {
+    name,
+    slug: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""),
+    description: (formData.get("description") as string) || null,
+    position: count,
+  });
+  revalidatePath("/admin/categories");
+  revalidatePath("/courses");
+}
+
+export async function updateCategory(categoryId: string, formData: FormData) {
+  await assertAdmin();
+  const name = (formData.get("name") as string)?.trim();
+  await store.update("categories", categoryId, {
+    ...(name ? { name } : {}),
+    description: (formData.get("description") as string) || undefined,
+  });
+  revalidatePath("/admin/categories");
+}
+
+export async function deleteCategory(categoryId: string) {
+  await assertAdmin();
+  await store.delete("categories", categoryId);
+  revalidatePath("/admin/categories");
+}
+
+/* ---------------- Instructors ---------------- */
+
+export async function saveInstructor(formData: FormData) {
+  await assertAdmin();
+  const id = formData.get("id") as string | null;
+  const payload = {
+    name: String(formData.get("name") ?? "").trim(),
+    title: (formData.get("title") as string) || null,
+    bio: (formData.get("bio") as string) || null,
+    photoUrl: (formData.get("photoUrl") as string) || null,
+    credentials: (formData.get("credentials") as string) || null,
+  };
+  if (!payload.name) throw errors.badRequest("Name is required");
+  if (id) {
+    await store.update("instructors", id, payload);
+  } else {
+    await store.create("instructors", payload);
+  }
+  revalidatePath("/admin/instructors");
+}
+
+export async function deleteInstructor(instructorId: string) {
+  await assertAdmin();
+  await store.delete("instructors", instructorId);
+  revalidatePath("/admin/instructors");
+}
+
+/* ---------------- Resources (admin) ---------------- */
+
+export async function saveResource(formData: FormData) {
+  await assertAdmin();
+  const id = formData.get("id") as string | null;
+  const payload = {
+    courseId: String(formData.get("courseId") ?? ""),
+    lessonId: (formData.get("lessonId") as string) || null,
+    title: String(formData.get("title") ?? "").trim(),
+    type: String(formData.get("type") ?? "pdf"),
+    storageId: (formData.get("storageId") as string) || null,
+    externalUrl: (formData.get("externalUrl") as string) || null,
+    downloadable: formData.get("downloadable") === "on",
+    availableAfterLessonId: (formData.get("availableAfterLessonId") as string) || null,
+  };
+  if (!payload.courseId || !payload.title) throw errors.badRequest("Course and title are required");
+  if (id) {
+    await store.update("resources", id, payload);
+  } else {
+    await store.create("resources", payload);
+  }
+  revalidatePath("/admin/resources");
+}
+
+export async function deleteResource(resourceId: string) {
+  await assertAdmin();
+  await store.delete("resources", resourceId);
+  revalidatePath("/admin/resources");
 }

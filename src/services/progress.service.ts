@@ -1,4 +1,4 @@
-import { store, WhereClause } from "@/repositories";
+import { store, WhereInput } from "@/repositories";
 import { errors } from "@/lib/api";
 import { EnrollmentDoc, formatEnrollment, computeProgressPercent } from "./enrollment.types";
 import { LessonDoc } from "./course.service";
@@ -156,7 +156,7 @@ export async function requireEnrollment(userId: string, courseId: string): Promi
 }
 
 export async function listUserEnrollments(userId: string, filter?: "all" | "in_progress" | "completed") {
-  const where: WhereClause[] = [["userId", "==", userId]];
+  const where: WhereInput[] = [["userId", "==", userId]];
   const enrollments = await store.list<EnrollmentDoc>("enrollments", {
     where,
     orderBy: [{ field: "lastAccessedAt", direction: "desc" }],

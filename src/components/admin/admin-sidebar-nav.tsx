@@ -3,12 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
 
 export function AdminSidebarNav({
   sections,
 }: {
-  sections: { title: string; items: { href: string; label: string; icon: LucideIcon }[] }[];
+  sections: { title: string; items: { href: string; label: string; icon: React.ReactNode }[] }[];
 }) {
   const pathname = usePathname();
   return (
@@ -30,7 +29,7 @@ export function AdminSidebarNav({
                     active ? "bg-[#4f46e5] text-white" : "text-slate-300 hover:bg-[#1e293b] hover:text-white"
                   )}
                 >
-                  <item.icon className="h-4 w-4" />
+                  <span className="shrink-0">{item.icon}</span>
                   {item.label}
                 </Link>
               );

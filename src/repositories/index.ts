@@ -3,6 +3,10 @@ import { DataStore } from "./types";
 import { PrismaStore } from "./prisma.store";
 import { FirestoreStore } from "./firestore.store";
 
+// Re-export the DataStore types so services can import WhereClause/QueryOptions
+// from "@/repositories" (services rely on this path).
+export * from "./types";
+
 /**
  * Provider factory. Production (Firebase env vars present) uses Firestore;
  * local development / preview falls back to SQLite via Prisma. Business logic

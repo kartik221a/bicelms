@@ -6,6 +6,8 @@ import {
   Collection,
   QueryOptions,
   WhereClause,
+  WhereInput,
+  asWhereClause,
   normalizeDatesIn,
   denormalizeDatesIn,
 } from "./types";
@@ -36,7 +38,8 @@ function buildQuery(fs: Firestore, collection: Collection, options?: QueryOption
   let q: ReturnType<Firestore["collection"]> = fs.collection(collection);
   type Q = typeof q;
   let cur: Q = q;
-  for (const w of options?.where ?? []) {
+  for (const raw of options?.where ?? []) {
+    const w: WhereClause = asWhereClause(raw);
     if (w.op === "contains") {
       // Firestore has no native contains; range-prefix match fallback (documented limitation)
       cur = cur.where(w.field, ">=", w.value).where(w.field, "<=", String(w.value) + "\uf8ff") as Q;
@@ -81,7 +84,7 @@ export class FirestoreStore implements DataStore {
     return snap.docs.map((d) => normalizeDatesIn({ id: d.id, ...d.data() }) as T);
   }
 
-  async count(collection: Collection, where?: WhereClause[]): Promise<number> {
+  async count(collection: Collection, where?: WhereInput[]): Promise<number> {
     const q = buildQuery(this.fs(), collection, { where });
     const snap = await q.count().get();
     return snap.data().count;
@@ -125,7 +128,7 @@ export class FirestoreStore implements DataStore {
     return true;
   }
 
-  async deleteWhere(collection: Collection, where: WhereClause[]): Promise<number> {
+  async deleteWhere(collection: Collection, where: WhereInput[]): Promise<number> {
     const q = buildQuery(this.fs(), collection, { where });
     const snap = await q.get();
     const batch = this.fs().batch();

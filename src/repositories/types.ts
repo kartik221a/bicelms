@@ -14,13 +14,21 @@ export interface WhereClause {
   value: unknown;
 }
 
+/** Compact clause form accepted for ergonomics: [field, op, value]. */
+export type WhereInput = WhereClause | [string, WhereOp, unknown];
+
+/** Normalize a compact tuple clause into the object form. */
+export function asWhereClause(w: WhereInput): WhereClause {
+  return Array.isArray(w) ? { field: w[0], op: w[1], value: w[2] } : w;
+}
+
 export interface OrderBy {
   field: string;
   direction?: "asc" | "desc";
 }
 
 export interface QueryOptions {
-  where?: WhereClause[];
+  where?: WhereInput[];
   orderBy?: OrderBy[];
   limit?: number;
   offset?: number;
@@ -62,11 +70,11 @@ export interface DataStore {
   /** First document where `field` equals `value` (intended for unique keys). */
   getByField<T>(collection: Collection, field: string, value: unknown): Promise<T | null>;
   list<T>(collection: Collection, options?: QueryOptions): Promise<T[]>;
-  count(collection: Collection, where?: WhereClause[]): Promise<number>;
+  count(collection: Collection, where?: WhereInput[]): Promise<number>;
   create<T>(collection: Collection, data: Record<string, unknown>): Promise<T>;
   update<T>(collection: Collection, id: string, data: Record<string, unknown>): Promise<T | null>;
   delete(collection: Collection, id: string): Promise<boolean>;
-  deleteWhere(collection: Collection, where: WhereClause[]): Promise<number>;
+  deleteWhere(collection: Collection, where: WhereInput[]): Promise<number>;
 }
 
 const DATE_FIELD = /At$|^expires$|^startsAt$|^issuedAt$|^publishedAt$|^lastSeenAt$|^readAt$/;

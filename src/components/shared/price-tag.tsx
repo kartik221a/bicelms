@@ -8,7 +8,7 @@ export function PriceTag({
 }: {
   price: number;
   originalPrice?: number | null;
-  size?: "sm" | "lg";
+  size?: "sm" | "md" | "lg";
 }) {
   const off = discountPercent(price, originalPrice);
   return (

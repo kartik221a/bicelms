@@ -4,6 +4,8 @@ import {
   Collection,
   QueryOptions,
   WhereClause,
+  WhereInput,
+  asWhereClause,
   normalizeDatesIn,
   denormalizeDatesIn,
 } from "./types";
@@ -34,9 +36,10 @@ const DELEGATES: Record<Collection, keyof typeof db> = {
   platformSettings: "platformSettings",
 };
 
-function buildWhere(where?: WhereClause[]): Record<string, unknown> {
+function buildWhere(where?: WhereInput[]): Record<string, unknown> {
   if (!where?.length) return {};
-  const AND = where.map((w) => {
+  const AND = where.map((raw) => {
+    const w: WhereClause = asWhereClause(raw);
     switch (w.op) {
       case "==":
         return { [w.field]: w.value };
@@ -102,7 +105,7 @@ export class PrismaStore implements DataStore {
     return rows.map((r) => normalizeDatesIn(r) as T);
   }
 
-  async count(collection: Collection, where?: WhereClause[]): Promise<number> {
+  async count(collection: Collection, where?: WhereInput[]): Promise<number> {
     return this.delegate(collection).count({ where: buildWhere(where) });
   }
 
@@ -132,7 +135,7 @@ export class PrismaStore implements DataStore {
     }
   }
 
-  async deleteWhere(collection: Collection, where: WhereClause[]): Promise<number> {
+  async deleteWhere(collection: Collection, where: WhereInput[]): Promise<number> {
     const res = await this.delegate(collection).deleteMany({ where: buildWhere(where) });
     return res.count;
   }

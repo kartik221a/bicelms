@@ -76,19 +76,21 @@ async function loadUserById(uid: string): Promise<SessionUser | null> {
   };
 }
 
+interface LookupUser {
+  id: string;
+  email: string;
+  name: string;
+  role: Role;
+  photoUrl?: string;
+  status: string;
+  emailVerified: boolean;
+  firebaseUid?: string;
+}
+
 async function loadUserByFirebaseUid(firebaseUid: string, email?: string): Promise<SessionUser | null> {
-  let user = await store.getByField<{
-    id: string;
-    email: string;
-    name: string;
-    role: Role;
-    photoUrl?: string;
-    status: string;
-    emailVerified: boolean;
-    firebaseUid?: string;
-  }>("users", "firebaseUid", firebaseUid);
+  let user = await store.getByField<LookupUser>("users", "firebaseUid", firebaseUid);
   if (!user && email) {
-    user = (await store.getByField("users", "email", email.toLowerCase())) as typeof user;
+    user = await store.getByField<LookupUser>("users", "email", email.toLowerCase());
     if (user && !user.firebaseUid) {
       await store.update("users", user.id, { firebaseUid });
     }

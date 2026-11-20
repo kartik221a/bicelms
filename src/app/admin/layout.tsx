@@ -9,49 +9,54 @@ import { SetupBanner } from "@/components/shared/setup-banner";
 import { getSession } from "@/services/auth/session";
 import { AdminSidebarNav } from "@/components/admin/admin-sidebar-nav";
 
-const NAV_SECTIONS = [
+// Icons are pre-rendered elements (serializable across the server → client
+// boundary) instead of component references.
+const NAV_SECTIONS: {
+  title: string;
+  items: { href: string; label: string; icon: React.ReactNode }[];
+}[] = [
   {
     title: "Overview",
-    items: [{ href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard }],
+    items: [{ href: "/admin/dashboard", label: "Dashboard", icon: <LayoutDashboard className="h-4 w-4" /> }],
   },
   {
     title: "Catalog",
     items: [
-      { href: "/admin/courses", label: "Courses", icon: BookOpen },
-      { href: "/admin/categories", label: "Categories", icon: Tags },
-      { href: "/admin/lessons", label: "Lessons", icon: ListVideo },
+      { href: "/admin/courses", label: "Courses", icon: <BookOpen className="h-4 w-4" /> },
+      { href: "/admin/categories", label: "Categories", icon: <Tags className="h-4 w-4" /> },
+      { href: "/admin/lessons", label: "Lessons", icon: <ListVideo className="h-4 w-4" /> },
     ],
   },
   {
     title: "People",
     items: [
-      { href: "/admin/students", label: "Students", icon: Users },
-      { href: "/admin/instructors", label: "Instructors", icon: GraduationCap },
+      { href: "/admin/students", label: "Students", icon: <Users className="h-4 w-4" /> },
+      { href: "/admin/instructors", label: "Instructors", icon: <GraduationCap className="h-4 w-4" /> },
     ],
   },
   {
     title: "Sales",
     items: [
-      { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
-      { href: "/admin/payments", label: "Payments", icon: CreditCard },
-      { href: "/admin/coupons", label: "Coupons", icon: TicketPercent },
+      { href: "/admin/orders", label: "Orders", icon: <ShoppingBag className="h-4 w-4" /> },
+      { href: "/admin/payments", label: "Payments", icon: <CreditCard className="h-4 w-4" /> },
+      { href: "/admin/coupons", label: "Coupons", icon: <TicketPercent className="h-4 w-4" /> },
     ],
   },
   {
     title: "Engagement",
     items: [
-      { href: "/admin/reviews", label: "Reviews", icon: MessageSquareText },
-      { href: "/admin/resources", label: "Resources", icon: FolderOpen },
-      { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
+      { href: "/admin/reviews", label: "Reviews", icon: <MessageSquareText className="h-4 w-4" /> },
+      { href: "/admin/resources", label: "Resources", icon: <FolderOpen className="h-4 w-4" /> },
+      { href: "/admin/announcements", label: "Announcements", icon: <Megaphone className="h-4 w-4" /> },
     ],
   },
   {
     title: "Insights",
-    items: [{ href: "/admin/analytics", label: "Analytics", icon: BarChart3 }],
+    items: [{ href: "/admin/analytics", label: "Analytics", icon: <BarChart3 className="h-4 w-4" /> }],
   },
   {
     title: "System",
-    items: [{ href: "/admin/settings", label: "Settings", icon: Settings }],
+    items: [{ href: "/admin/settings", label: "Settings", icon: <Settings className="h-4 w-4" /> }],
   },
 ];
 
