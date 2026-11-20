@@ -1,3 +1,9 @@
+// Base URL: explicit override, then the Vercel deployment URL, then localhost
+// for local development (used by robots/sitemap/SEO metadata).
+const derivedUrl =
+  process.env.NEXT_PUBLIC_APP_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const site = {
   name: "BICE Academy",
   shortName: "BICE",
@@ -5,7 +11,7 @@ export const site = {
   description:
     "BICE is a professional coaching institute for data skills — Advanced Excel, Power Query, SQL, Python and Business Dashboards — with structured courses, hands-on projects and verified certificates.",
   supportEmail: "support@bice.example",
-  url: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+  url: derivedUrl,
   socials: {
     twitter: "https://twitter.com/biceacademy",
     linkedin: "https://linkedin.com/company/biceacademy",

@@ -1,5 +1,5 @@
-import { App, applicationDefault, cert, getApps, initializeApp } from "firebase-admin/app";
-import { getFirestore, Firestore } from "firebase-admin/firestore";
+import type { App } from "firebase-admin/app";
+import type { Firestore } from "firebase-admin/firestore";
 import { env, flags } from "@/config/env";
 import {
   DataStore,
@@ -12,26 +12,41 @@ import {
   denormalizeDatesIn,
 } from "./types";
 
+// firebase-admin is imported lazily (see providers/auth/firebase-admin.ts):
+// loading it unconditionally breaks Turbopack serverless builds. Types stay
+// as `import type` (erased at build time).
+
 let _fs: Firestore | null = null;
 let _app: App | null = null;
 
-export function getFirebase(): { app: App; firestore: Firestore } {
+const APP_NAME = "bice-admin";
+
+async function getFirebase(): Promise<{ app: App; firestore: Firestore }> {
   if (_app && _fs) return { app: _app, firestore: _fs };
-  if (getApps().length) {
-    _app = getApps()[0];
-  } else if (flags.firebaseConfigured && env.FIREBASE_PRIVATE_KEY) {
-    _app = initializeApp({
-      credential: cert({
-        projectId: env.FIREBASE_PROJECT_ID!,
-        clientEmail: env.FIREBASE_CLIENT_EMAIL!,
-        privateKey: env.FIREBASE_PRIVATE_KEY,
-      }),
-    });
-  } else {
-    _app = initializeApp({ credential: applicationDefault() });
-  }
+  const { getFirestore } = await import("firebase-admin/firestore");
+  _app = _app ?? (await getInitializedApp());
   _fs = getFirestore(_app);
   return { app: _app, firestore: _fs };
+}
+
+async function getInitializedApp(): Promise<App> {
+  const { initializeApp, cert, applicationDefault, getApp } = await import("firebase-admin/app");
+  try {
+    return getApp(APP_NAME);
+  } catch {
+    // not initialized yet — fall through
+  }
+  const options =
+    flags.firebaseConfigured && env.FIREBASE_PRIVATE_KEY
+      ? {
+          credential: cert({
+            projectId: env.FIREBASE_PROJECT_ID!,
+            clientEmail: env.FIREBASE_CLIENT_EMAIL!,
+            privateKey: env.FIREBASE_PRIVATE_KEY,
+          }),
+        }
+      : { credential: applicationDefault() };
+  return initializeApp(options, APP_NAME);
 }
 
 function buildQuery(fs: Firestore, collection: Collection, options?: QueryOptions) {
@@ -61,37 +76,37 @@ function buildQuery(fs: Firestore, collection: Collection, options?: QueryOption
 export class FirestoreStore implements DataStore {
   readonly name = "firestore" as const;
 
-  private fs(): Firestore {
-    return getFirebase().firestore;
+  private async fs(): Promise<Firestore> {
+    return (await getFirebase()).firestore;
   }
 
   async get<T>(collection: Collection, id: string): Promise<T | null> {
-    const snap = await this.fs().collection(collection).doc(id).get();
+    const snap = await (await this.fs()).collection(collection).doc(id).get();
     if (!snap.exists) return null;
     return normalizeDatesIn({ id: snap.id, ...snap.data() }) as T;
   }
 
   async getByField<T>(collection: Collection, field: string, value: unknown): Promise<T | null> {
-    const snap = await this.fs().collection(collection).where(field, "==", value).limit(1).get();
+    const snap = await (await this.fs()).collection(collection).where(field, "==", value).limit(1).get();
     if (snap.empty) return null;
     const d = snap.docs[0];
     return normalizeDatesIn({ id: d.id, ...d.data() }) as T;
   }
 
   async list<T>(collection: Collection, options?: QueryOptions): Promise<T[]> {
-    const q = buildQuery(this.fs(), collection, options);
+    const q = buildQuery(await this.fs(), collection, options);
     const snap = await q.get();
     return snap.docs.map((d) => normalizeDatesIn({ id: d.id, ...d.data() }) as T);
   }
 
   async count(collection: Collection, where?: WhereInput[]): Promise<number> {
-    const q = buildQuery(this.fs(), collection, { where });
+    const q = buildQuery(await this.fs(), collection, { where });
     const snap = await q.count().get();
     return snap.data().count;
   }
 
   async create<T>(collection: Collection, data: Record<string, unknown>): Promise<T> {
-    const fs = this.fs();
+    const fs = await this.fs();
     const clean = denormalizeDatesIn(data);
     let doc: ReturnType<ReturnType<Firestore["collection"]>["doc"]>;
     if (clean.id) {
@@ -113,7 +128,7 @@ export class FirestoreStore implements DataStore {
   }
 
   async update<T>(collection: Collection, id: string, data: Record<string, unknown>): Promise<T | null> {
-    const doc = this.fs().collection(collection).doc(id);
+    const doc = (await this.fs()).collection(collection).doc(id);
     const exists = await doc.get();
     if (!exists.exists) return null;
     const clean = denormalizeDatesIn(data);
@@ -124,14 +139,14 @@ export class FirestoreStore implements DataStore {
   }
 
   async delete(collection: Collection, id: string): Promise<boolean> {
-    await this.fs().collection(collection).doc(id).delete();
+    await (await this.fs()).collection(collection).doc(id).delete();
     return true;
   }
 
   async deleteWhere(collection: Collection, where: WhereInput[]): Promise<number> {
-    const q = buildQuery(this.fs(), collection, { where });
+    const q = buildQuery(await this.fs(), collection, { where });
     const snap = await q.get();
-    const batch = this.fs().batch();
+    const batch = (await this.fs()).batch();
     snap.docs.forEach((d) => batch.delete(d.ref));
     await batch.commit();
     return snap.size;

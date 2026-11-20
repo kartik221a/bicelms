@@ -42,7 +42,7 @@ export async function getSession(): Promise<SessionUser | null> {
 
   if (flags.firebaseConfigured) {
     try {
-      const decoded = await getFirebaseAuth().verifySessionCookie(token, true);
+      const decoded = await (await getFirebaseAuth()).verifySessionCookie(token, true);
       return await loadUserByFirebaseUid(decoded.uid, decoded.email);
     } catch {
       return null;

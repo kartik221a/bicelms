@@ -84,7 +84,7 @@ export async function issueLocalSession(user: DbUser) {
 
 /** Firebase flow: client sends ID token, server creates session cookie. */
 export async function createFirebaseSession(idToken: string) {
-  const auth = getFirebaseAuth();
+  const auth = await getFirebaseAuth();
   const decoded = await auth.verifyIdToken(idToken, true);
   const sessionCookie = await auth.createSessionCookie(idToken, {
     expiresIn: SESSION_MAX_AGE_SECONDS * 1000,
