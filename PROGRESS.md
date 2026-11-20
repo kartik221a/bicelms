@@ -53,3 +53,17 @@ queue), `collect.py` (asset export), `sheets.py` (contact sheets), `screens.json
   Cloudinary (cloud name + signed-upload API key/secret) · SMTP/email provider (optional,
   abstracted). If unavailable at build time, integrations ship as real code with a
   clearly marked setup state (per master prompt §17).
+
+## Implementation status (2026-11-20)
+
+All 9 phases implemented and verified end-to-end in the sandbox:
+
+- Foundation, data layer (Prisma+Firestore), services, REST API v1: done
+- Public website, auth, student LMS (protected player + watermark), admin: done
+- Razorpay/Cloudinary/Firebase/Email: real integration code, env-guarded setup states
+- Verified: tsc 0 errors, eslint clean, all routes smoke-tested (200/307 as appropriate),
+  browser-verified golden paths (login → dashboard → learning interface with watermark →
+  mark complete; enroll → honest Razorpay setup state; admin dashboard with real aggregates)
+- Pushed to https://github.com/kartik221a/bicelms (branch main)
+
+Credentials needed to activate integrations (all optional for dev): see .env.example
