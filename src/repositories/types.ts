@@ -34,7 +34,7 @@ export interface QueryOptions {
   offset?: number;
 }
 
-export type StoreName = "local-sqlite" | "firestore";
+export type StoreName = "local-sqlite" | "firestore" | "memory";
 
 export const COLLECTIONS = [
   "users",

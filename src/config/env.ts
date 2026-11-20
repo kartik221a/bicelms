@@ -12,6 +12,9 @@ export const env = {
     process.env.NEXT_PUBLIC_APP_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
 
+  // Local data layer (SQLite dev provider)
+  DATABASE_URL: process.env.DATABASE_URL,
+
   // Auth / DB (Firebase)
   FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
   FIREBASE_CLIENT_EMAIL: process.env.FIREBASE_CLIENT_EMAIL,
@@ -65,6 +68,26 @@ export const flags = {
   get setupMode() {
     return !this.firebaseConfigured;
   },
+  /**
+   * SQLite (Prisma) can only run where the filesystem is writable and the
+   * database file exists — i.e. local/self-hosted dev. Serverless platforms
+   * (Vercel) have a read-only filesystem, so the memory provider is used
+   * there instead of crashing with a 500 on every request.
+   */
+  get sqliteViable() {
+    const serverless = Boolean(
+      process.env.VERCEL ||
+        process.env.VERCEL_ENV ||
+        process.env.AWS_LAMBDA_FUNCTION_NAME ||
+        process.env.NETLIFY ||
+        process.env.CF_WORKER
+    );
+    return Boolean(env.DATABASE_URL) && !serverless;
+  },
 };
 
-export const dataProviderName = flags.firebaseConfigured ? "firestore" : "local-sqlite";
+export const dataProviderName = flags.firebaseConfigured
+  ? "firestore"
+  : flags.sqliteViable
+    ? "local-sqlite"
+    : "memory";

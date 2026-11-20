@@ -30,13 +30,13 @@ export async function createRazorpayOrder(input: {
   receipt: string;
   notes?: Record<string, string>;
 }): Promise<RazorpayOrder> {
-  const client = getRazorpayClient();
+  const client = await getRazorpayClient();
   return client.orders.create({
     amount: input.amount,
     currency: "INR",
     receipt: input.receipt,
     notes: input.notes ?? {},
-  });
+  }) as unknown as Promise<RazorpayOrder>;
 }
 
 /** Checkout callback verification: HMAC-SHA256(order_id + "|" + payment_id). */
